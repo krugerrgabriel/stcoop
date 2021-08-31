@@ -13,9 +13,6 @@ import BenefitsData from "../public/json/benefits.json";
 import { useEffect } from "react";
 
 const Home: NextPage = () => {
-  useEffect(() => {
-    console.log(BenefitsData);
-  }, []);
   return (
     <>
       <Navbar />
