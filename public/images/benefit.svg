@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="393" height="424" viewBox="0 0 393 424">
+  <defs>
+    <filter id="Background" x="0" y="0" width="393" height="424" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feFlood flood-opacity="0.02"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Grupo_122" data-name="Grupo 122" transform="translate(12 9)">
+    <g transform="matrix(1, 0, 0, 1, -12, -9)" filter="url(#Background)">
+      <rect id="Background-2" data-name="Background" width="369" height="400" transform="translate(12 9)" fill="#e6e6e6"/>
+    </g>
+    <g id="bx-camera" transform="translate(128.676 99.2)">
+      <path id="Caminho_50" data-name="Caminho 50" d="M30.4,8A22.7,22.7,0,0,0,8,30.4,22.7,22.7,0,0,0,30.4,52.8,22.7,22.7,0,0,0,52.8,30.4,22.7,22.7,0,0,0,30.4,8Zm0,33.6A11.5,11.5,0,0,1,19.2,30.4,11.5,11.5,0,0,1,30.4,19.2,11.5,11.5,0,0,1,41.6,30.4,11.5,11.5,0,0,1,30.4,41.6Z" transform="translate(25.6 25.6)" fill="#cecece"/>
+      <path id="Caminho_51" data-name="Caminho 51" d="M102.8,18.8H88.318L73.159,3.641A5.576,5.576,0,0,0,69.2,2H46.8a5.575,5.575,0,0,0-3.959,1.641L27.682,18.8H13.2A11.211,11.211,0,0,0,2,30V91.6a11.211,11.211,0,0,0,11.2,11.2h89.6A11.211,11.211,0,0,0,114,91.6V30A11.211,11.211,0,0,0,102.8,18.8ZM13.2,91.6V30H30a5.575,5.575,0,0,0,3.959-1.641L49.118,13.2H66.882L82.041,28.359A5.576,5.576,0,0,0,86,30h16.8l.011,61.6Z" transform="translate(-2 -2)" fill="#cecece"/>
+    </g>
+  </g>
+</svg>

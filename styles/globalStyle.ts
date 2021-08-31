@@ -12,6 +12,8 @@ const GlobalStyle = createGlobalStyle`
         margin: 0;
 
         border: 0;
+
+        font-family: 'Prelo', sans-serif;
     }
     a {
         color: inherit;

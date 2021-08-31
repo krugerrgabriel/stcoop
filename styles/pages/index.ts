@@ -1,9 +1,12 @@
 import styled from "styled-components";
 
-export const TestStyle = styled.p`
-    color: ${({ theme }) => theme.colors.black};
-`;
-
 export const UserPanel = styled.div`
     background-color: ${({ theme }) => theme.colors.black};
+`;
+
+export const BenefitsBox = styled.div`
+    background-color: ${({ theme }) => theme.colors.gray06};
+
+    padding: 36px 0;
+    margin: 6px 0 0 0;
 `;
