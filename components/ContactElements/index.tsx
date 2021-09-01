@@ -54,7 +54,7 @@ export const SelectField: React.FC<{
         {/* @ts-ignore */}
         <IconLayer className={props.id}>
           <Image
-            src={require(`../../public/images/icons/stcoop-${props.id}.svg`)}
+            src={require(`../../public/images/icons/stcoop-motivo.svg`)}
             layout="fill"
             objectFit="cover"
             alt={`STCOOP Cooperativa Logistica Ícone ${props.id}`}

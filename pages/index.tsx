@@ -16,6 +16,7 @@ import Lorem from "../components/Lorem";
 import { LoremBox, OrangeLayerWidth } from "../components/Lorem/styles";
 import NewsCard from "../components/NewsCard/";
 import { NewsCardBox } from "../components/NewsCard/styles";
+import Footer from "../components/Footer";
 
 import BenefitsData from "../public/json/benefits.json";
 import LoremData from "../public/json/lorem.json";
@@ -101,6 +102,8 @@ const Home: NextPage = () => {
       </NewsCardBox>
 
       <ContactForm />
+
+      <Footer />
     </>
   );
 };

@@ -1,8 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
+
+import Image from "next/image";
 
 import { InputField, SelectField } from "../ContactElements";
 
-import { Body, ContactImage } from "./styles";
+import { Body, ContactWrapper } from "./styles";
 import { TitleBox, Title, Subtitle } from "../../styles/";
 
 import { Container, Row, Col } from "react-bootstrap";
@@ -93,17 +95,20 @@ const ContactForm: React.FC = () => {
           </Col>
         </Row>
         <Row>
-          <Col lg={{ span: 2, offset: 4 }}>
+          <Col lg={4} />
+          <Col lg={2}>
             <Button> ENVIAR </Button>
           </Col>
         </Row>
       </Container>
-      {/* <ContactImage
-        src={ContactBackground}
-        width={857}
-        height={394}
-        alt="STCOOP Cooperativa Logística Contato"
-      /> */}
+      <ContactWrapper>
+        <Image
+          src={ContactBackground}
+          width={857}
+          height={394}
+          alt="STCOOP Cooperativa Logística Contato"
+        />
+      </ContactWrapper>
     </Body>
   );
 };
