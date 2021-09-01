@@ -1,0 +1,23 @@
+[
+  {
+    "_id": 0,
+    "title": "Lorem Ipsum dolor sit amet",
+    "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua",
+    "image": "/public/images/news01.png",
+    "createdAt": "23 Ago, 2021"
+  },
+  {
+    "_id": 1,
+    "title": "Lorem Ipsum dolor sit amet",
+    "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua",
+    "image": "/public/images/news02.png",
+    "createdAt": "12 Ago, 2021"
+  },
+  {
+    "_id": 2,
+    "title": "Lorem Ipsum dolor sit amet",
+    "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua",
+    "image": "/public/images/news03.png",
+    "createdAt": "28 Jul, 2021"
+  }
+]

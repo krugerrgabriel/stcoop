@@ -87,3 +87,15 @@
   align-items: center;
   display: flex;
 }
+
+.react-multiple-carousel__arrow{
+  background-color: #fd5000 !important;
+  border-radius: 0 !important;
+}
+.react-multiple-carousel__arrow:hover{
+  background-color: #fd5000 !important;
+}
+
+.image-item{
+  margin: 0 16px;
+}

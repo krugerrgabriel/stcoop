@@ -17,8 +17,8 @@ export const TitleBox = styled.div`
     margin: 0 0 28px 0;
 `;
 
-export const Title = styled.p`
-    color: ${({ theme }) => theme.colors.gray01};
+export const Title = styled.p<{ white?: Boolean; }>`
+    color: ${(props) => props.white ? props.theme.colors.white : props.theme.colors.gray01};
 
     font-size: 32px;
     font-weight: 700;
@@ -26,8 +26,8 @@ export const Title = styled.p`
     margin: 0;
 `;
 
-export const Subtitle = styled.span`
-    color: ${({ theme }) => theme.colors.gray02};
+export const Subtitle = styled.span<{ white?: Boolean; }>`
+    color: ${(props) => props.white ? props.theme.colors.white : props.theme.colors.gray02};
 
     font-size: 16px;
     font-weight: 400;

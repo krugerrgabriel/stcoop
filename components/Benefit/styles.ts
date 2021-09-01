@@ -8,7 +8,7 @@ export const Body = styled.div<{ image: String; }>`
     flex-direction: column;
 
     width: 100%;
-    height: 400px;
+    height: 450px;
 
     background-color: ${({ theme }) => theme.colors.gray05};
 
