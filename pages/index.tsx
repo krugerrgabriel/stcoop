@@ -3,11 +3,13 @@ import type { NextPage } from "next";
 import Navbar from "../components/Navbar";
 import Carousel from "../components/Carousel";
 import Benefit from "../components/Benefit";
+import Button from "../components/Button";
+import ContactForm from "../components/ContactForm";
 
 import { Container, Row, Col } from "react-bootstrap";
 
-import { BenefitsBox } from "../styles/pages/index";
 import { TitleBox, Title, Subtitle } from "../styles/";
+import { BenefitsBox } from "../styles/pages/index";
 import Partners from "../components/Partners";
 import { PartnersBox } from "../components/Partners/styles";
 import Lorem from "../components/Lorem";
@@ -87,18 +89,18 @@ const Home: NextPage = () => {
             {NewsData.map((item, index) => {
               return (
                 <Col lg={4} key={item._id}>
-                  <NewsCard
-                    id={item._id}
-                    title={item.title}
-                    description={item.description}
-                    image={item.image}
-                  />
+                  <NewsCard item={item} />
                 </Col>
               );
             })}
           </Row>
+          <Row className="justify-content-center margin-top-28px">
+            <Button> VER TUDO </Button>
+          </Row>
         </Container>
       </NewsCardBox>
+
+      <ContactForm />
     </>
   );
 };

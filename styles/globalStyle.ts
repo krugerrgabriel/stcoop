@@ -6,6 +6,13 @@ const GlobalStyle = createGlobalStyle`
     }
     *, html{
         outline: none;
+
+        overflow-x: hidden;
+    }
+    html{
+        *{
+            overflow: hidden;
+        }
     }
     body{
         padding: 0;
