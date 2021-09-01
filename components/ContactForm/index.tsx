@@ -73,7 +73,7 @@ const ContactForm: React.FC = () => {
           <Col lg={3}>
             <SelectField
               type="text"
-              id="grund"
+              id="motivo"
               label="Motivo do contato"
               value={phone}
               onSelect={(data: string) => setMotivo(data)} /* @ts-ignore */
