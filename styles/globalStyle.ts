@@ -26,8 +26,8 @@ const GlobalStyle = createGlobalStyle`
         color: inherit;
         text-decoration: none;
     }
-    a:hover{ /* @ts-ignore */
-        color: ${({ theme }) => theme.colors.orange};
+    a:hover{
+        color: "#fd5000";
     }
 `;
 
