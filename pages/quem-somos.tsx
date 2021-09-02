@@ -5,9 +5,12 @@ import Image from "next/image";
 
 import Navbar from "../components/Navbar";
 import Tabs from "../components/Tabs";
+import Values from "../components/Values";
+import { ValueBox } from "../components/Values/styles";
 
 import { FullBanner } from "../styles/";
 import { InfoBox } from "../styles/pages/quem-somos";
+import { TitleBox, Title, Subtitle } from "../styles/";
 
 import { Container } from "react-bootstrap";
 
@@ -39,6 +42,16 @@ const quemSomos: NextPage = () => {
       <InfoBox>
         <Tabs />
       </InfoBox>
+
+      <ValueBox>
+        <Container>
+          <TitleBox>
+            <Title> NOSSOS VALORES </Title>
+            <Subtitle> Os valores de nossa empresa </Subtitle>
+          </TitleBox>
+        </Container>
+        <Values />
+      </ValueBox>
     </>
   );
 };

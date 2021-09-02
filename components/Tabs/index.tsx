@@ -19,11 +19,18 @@ import { Container, Row, Col } from "react-bootstrap";
 const Tabs: React.FC = () => {
   const [activeTab, setActiveTab] = useState(0);
 
+  const textsArray = [
+    "Fortalecer o cooperativismo, afim de promover qualidade de vida, condições de trabalho, lucro e desenvolvimento social aos caminhoneiros.",
+    "Ser a maior cooperativa de transporte da América Latina, sendo referência pela excelência na prestação de serviços logísticos.",
+    "A missão da STCOOP surgiu com o objetivo de unir, atender e contribuir com os pequenos e médios transportadores que hoje passam dificuldades neste competitivo mercado, assim unidos eles têm condições de trabalharem de forma digna e economicamente viável",
+    "A força que representa estes transportadores configura cerca de 70% de toda frota brasileira, que juntas realizam 83% das movimentações de cargas pelo país. A coletividade proporcionada pela STCOOP irá gerar a força de negociação que eles precisam, sendo possível obter diversos benefícios.",
+  ];
+
   const opts = {
     height: "535",
     width: "955",
     playerVars: {
-      autoplay: 1,
+      autoplay: 0,
     },
   };
   return (
@@ -59,11 +66,7 @@ const Tabs: React.FC = () => {
             </Row>
             <Row>
               <Col lg={12}>
-                <TabText>
-                  Fortalecer o cooperativismo, afim de promover qualidade de
-                  vida, condições de trabalho, lucro e desenvolvimento social
-                  aos caminhoneiros.
-                </TabText>
+                <TabText>{textsArray[activeTab]}</TabText>
               </Col>
             </Row>
           </Col>

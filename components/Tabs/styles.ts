@@ -3,13 +3,13 @@ import styled from "styled-components";
 export const Body = styled.div`
     position: relative;
 
-    height: 1000px;
+    height: 535px;
 `;
 
 export const TabsBox = styled.div`
     width: 100%;
 
-    padding: 42px 0 0 0;
+    padding: 96px 0 0 0;
 `;
 
 export const Header = styled.div`
@@ -49,7 +49,7 @@ export const VideoLayer = styled.div`
     height: 535px;
 
     right: 0;
-    top: -75px;
+    top: 0;
 
     z-index: 999;
 `;
