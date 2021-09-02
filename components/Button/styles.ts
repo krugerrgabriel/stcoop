@@ -1,4 +1,3 @@
-import { propTypes } from 'react-bootstrap/esm/Image';
 import styled from 'styled-components';
 
 export const ArrowLayer = styled.div<{ color?: String; }>`
@@ -23,19 +22,25 @@ export const ArrowLayer = styled.div<{ color?: String; }>`
 `;
 
 export const Body = styled.div<{ color?: String; }>`
-    display: flex;
-    align-items: center;
-    
     background-color: ${(props) => props.color == 'gray' ? '#7A7A7A' : props.theme.colors.orange};
     
-    width: 142px;
+    width: 100%;
     height: 42px;
     
     position: relative;
 
-    padding-left: 18px;
-
     cursor: pointer;
+
+    div.info{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: calc(100% - 42px);
+        height: 100%;
+
+        z-index: 501;
+    }
 
     h6{
         z-index: 500;
@@ -51,7 +56,7 @@ export const Body = styled.div<{ color?: String; }>`
 
     &:hover{
         ${ArrowLayer}{
-            width: 142px;
+            width: 100%;
         }
     }
 `;

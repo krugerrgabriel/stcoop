@@ -62,8 +62,11 @@ export const SelectField: React.FC<{
         </IconLayer>
       </GrayLayer>
       <Etc>
-        <select onChange={(event) => props.onSelect(event.target.value)}>
-          <option value="null" disabled selected>
+        <select
+          defaultValue="null"
+          onChange={(event) => props.onSelect(event.target.value)}
+        >
+          <option value="null" disabled>
             {props.label}
           </option>
           {props.options?.map((item, index) => {

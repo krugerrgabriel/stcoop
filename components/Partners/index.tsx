@@ -44,30 +44,40 @@ const Partners: React.FC = () => {
           responsive={responsive}
           infinite={true}
         >
-          <Company>
-            <Image
-              src={UNUSLogo}
-              alt="STCOOP Cooperativa Logística Grupo UNUS Logo"
-              width={189}
-              height={52}
-            />
-          </Company>
-          <Company>
-            <Image
-              src={TransdeskLogo}
-              alt="STCOOP Cooperativa Logística Transdesk Logo"
-              width={189}
-              height={36}
-            />
-          </Company>
-          <Company>
-            <Image
-              src={TDKLogo}
-              alt="STCOOP Cooperativa Logística TDK Corretora Logo"
-              width={189}
-              height={59}
-            />
-          </Company>
+          <a href="https://grupounus.com.br" target="_blank" rel="noreferrer">
+            <Company>
+              <Image
+                src={UNUSLogo}
+                alt="STCOOP Cooperativa Logística Grupo UNUS Logo"
+                width={189}
+                height={52}
+              />
+            </Company>
+          </a>
+          <a href="https://transdesk.com.br" target="_blank" rel="noreferrer">
+            <Company>
+              <Image
+                src={TransdeskLogo}
+                alt="STCOOP Cooperativa Logística Transdesk Logo"
+                width={189}
+                height={36}
+              />
+            </Company>
+          </a>
+          <a
+            href="https://tdkcorretora.com.br"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <Company>
+              <Image
+                src={TDKLogo}
+                alt="STCOOP Cooperativa Logística TDK Corretora Logo"
+                width={189}
+                height={59}
+              />
+            </Company>
+          </a>
           <Company>
             <Image
               src={BRLogo}

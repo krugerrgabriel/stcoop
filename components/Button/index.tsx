@@ -10,7 +10,9 @@ const Button: React.FC<{ gray?: Boolean }> = (props) => {
   let color = props.gray ? "gray" : "white";
   return (
     <Body color={color}>
-      <h6>{props.children}</h6>
+      <div className="info">
+        <h6>{props.children}</h6>
+      </div>
       <ArrowLayer color={color}>
         <Image src={ArrowImage} alt="STCOOP Cooperativa Logistica Arrow" />
       </ArrowLayer>

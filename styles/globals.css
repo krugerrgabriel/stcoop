@@ -103,3 +103,26 @@
 .margin-top-28px{
   margin-top: 28px;
 }
+.margin-top-42px{
+  margin-top: 42px;
+}
+
+.centered{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-end{
+  display: flex;
+  justify-content: flex-end;
+}
+.flex-center{
+  display: flex;
+  justify-content: center;
+}
+
+.vertical-center{
+  display: flex;
+  align-items: center;
+}

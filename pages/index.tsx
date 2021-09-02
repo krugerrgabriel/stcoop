@@ -1,4 +1,5 @@
 import type { NextPage } from "next";
+import Head from "next/head";
 
 import Navbar from "../components/Navbar";
 import Carousel from "../components/Carousel";
@@ -25,6 +26,12 @@ import NewsData from "../public/json/news.json";
 const Home: NextPage = () => {
   return (
     <>
+      <Head>
+        <title> STCOOP Cooperativa Logística </title>
+
+        <link rel="shortcut icon" href="/public/images/icons/stcoop.png" />
+      </Head>
+
       <Navbar />
 
       <Carousel active={1} orangeLayer="right" />
@@ -96,7 +103,9 @@ const Home: NextPage = () => {
             })}
           </Row>
           <Row className="justify-content-center margin-top-28px">
-            <Button> VER TUDO </Button>
+            <Col lg={2}>
+              <Button> VER TUDO </Button>
+            </Col>
           </Row>
         </Container>
       </NewsCardBox>

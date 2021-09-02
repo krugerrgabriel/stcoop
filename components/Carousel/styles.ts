@@ -1,9 +1,13 @@
 import styled from 'styled-components';
 
+import Button from "../Button/";
+
 import { OrangeLayer } from "../../styles/";
 
 export const Body = styled.div`
     height: auto;
+
+    margin: 42px 0 0 0;
 
     *{
         z-index: 500;

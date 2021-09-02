@@ -26,6 +26,9 @@ const GlobalStyle = createGlobalStyle`
         color: inherit;
         text-decoration: none;
     }
+    a:hover{ /* @ts-ignore */
+        color: ${({ theme }) => theme.colors.orange};
+    }
 `;
 
 export default GlobalStyle;

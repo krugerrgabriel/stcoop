@@ -55,7 +55,11 @@ const Carousel: React.FC<ICarousel> = () => {
                   : "NÃO DEFINIDO"}
               </span>
               <Margin margin="36px 0 0 0" />
-              <Button> VER MAIS </Button>
+              <Row>
+                <Col lg={5}>
+                  <Button> VER MAIS </Button>
+                </Col>
+              </Row>
             </CarouselPanel>
           </Col>
           <Col lg={7}>
@@ -127,24 +131,42 @@ const Carousel: React.FC<ICarousel> = () => {
           <Col lg={1}></Col>
           <Col lg={2}>
             <SocialMedia>
-              <Image
-                src={FacebookIcon}
-                alt="STCOOP Cooperativa Logística Facebook Icon"
-                width={24}
-                height={24}
-              />
-              <Image
-                src={InstagramIcon}
-                alt="STCOOP Cooperativa Logística Instagram Icon"
-                width={24}
-                height={24}
-              />
-              <Image
-                src={YoutubeIcon}
-                alt="STCOOP Cooperativa Logística Youtube Icon"
-                width={34}
-                height={24}
-              />
+              <a
+                href="https://facebook.com/stcoop"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Image
+                  src={FacebookIcon}
+                  alt="STCOOP Cooperativa Logística Facebook Icon"
+                  width={24}
+                  height={24}
+                />
+              </a>
+              <a
+                href="https://instagram.com/stcoop"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Image
+                  src={InstagramIcon}
+                  alt="STCOOP Cooperativa Logística Instagram Icon"
+                  width={24}
+                  height={24}
+                />
+              </a>
+              <a
+                href="https://youtube.com/c/stcoop"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Image
+                  src={YoutubeIcon}
+                  alt="STCOOP Cooperativa Logística Youtube Icon"
+                  width={34}
+                  height={24}
+                />
+              </a>
             </SocialMedia>
           </Col>
         </Row>

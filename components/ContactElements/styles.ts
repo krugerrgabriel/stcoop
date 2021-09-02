@@ -22,10 +22,16 @@ export const GrayLayer = styled.div`
 
     width: 42px;
     height: 42px;
+
+    margin-left: -1px;
+
+    z-index: 1;
 `;
 
 export const IconLayer = styled.div`
     position: relative;
+
+    z-index: 2;
 
     &.user{
         width: 18px;
@@ -35,7 +41,7 @@ export const IconLayer = styled.div`
         width: 19px;
         height: 19px;
     }
-    &.grund{
+    &.motivo{
         width: 19px;
         height: 17px;
     }

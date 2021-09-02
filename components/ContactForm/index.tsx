@@ -36,7 +36,7 @@ const ContactForm: React.FC = () => {
   ];
 
   return (
-    <Body>
+    <Body id="contato">
       <Container>
         <TitleBox>
           <Title> CONTATO </Title>

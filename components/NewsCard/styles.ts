@@ -35,6 +35,10 @@ export const Info = styled.div`
         justify-content: space-between;
 
         margin: 18px 0 0 0;
+
+        div.button{
+            width: 142px;
+        }
     }
 `;
 

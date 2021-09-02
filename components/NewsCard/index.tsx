@@ -27,7 +27,9 @@ const NewsCard: React.FC<{
         <p> {item.title} </p>
         <span> {item.description} </span>
         <div className="side-a-side">
-          <Button gray> VER MAIS</Button>
+          <div className="button">
+            <Button gray> VER MAIS</Button>
+          </div>
           <strong> {item.createdAt} </strong>
         </div>
       </Info>

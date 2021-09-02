@@ -34,3 +34,30 @@ export const Subtitle = styled.span<{ white?: Boolean; }>`
 
     margin: 0 0 0 12px;
 `;
+
+export const FullBanner = styled.div`
+    display: flex;
+    align-items: flex-end;
+
+    position: relative;
+
+    width: 100vw;
+    height: 300px;
+
+    padding: 42px;
+
+    z-index: -1;
+
+    *{
+        z-index: -1;
+    }
+
+    h1{
+        color: ${({ theme }) => theme.colors.white};
+        font-size: 48px;
+        font-weight: 700;
+
+        z-index: 2;
+    }
+
+`;

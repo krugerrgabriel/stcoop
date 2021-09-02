@@ -15,7 +15,7 @@ export const Body = styled.div`
     height: 113px;
     width: 100%;
 
-    margin: 0 0 42px 0;
+    margin: 0;
 
     *{
         z-index: 995;
@@ -38,6 +38,8 @@ export const Button = styled.a`
     text-align: center;
 
     padding: 12px 24px;
+
+    cursor: pointer;
 `;
 
 export const ColEdit = styled(Col)`

@@ -12,17 +12,26 @@ const Navbar: React.FC = () => {
       <Container>
         <Row>
           <Col lg={3}>
-            <Logo src={LogoSTCOOP} alt="STCOOP Logo" width={225} height={64} />
+            <Link href="/">
+              <a>
+                <Logo
+                  src={LogoSTCOOP}
+                  alt="STCOOP Logo"
+                  width={225}
+                  height={64}
+                />
+              </a>
+            </Link>
           </Col>
 
           <ColEdit className="links" lg={6}>
             <Link href="/">
               <a> SEJA COOPERADO </a>
             </Link>
-            <Link href="/">
+            <Link href="/quem-somos">
               <a> QUEM SOMOS NÓS </a>
             </Link>
-            <Link href="/">
+            <Link href="#contato">
               <a> CONTATO </a>
             </Link>
             <Link href="/">
