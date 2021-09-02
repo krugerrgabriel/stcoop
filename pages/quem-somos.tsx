@@ -4,8 +4,10 @@ import Head from "next/head";
 import Image from "next/image";
 
 import Navbar from "../components/Navbar";
+import Tabs from "../components/Tabs";
 
 import { FullBanner } from "../styles/";
+import { InfoBox } from "../styles/pages/quem-somos";
 
 import { Container } from "react-bootstrap";
 
@@ -19,7 +21,9 @@ const quemSomos: NextPage = () => {
       <Head>
         <title> STCOOP | Quem Somos Nós</title>
       </Head>
+
       <Navbar />
+
       <FullBanner>
         <Image
           src={QuemSomosBanner}
@@ -31,6 +35,10 @@ const quemSomos: NextPage = () => {
           <h1> QUEM SOMOS NÓS </h1>
         </Container>
       </FullBanner>
+
+      <InfoBox>
+        <Tabs />
+      </InfoBox>
     </>
   );
 };

@@ -54,8 +54,11 @@ export const FullBanner = styled.div`
 
     h1{
         color: ${({ theme }) => theme.colors.white};
+        
         font-size: 48px;
         font-weight: 700;
+
+        margin: 0;
 
         z-index: 2;
     }
