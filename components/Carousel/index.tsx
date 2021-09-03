@@ -72,7 +72,7 @@ const Carousel: React.FC<ICarousel> = () => {
           </Col>
           <Col lg={7}>
             <MediaLayer>
-              {ProductsData[item].image ? (
+              {ProductsData[item].image != "null" ? (
                 <Image
                   src={VideoLayer}
                   alt="STCOOP Cooperativa Logística Video Layer"

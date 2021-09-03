@@ -45,7 +45,7 @@ const Beneficios: React.FC = () => {
           <Col lg={6}>
             <YouTubeLayer>
               {/* @ts-ignore */}
-              {ProductsData[item].image ? (
+              {ProductsData[item].image != "null" ? (
                 <Image
                   src={VideoLayer}
                   alt="STCOOP Cooperativa Logística Video Layer"
