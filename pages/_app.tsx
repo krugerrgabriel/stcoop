@@ -14,18 +14,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="32x32"
-          href="../public/images/favicon-32x32.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="16x16"
-          href="../public/images/favicon-16x16.png"
-        />
+        <link rel="shortcut icon" href="/favicon.ico" />
         <meta name="theme-color" content="#fd5000" />
       </Head>
       <ThemeProvider theme={theme}>
