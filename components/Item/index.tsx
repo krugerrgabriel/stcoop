@@ -17,12 +17,12 @@ const Item: React.FC = () => {
     <ItemBox>
       <ItemLayer>
         <ItemImageLayer>
-          <Image
+          {/* <Image
             src={EspacoLazerImage}
             layout="fill"
             objectFit="cover"
             alt="STCOOP Cooperativa Logística Espaço de Lazer"
-          />
+          /> */}
         </ItemImageLayer>
       </ItemLayer>
       <Container>
