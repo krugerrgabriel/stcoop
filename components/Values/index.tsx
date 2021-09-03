@@ -52,12 +52,12 @@ const Values: React.FC = () => {
               width={59}
               height={82}
             />
-            <span> Fé em Deus</span>
+            <span> Fé em Deus </span>
           </Value>
           <Value>
             <Image
               src={AprendizadoIcon}
-              alt="STCOOP Cooperativa Logística Fé Icon"
+              alt="STCOOP Cooperativa Logística Aprendizado contínuo Icon"
               width={118}
               height={82}
             />
@@ -66,7 +66,7 @@ const Values: React.FC = () => {
           <Value>
             <Image
               src={ExcelenciaIcon}
-              alt="STCOOP Cooperativa Logística Fé Icon"
+              alt="STCOOP Cooperativa Logística Excelência na prestação de serviços Icon"
               width={90}
               height={82}
             />
@@ -75,7 +75,7 @@ const Values: React.FC = () => {
           <Value>
             <Image
               src={SustentabilidadeIcon}
-              alt="STCOOP Cooperativa Logística Fé Icon"
+              alt="STCOOP Cooperativa Logística Sustentabilidade econômica e social Icon"
               width={109}
               height={82}
             />
@@ -84,7 +84,7 @@ const Values: React.FC = () => {
           <Value>
             <Image
               src={EticaIcon}
-              alt="STCOOP Cooperativa Logística Fé Icon"
+              alt="STCOOP Cooperativa Logística Ética e integridade em suas relações Icon"
               width={113}
               height={82}
             />
@@ -93,7 +93,7 @@ const Values: React.FC = () => {
           <Value>
             <Image
               src={ValorizacaoIcon}
-              alt="STCOOP Cooperativa Logística Fé Icon"
+              alt="STCOOP Cooperativa Logística Valorização das pessoas e da família Icon"
               width={82}
               height={82}
             />
@@ -102,11 +102,11 @@ const Values: React.FC = () => {
           <Value>
             <Image
               src={CompromissoIcon}
-              alt="STCOOP Cooperativa Logística Fé Icon"
+              alt="STCOOP Cooperativa Logística Compromisso com resultados diretos Icon"
               width={66}
               height={82}
             />
-            <span> Fé em Deus</span>
+            <span> Compromisso com resultados diretos </span>
           </Value>
         </Carousel>
       </Container>

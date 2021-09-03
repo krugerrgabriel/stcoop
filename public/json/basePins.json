@@ -1,0 +1,29 @@
+[
+  {
+    "_id": 0,
+    "name": "Base Rondonópolis",
+    "city": "Rondonópolis",
+    "top": "null",
+    "bottom": 264,
+    "left": 264,
+    "right": "null"
+  },
+  {
+    "_id": 1,
+    "name": "Base Cascavel",
+    "city": "Cascavel",
+    "top": "null",
+    "bottom": 137,
+    "left": 293,
+    "right": "null"
+  },
+  {
+    "_id": 2,
+    "name": "Base Curitiba",
+    "city": "Curitiba",
+    "top": "null",
+    "bottom": 129,
+    "left": 341,
+    "right": "null"
+  }
+]

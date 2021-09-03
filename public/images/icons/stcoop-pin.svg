@@ -1,0 +1,9 @@
+<svg id="Rondonópolis" xmlns="http://www.w3.org/2000/svg" width="20.316" height="27.88" viewBox="0 0 20.316 27.88">
+  <ellipse id="Sombra" cx="7.629" cy="0.914" rx="7.629" ry="0.914" transform="translate(2.529 26.051)" fill="#a1a1a1" style="mix-blend-mode: multiply;isolation: isolate"/>
+  <g id="Pin">
+    <g id="Grupo_87" data-name="Grupo 87">
+      <path id="Caminho_230" data-name="Caminho 230" d="M396.925,287.764c-2.4-3.009-4.911-5.97-7.179-9.076a11.653,11.653,0,0,1-2.644-7.128c0-13.808,20.316-13.808,20.316,0a11.653,11.653,0,0,1-2.644,7.128c-2.268,3.105-4.784,6.067-7.179,9.076a.423.423,0,0,1-.67,0Z" transform="translate(-387.102 -261.205)" fill="#fff" fill-rule="evenodd"/>
+    </g>
+    <path id="Caminho_231" data-name="Caminho 231" d="M397.185,263.129a8.207,8.207,0,1,1-8.206,8.208A8.209,8.209,0,0,1,397.185,263.129Z" transform="translate(-387.028 -261.129)" fill="#fd5000" fill-rule="evenodd"/>
+  </g>
+</svg>

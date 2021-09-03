@@ -30,7 +30,9 @@ export const Tab = styled.div<{ active?: Boolean }>`
 
     cursor: pointer;
     
-    ${(props) => props.active ? `border-bottom: 2px solid ${props.theme.colors.orange};` : 'border-bottom: 2px solid #707070;'};
+    ${(props) => props.active ? `border-bottom: 3px solid ${props.theme.colors.orange};` : 'border-bottom: 3px solid #707070;'};
+
+    transition: 0.2s;
 `;
 
 export const TabText = styled.p`

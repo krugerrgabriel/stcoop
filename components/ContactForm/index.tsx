@@ -13,7 +13,7 @@ import Button from "../Button";
 
 import ContactBackground from "../../public/images/stcoop-contact-background.png";
 
-const ContactForm: React.FC = () => {
+const ContactForm: React.FC<{ left?: Boolean }> = (props) => {
   const [name, setName] = useState("");
   const [mail, setMail] = useState("");
   const [phone, setPhone] = useState("");
@@ -38,74 +38,85 @@ const ContactForm: React.FC = () => {
   return (
     <Body id="contato">
       <Container>
-        <TitleBox>
-          <Title> CONTATO </Title>
-          <Subtitle> Fale conosco </Subtitle>
-        </TitleBox>
         <Row>
-          <Col lg={3}>
-            <InputField
-              type="text"
-              id="user"
-              label="Nome completo"
-              value={name}
-              onType={(data: string) => setName(data)}
-            />
-          </Col>
-          <Col lg={3}>
-            <InputField
-              type="mail"
-              id="mail"
-              label="Email"
-              value={mail}
-              onType={(data: string) => setMail(data)}
-            />
-          </Col>
-        </Row>
-        <Row>
-          <Col lg={3}>
-            <InputField
-              type="text"
-              id="phone"
-              label="Telefone"
-              value={phone}
-              onType={(data: string) => setPhone(data)}
-            />
-          </Col>
-          <Col lg={3}>
-            <SelectField
-              type="text"
-              id="motivo"
-              label="Motivo do contato"
-              value={phone}
-              onSelect={(data: string) => setMotivo(data)} /* @ts-ignore */
-              options={selectOptions}
-            />
-          </Col>
-        </Row>
-        <Row>
+          {props.left ? <Col lg={6} /> : null}
           <Col lg={6}>
-            <InputField
-              type="text"
-              id="message"
-              label="Mensagem"
-              value={message}
-              onType={(data: string) => setMessage(data)}
-            />
+            <TitleBox>
+              <Title> CONTATO </Title>
+              <Subtitle> Fale conosco </Subtitle>
+            </TitleBox>
           </Col>
         </Row>
         <Row>
-          <Col lg={4} />
-          <Col lg={2}>
-            <Button> ENVIAR </Button>
+          {props.left ? <Col lg={6} /> : null}
+          <Col lg={6}>
+            <Row>
+              <Col lg={6}>
+                <InputField
+                  type="text"
+                  id="user"
+                  label="Nome completo"
+                  value={name}
+                  onType={(data: string) => setName(data)}
+                />
+              </Col>
+              <Col lg={6}>
+                <InputField
+                  type="mail"
+                  id="mail"
+                  label="Email"
+                  value={mail}
+                  onType={(data: string) => setMail(data)}
+                />
+              </Col>
+            </Row>
+            <Row>
+              <Col lg={6}>
+                <InputField
+                  type="text"
+                  id="phone"
+                  label="Telefone"
+                  value={phone}
+                  onType={(data: string) => setPhone(data)}
+                />
+              </Col>
+              <Col lg={6}>
+                <SelectField
+                  type="text"
+                  id="motivo"
+                  label="Motivo do contato"
+                  value={phone}
+                  onSelect={(data: string) => setMotivo(data)} /* @ts-ignore */
+                  options={selectOptions}
+                />
+              </Col>
+            </Row>
+            <Row>
+              <Col lg={12}>
+                <InputField
+                  type="text"
+                  id="message"
+                  label="Mensagem"
+                  value={message}
+                  onType={(data: string) => setMessage(data)}
+                />
+              </Col>
+            </Row>
+            <Row>
+              <Col lg={8} />
+              <Col lg={4}>
+                <Button> ENVIAR </Button>
+              </Col>
+            </Row>
           </Col>
         </Row>
       </Container>
-      <ContactWrapper>
+      <ContactWrapper left={props.left}>
         <Image
           src={ContactBackground}
           width={857}
           height={394}
+          className={props.left ? "rotated" : ""}
           alt="STCOOP Cooperativa Logística Contato"
         />
       </ContactWrapper>

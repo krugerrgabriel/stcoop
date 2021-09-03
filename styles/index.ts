@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
-export const OrangeLayer = styled.div`
+export const OrangeLayer = styled.div<{ left?: Boolean; }>`
     position: absolute;
     top: 0;
-    right: 0;
+    ${(props) => props.left ? 'left: 0;' : 'right: 0;'};
 
     background-color: ${({ theme }) => theme.colors.orange};
 
@@ -63,4 +63,13 @@ export const FullBanner = styled.div`
         z-index: 2;
     }
 
+`;
+
+export const MiniTitle = styled.p`
+    color: ${({ theme }) => theme.colors.black};
+
+    font-size: 28px;
+    font-weight: 500;
+
+    margin: 0;
 `;

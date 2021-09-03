@@ -10,8 +10,8 @@ export const Body = styled.div`
     display: flex;
 `;
 
-export const ContactWrapper = styled.div`
+export const ContactWrapper = styled.div<{ left?: Boolean }>`
     position: absolute;
     top: 0;
-    right: 0;
+    ${(props) => props.left ? 'left: 0;' : 'right: 0'}
 `;

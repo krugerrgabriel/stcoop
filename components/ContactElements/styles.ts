@@ -23,8 +23,6 @@ export const GrayLayer = styled.div`
     width: 42px;
     height: 42px;
 
-    margin-left: -1px;
-
     z-index: 1;
 `;
 
