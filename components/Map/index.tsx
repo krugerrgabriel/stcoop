@@ -13,7 +13,7 @@ import PinIcon from "../../public/images/icons/stcoop-pin.svg";
 import PinImage from "../../public/images/icons/stcoop-map-pin.svg";
 
 const Map: React.FC<{ type: String }> = (props) => {
-  const [nameData, setNameData] = useState("test");
+  const [nameData, setNameData] = useState("NÃO DEFINIDO");
   const PinsData =
     props.type == "unidade"
       ? require("../../public/json/basePins.json")
@@ -33,7 +33,6 @@ const Map: React.FC<{ type: String }> = (props) => {
                     left={item.left}
                     right={item.right}
                     onMouseEnter={() => setNameData(item.city)}
-                    onMouseLeave={() => setNameData(item.city)}
                     key={index}
                   >
                     <PinBox>
