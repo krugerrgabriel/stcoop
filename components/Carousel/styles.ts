@@ -99,3 +99,5 @@ export const CarouselCounter = styled.div<{ active: Boolean; }>`
 
     cursor: pointer;
 `;
+
+export const MediaLayer = styled.div``;

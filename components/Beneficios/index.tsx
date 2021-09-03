@@ -20,6 +20,7 @@ import Image from "next/image";
 
 import CarouselLeftArrow from "../../public/images/icons/stcoop-left-arrow.svg";
 import CarouselRightArrow from "../../public/images/icons/stcoop-right-arrow.svg";
+import VideoLayer from "/public/images/stcoop-video-layer.png";
 
 import ProductsData from "../../public/json/products.json";
 
@@ -47,7 +48,16 @@ const Beneficios: React.FC = () => {
           <Col lg={6}>
             <YouTubeLayer>
               {/* @ts-ignore */}
-              <YouTube videoId="W0Wy1A1GWKQ" opts={opts} />
+              {ProductsData[item].image ? (
+                <Image
+                  src={VideoLayer}
+                  alt="STCOOP Cooperativa Logística Video Layer"
+                  width={745}
+                  height={422}
+                />
+              ) : (
+                <YouTube videoId={ProductsData[item].video} opts={opts} />
+              )}
             </YouTubeLayer>
           </Col>
           <Col lg={6}>

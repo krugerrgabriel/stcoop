@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 
 import { ICarousel } from "./interfaces";
@@ -16,6 +16,7 @@ import {
   CarouselButton,
   CarouselCounterBox,
   CarouselCounter,
+  MediaLayer,
 } from "./styles";
 
 import VideoLayer from "/public/images/stcoop-video-layer.png";
@@ -24,6 +25,8 @@ import InstagramIcon from "/public/images/icons/stcoop-instagram.svg";
 import YoutubeIcon from "/public/images/icons/stcoop-youtube.svg";
 import CarouselLeftArrow from "/public/images/icons/stcoop-left-arrow.svg";
 import CarouselRightArrow from "/public/images/icons/stcoop-right-arrow.svg";
+
+import YouTube from "react-youtube";
 
 import ProductsData from "../../public/json/products.json";
 
@@ -35,6 +38,14 @@ const Carousel: React.FC<ICarousel> = () => {
   };
   const previousItem = () => {
     setItem(item <= 0 ? 3 : item - 1);
+  };
+
+  const opts = {
+    height: "422",
+    width: "745",
+    playerVars: {
+      autoplay: 0,
+    },
   };
 
   return (
@@ -63,12 +74,18 @@ const Carousel: React.FC<ICarousel> = () => {
             </CarouselPanel>
           </Col>
           <Col lg={7}>
-            <Image
-              src={VideoLayer}
-              alt="STCOOP Cooperativa Logística Video Layer"
-              width={745}
-              height={422}
-            />
+            <MediaLayer>
+              {ProductsData[item].image ? (
+                <Image
+                  src={VideoLayer}
+                  alt="STCOOP Cooperativa Logística Video Layer"
+                  width={745}
+                  height={422}
+                />
+              ) : (
+                <YouTube videoId={ProductsData[item].video} opts={opts} />
+              )}
+            </MediaLayer>
           </Col>
         </Row>
         <Row className="justify-content-end">
