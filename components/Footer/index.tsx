@@ -27,7 +27,11 @@ const Footer: React.FC = () => {
         <Row>
           <Col lg={3}>
             <ul>
-              <li className="title"> SEJA COOPERADO </li>
+              <li className="title">
+                <Link href="/seja-cooperado">
+                  <a>SEJA COOPERADO</a>
+                </Link>
+              </li>
               <li> Beneficios </li>
               <li> Unidade mais próxima </li>
               <li> Rota da informação</li>
@@ -62,7 +66,12 @@ const Footer: React.FC = () => {
           </Col>
           <Col lg={3} className="flex-end">
             <ul>
-              <li className="title"> BASES DE APOIO </li>
+              <li className="title">
+                {" "}
+                <Link href="/bases-de-apoio">
+                  <a>BASES DE APOIO</a>
+                </Link>{" "}
+              </li>
               <li> Ver sobre </li>
               <li> Localização </li>
             </ul>

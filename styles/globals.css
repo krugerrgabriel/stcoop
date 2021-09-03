@@ -134,3 +134,16 @@
 .display-flex{
   display: flex;
 }
+
+.card,.card-header{
+  background-color: rgba(0, 0, 0, 0.5);
+
+  border-radius: 0;
+
+  color: #ffffff;
+  
+  font-weight: 400;
+}
+.card-body{
+  color: #000000;
+}

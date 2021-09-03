@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
-export const MapBox = styled.div`
+export const MapBox = styled.div<{ gray?: Boolean; }>`
     padding: 42px 0;
+    ${(props) => props.gray ? `background-color: ${props.theme.colors.gray06}` : null}
 `;
 
 export const Body = styled.div``;

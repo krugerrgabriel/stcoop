@@ -25,7 +25,7 @@ const Navbar: React.FC = () => {
           </Col>
 
           <ColEdit className="links" lg={6}>
-            <Link href="/">
+            <Link href="/seja-cooperado">
               <a> SEJA COOPERADO </a>
             </Link>
             <Link href="/quem-somos">
@@ -34,7 +34,7 @@ const Navbar: React.FC = () => {
             <Link href="#contato">
               <a> CONTATO </a>
             </Link>
-            <Link href="/">
+            <Link href="/bases-de-apoio">
               <a> BASES DE APOIO </a>
             </Link>
           </ColEdit>

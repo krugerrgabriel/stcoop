@@ -15,9 +15,9 @@ import PinImage from "../../public/images/icons/stcoop-map-pin.svg";
 const Map: React.FC<{ type: String }> = (props) => {
   const [nameData, setNameData] = useState("NÃO DEFINIDO");
   const PinsData =
-    props.type == "unidade"
-      ? require("../../public/json/basePins.json")
-      : require("../../public/json/unidadePins.json");
+    props.type == "unidades"
+      ? require("../../public/json/unidadesPins.json")
+      : require("../../public/json/basesPins.json");
   return (
     <Body>
       <Container>
@@ -36,14 +36,12 @@ const Map: React.FC<{ type: String }> = (props) => {
                     key={index}
                   >
                     <PinBox>
-                      <a href={item.link} target="_blank" rel="noreferrer">
-                        <Image
-                          src={PinIcon}
-                          layout="fill"
-                          objectFit="cover"
-                          alt={`STCOOP Cooperativa Logística ${item.name}`}
-                        />
-                      </a>
+                      <Image
+                        src={PinIcon}
+                        layout="fill"
+                        objectFit="cover"
+                        alt={`STCOOP Cooperativa Logística ${item.name}`}
+                      />
                     </PinBox>
                   </PinLayer>
                 );
@@ -86,7 +84,11 @@ const Map: React.FC<{ type: String }> = (props) => {
                     />
                   </ImageLayer>
                   <div className="info">
-                    <span> BASE DE APOIO AO CAMINHONEIRO </span>
+                    <span>
+                      {props.type == "unidades"
+                        ? "UNIDADE"
+                        : "BASE DE APOIO AO CAMINHONEIRO"}
+                    </span>
                     <p> {nameData} </p>
                   </div>
                 </UnidadeShow>

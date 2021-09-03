@@ -36,11 +36,11 @@ import Footer from "../components/Footer";
 
 // import { Container } from './styles';
 
-const quemSomos: NextPage = () => {
+const QuemSomos: NextPage = () => {
   return (
     <>
       <Head>
-        <title> STCOOP | Quem Somos Nós</title>
+        <title> STCOOP | Quem Somos Nós </title>
       </Head>
 
       <Navbar />
@@ -74,8 +74,8 @@ const quemSomos: NextPage = () => {
       <CooperativismoBox>
         <Container>
           <TitleBox>
-            <Title> NOSSOS VALORES </Title>
-            <Subtitle> Os valores de nossa empresa </Subtitle>
+            <Title> COOPERATIVISMO </Title>
+            <Subtitle> O que é o cooperativismo </Subtitle>
           </TitleBox>
           <Row>
             <Col lg={6}>
@@ -165,7 +165,7 @@ const quemSomos: NextPage = () => {
             <Subtitle> Lorem ipsum dolor sit </Subtitle>
           </TitleBox>
         </Container>
-        <Map type="unidade" />
+        <Map type="bases" />
       </MapBox>
 
       <LoremBox>
@@ -194,4 +194,4 @@ const quemSomos: NextPage = () => {
   );
 };
 
-export default quemSomos;
+export default QuemSomos;
