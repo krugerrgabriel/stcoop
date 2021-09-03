@@ -27,7 +27,44 @@ const GlobalStyle = createGlobalStyle`
         text-decoration: none;
     }
     a:hover{
-        color: "#fd5000";
+        color: #fd5000;
+    }
+
+    ::-webkit-scrollbar {
+        width: 10px;
+        height: 10px;
+        transition: 0.2s;
+    }
+    ::-webkit-scrollbar-button {
+        width: 0px;
+        height: 0px;
+        transition: 0.2s;
+    }
+    ::-webkit-scrollbar-thumb {
+        background: #fd5000;
+        border: 0px none #ffffff;
+        border-radius: 0px;
+        transition: 0.2s;
+    }
+    ::-webkit-scrollbar-track {
+        background: #ffffff;
+        border: 0px none #ffffff;
+        border-radius: 0px;
+        transition: 0.2s;
+    }
+    ::-webkit-scrollbar-track:hover {
+        background: #f0f0f0;
+    }
+    ::-webkit-scrollbar-track:active {
+        background: #ededed;
+    }
+    ::-webkit-scrollbar-corner {
+        background: transparent;
+    }
+
+    ::selection {
+        color: #ffffff;
+        background: #000000;
     }
 `;
 
