@@ -43,9 +43,6 @@ const Carousel: React.FC<ICarousel> = () => {
   const opts = {
     height: "422",
     width: "745",
-    playerVars: {
-      autoplay: 0,
-    },
   };
 
   return (

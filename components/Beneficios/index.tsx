@@ -37,9 +37,6 @@ const Beneficios: React.FC = () => {
   const opts = {
     height: "350",
     width: "622",
-    playerVars: {
-      autoplay: 0,
-    },
   };
   return (
     <Body>
