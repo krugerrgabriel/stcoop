@@ -27,7 +27,7 @@ const GlobalStyle = createGlobalStyle`
         text-decoration: none;
     }
     a:hover{
-        color: #fd5000;
+        color: #fd5000 !important;
     }
 
     ::-webkit-scrollbar {

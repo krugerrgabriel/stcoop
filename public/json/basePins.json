@@ -6,7 +6,8 @@
     "top": "null",
     "bottom": 264,
     "left": 264,
-    "right": "null"
+    "right": "null",
+    "link": "https://stcoop.com.br/base/rondonopolis/pin"
   },
   {
     "_id": 1,
@@ -15,7 +16,8 @@
     "top": "null",
     "bottom": 137,
     "left": 293,
-    "right": "null"
+    "right": "null",
+    "link": "https://stcoop.com.br/base/cascavel/pin"
   },
   {
     "_id": 2,
@@ -24,6 +26,7 @@
     "top": "null",
     "bottom": 129,
     "left": 341,
-    "right": "null"
+    "right": "null",
+    "link": "https://stcoop.com.br/base/rondonopolis/pin"
   }
 ]

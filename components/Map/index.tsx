@@ -37,12 +37,14 @@ const Map: React.FC<{ type: String }> = (props) => {
                     key={index}
                   >
                     <PinBox>
-                      <Image
-                        src={PinIcon}
-                        layout="fill"
-                        objectFit="cover"
-                        alt={`STCOOP Cooperativa Logística ${item.name}`}
-                      />
+                      <a href={item.link} target="_blank" rel="noreferrer">
+                        <Image
+                          src={PinIcon}
+                          layout="fill"
+                          objectFit="cover"
+                          alt={`STCOOP Cooperativa Logística ${item.name}`}
+                        />
+                      </a>
                     </PinBox>
                   </PinLayer>
                 );
