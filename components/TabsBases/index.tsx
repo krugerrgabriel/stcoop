@@ -38,7 +38,7 @@ const TabsBases: React.FC = () => {
     <Body>
       <Container>
         <Row>
-          <Col lg={7}>
+          <Col lg={6}>
             <Row>
               <Col lg={12}>
                 <TabsBox>
