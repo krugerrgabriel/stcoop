@@ -290,11 +290,7 @@ const Noticia: NextPage = () => {
                 .map((item, index) => {
                   return (
                     <>
-                      <Link href={`/rota-da-informacao/${item._id}`}>
-                        <a>
-                          <RotaSmallCard item={item} />
-                        </a>
-                      </Link>
+                      <RotaSmallCard item={item} />
                       {items.filter((item) => item.big == false).length - 1 !=
                       index ? (
                         <Divider small />
@@ -373,25 +369,13 @@ const Noticia: NextPage = () => {
         </Row>
         <Row>
           <Col lg={4}>
-            <Link href={`/rota-da-informacao/${items[0]._id}`}>
-              <a>
-                <RotaSmallCard item={items[0]} />
-              </a>
-            </Link>
+            <RotaSmallCard item={items[0]} />
           </Col>
           <Col lg={4}>
-            <Link href={`/rota-da-informacao/${items[1]._id}`}>
-              <a>
-                <RotaSmallCard item={items[1]} />
-              </a>
-            </Link>
+            <RotaSmallCard item={items[1]} />
           </Col>
           <Col lg={4}>
-            <Link href={`/rota-da-informacao/${items[2]._id}`}>
-              <a>
-                <RotaSmallCard item={items[2]} />
-              </a>
-            </Link>
+            <RotaSmallCard item={items[2]} />
           </Col>
         </Row>
       </Container>

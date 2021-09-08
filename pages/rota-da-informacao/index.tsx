@@ -7,8 +7,6 @@ import RotaBigCard from "../../components/RotaBigCard";
 import RotaSmallCard from "../../components/RotaSmallCard";
 import Footer from "../../components/Footer";
 
-import Link from "next/link";
-
 import { Container, Row, Col } from "react-bootstrap";
 
 import {
@@ -96,43 +94,23 @@ const RotaDaInformacao: NextPage = () => {
           </Row>
           <Row>
             <Col lg={6}>
-              <Link href={`/rota-da-informacao/${items[0]._id}`}>
-                <a>
-                  <RotaCard large item={items[0]} />
-                </a>
-              </Link>
+              <RotaCard large item={items[0]} />
             </Col>
             <Col lg={6}>
               <Row>
                 <Col lg={6}>
-                  <Link href={`/rota-da-informacao/${items[1]._id}`}>
-                    <a>
-                      <RotaCard item={items[1]} />
-                    </a>
-                  </Link>
+                  <RotaCard item={items[1]} />
                 </Col>
                 <Col lg={6}>
-                  <Link href={`/rota-da-informacao/${items[2]._id}`}>
-                    <a>
-                      <RotaCard item={items[2]} />
-                    </a>
-                  </Link>
+                  <RotaCard item={items[2]} />
                 </Col>
               </Row>
               <Row>
                 <Col lg={6}>
-                  <Link href={`/rota-da-informacao/${items[3]._id}`}>
-                    <a>
-                      <RotaCard item={items[3]} />
-                    </a>
-                  </Link>
+                  <RotaCard item={items[3]} />
                 </Col>
                 <Col lg={6}>
-                  <Link href={`/rota-da-informacao/${items[4]._id}`}>
-                    <a>
-                      <RotaCard item={items[4]} />
-                    </a>
-                  </Link>
+                  <RotaCard item={items[4]} />
                 </Col>
               </Row>
             </Col>
@@ -149,11 +127,7 @@ const RotaDaInformacao: NextPage = () => {
                 .map((item, index) => {
                   return (
                     <>
-                      <Link href={`/rota-da-informacao/${item._id}`}>
-                        <a>
-                          <RotaHorizontalCard item={item} />
-                        </a>
-                      </Link>
+                      <RotaHorizontalCard item={item} />
                       <Divider />
                     </>
                   );
@@ -165,11 +139,7 @@ const RotaDaInformacao: NextPage = () => {
                 .map((item, index) => {
                   return (
                     <>
-                      <Link href={`/rota-da-informacao/${item._id}`}>
-                        <a>
-                          <RotaHorizontalCard item={item} />
-                        </a>
-                      </Link>
+                      <RotaHorizontalCard item={item} />
                       {items.filter((item) => item.big == false).length - 1 !=
                       index ? (
                         <Divider />
@@ -187,11 +157,7 @@ const RotaDaInformacao: NextPage = () => {
                 .map((item, index) => {
                   return (
                     <>
-                      <Link href={`/rota-da-informacao/${item._id}`}>
-                        <a>
-                          <RotaSmallCard item={item} />
-                        </a>
-                      </Link>
+                      <RotaSmallCard item={item} />
                       {items.filter((item) => item.big == false).length - 1 !=
                       index ? (
                         <Divider small />
@@ -207,11 +173,7 @@ const RotaDaInformacao: NextPage = () => {
                 .map((item, index) => {
                   return (
                     <>
-                      <Link href={`/rota-da-informacao/${item._id}`}>
-                        <a>
-                          <RotaSmallCard item={item} />
-                        </a>
-                      </Link>
+                      <RotaSmallCard item={item} />
                       {items.filter((item) => item.big == false).length - 1 !=
                       index ? (
                         <Divider small />
