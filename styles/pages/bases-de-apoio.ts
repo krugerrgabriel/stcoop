@@ -46,3 +46,56 @@ export const BaseText = styled.span`
 
     margin: 0 0 36px 0;
 `;
+
+export const ItemBox = styled.div`
+    width: 100vw;
+`;
+
+export const ItemImageAbsolute = styled.div<{ left?: Boolean; right?: Boolean; }>`
+    position: absolute;
+
+    ${(props) => props.left ? 'left: 0;' : 'right: 0;'};
+    top: 0;
+`;
+
+export const ItemImage = styled.div`
+    position: relative;
+
+    width: 50vw;
+    height: 533px;
+`;
+
+export const Item = styled.div`
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+
+    width: 100vw;
+    height: 533px;
+
+    position: relative;
+
+    div.info{
+        width: 500px;
+
+        margin: 0 42px;
+
+        p{
+            color: ${({ theme }) => theme.colors.gray01};
+
+            font-size: 28px;
+            font-weight: 600;
+
+            margin: 0 0 6px 0;
+        }
+
+        span{
+            color: ${({ theme }) => theme.colors.gray01};
+
+            font-size: 20px;
+            font-weight: 400;
+
+            line-height: 32px;
+        }
+    }
+`;

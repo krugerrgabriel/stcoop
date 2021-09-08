@@ -24,6 +24,7 @@ import ContactForm from "../components/ContactForm";
 import Footer from "../components/Footer";
 
 import FaqData from "../public/json/faq.json";
+import { useEffect } from "react";
 
 const SejaCooperado: NextPage = () => {
   const opts = {
@@ -85,7 +86,7 @@ const SejaCooperado: NextPage = () => {
         </VideoLayer>
       </OqueBox>
 
-      <MapBox gray>
+      <MapBox id="nossas-unidades" gray>
         <Container>
           <TitleBox>
             <Title> NOSSAS UNIDADES </Title>
@@ -95,7 +96,7 @@ const SejaCooperado: NextPage = () => {
         <Map type="unidades" />
       </MapBox>
 
-      <FaqBox>
+      <FaqBox id="faq">
         <Container>
           <TitleBox>
             <Title> FAQ </Title>

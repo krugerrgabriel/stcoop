@@ -135,6 +135,15 @@
   display: flex;
 }
 
+.card{
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+.card:hover{
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
 .card,.card-header{
   background-color: rgba(0, 0, 0, 0.5);
 
@@ -146,4 +155,11 @@
 }
 .card-body{
   color: #000000;
+  background-color: #fefefe;
+
+  cursor: default;
+}
+
+.align-end{
+  align-items: flex-end;
 }

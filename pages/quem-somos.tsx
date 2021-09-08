@@ -2,6 +2,7 @@ import type { NextPage } from "next";
 
 import Head from "next/head";
 import Image from "next/image";
+import { useRouter } from "next/router";
 
 import Navbar from "../components/Navbar";
 import Tabs from "../components/Tabs";
@@ -37,6 +38,10 @@ import Footer from "../components/Footer";
 // import { Container } from './styles';
 
 const QuemSomos: NextPage = () => {
+  const router = useRouter();
+  const { tab } = router.query;
+  console.log("quem: " + tab);
+  let tabSelect = tab != undefined ? tab : 0;
   return (
     <>
       <Head>
@@ -58,10 +63,11 @@ const QuemSomos: NextPage = () => {
       </FullBanner>
 
       <InfoBox>
-        <Tabs />
+        {/* @ts-ignore */}
+        <Tabs tab={tabSelect} />
       </InfoBox>
 
-      <ValueBox>
+      <ValueBox id="nossos-valores">
         <Container>
           <TitleBox>
             <Title> NOSSOS VALORES </Title>
@@ -71,7 +77,7 @@ const QuemSomos: NextPage = () => {
         <Values />
       </ValueBox>
 
-      <CooperativismoBox>
+      <CooperativismoBox id="cooperativismo">
         <Container>
           <TitleBox>
             <Title> COOPERATIVISMO </Title>
@@ -148,7 +154,7 @@ const QuemSomos: NextPage = () => {
         </Container>
       </CooperativismoBox>
 
-      <BeneficiosBox>
+      <BeneficiosBox id="nossos-beneficios">
         <OrangeLayerEdit left />
         <Container>
           <TitleBox>

@@ -1,6 +1,4 @@
-import { useState } from "react";
-
-import Image from "next/image";
+import { useEffect, useState } from "react";
 
 import YouTube from "react-youtube";
 
@@ -16,8 +14,14 @@ import {
 
 import { Container, Row, Col } from "react-bootstrap";
 
-const Tabs: React.FC = () => {
+const Tabs: React.FC<{ tab?: Number }> = (props) => {
   const [activeTab, setActiveTab] = useState(0);
+  useEffect(() => {
+    if (props.tab != undefined) {
+      /* @ts-ignore */
+      setActiveTab(props.tab);
+    }
+  }, [props.tab]);
 
   const textsArray = [
     "Fortalecer o cooperativismo, afim de promover qualidade de vida, condições de trabalho, lucro e desenvolvimento social aos caminhoneiros.",
