@@ -1,5 +1,4 @@
 import styled from "styled-components";
-
 import { OrangeLayer } from "../../styles";
 
 export const OqueSaoBox = styled.div`
