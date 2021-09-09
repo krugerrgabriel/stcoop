@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
 
 import { useRouter } from "next/router";
-import Link from "next/link";
+import Head from "next/head";
 
 import Navbar from "../../components/Navbar";
 import Breadcrumb from "../../components/Breadcrumb";
@@ -121,6 +121,10 @@ const Noticia: NextPage = () => {
 
   return (
     <>
+      <Head>
+        <title> STCOOP | {items[0].title} </title>
+      </Head>
+
       <Navbar />
       {/* @ts-ignore */}
       <Breadcrumb tree={treeArray} />

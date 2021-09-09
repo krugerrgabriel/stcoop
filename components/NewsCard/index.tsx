@@ -1,5 +1,7 @@
 import React from "react";
 
+import Link from "next/link";
+
 import Button from "../Button/";
 
 import { Body, NewsImage, Info } from "./styles";
@@ -28,7 +30,11 @@ const NewsCard: React.FC<{
         <span> {item.description} </span>
         <div className="side-a-side">
           <div className="button">
-            <Button gray> VER MAIS</Button>
+            <Link href={`/rota-da-informacao/${item._id}`}>
+              <a>
+                <Button gray> VER MAIS</Button>
+              </a>
+            </Link>
           </div>
           <strong> {item.createdAt} </strong>
         </div>

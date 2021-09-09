@@ -43,7 +43,7 @@ export const Body = styled.div<{ color?: String; }>`
     }
 
     h6{
-        z-index: 500;
+        z-index: 502;
 
         color: ${({ theme }) => theme.colors.white};
 

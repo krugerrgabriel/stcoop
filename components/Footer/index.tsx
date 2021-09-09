@@ -20,119 +20,123 @@ import FacebookIcon from "/public/images/icons/stcoop-facebook.svg";
 import InstagramIcon from "/public/images/icons/stcoop-instagram.svg";
 import YoutubeIcon from "/public/images/icons/stcoop-youtube.svg";
 
-const Footer: React.FC = () => {
+const Footer: React.FC<{ withoutSitemap?: Boolean }> = (props) => {
   return (
     <Body>
       <Container>
-        <Row>
-          <Col lg={3}>
-            <ul>
-              <li className="title">
-                <Link href="/seja-cooperado">
-                  <a>SEJA COOPERADO</a>
-                </Link>
-              </li>
-              <li>
-                <Link href="/seja-cooperado">
-                  <a>Beneficios</a>
-                </Link>
-              </li>
-              <li> Unidade mais próxima </li>
-              <li>
-                <Link href="/rota-da-informacao">
-                  <a>Rota da informação</a>
-                </Link>
-              </li>
-            </ul>
-          </Col>
-          <Col lg={3} className="flex-center">
-            <ul>
-              <li className="title">
-                <Link href="/quem-somos">
-                  <a>QUEM SOMOS NÓS</a>
-                </Link>
-              </li>
-              <li>
-                <Link href="/quem-somos#cooperativismo">
-                  <a>O que é uma cooperativa</a>
-                </Link>
-              </li>
-              <li>
-                <Link href="/quem-somos?tab=3">
-                  <a>A COOPERATIVA</a>
-                </Link>
-              </li>
-              <li>
-                <Link href="/quem-somos?tab=0">
-                  <a>Nossa missão</a>
-                </Link>
-              </li>
-              <li>
-                <Link href="/quem-somos?tab=1">
-                  <a>Nossa visão</a>
-                </Link>
-              </li>
-              <li>
-                <Link href="/quem-somos#nossos-valores">
-                  <a>Nossos valores</a>
-                </Link>
-              </li>
-              <li>
-                <Link href="/quem-somos#nossos-beneficios">
-                  <a>Nossos benefícios</a>
-                </Link>
-              </li>
-            </ul>
-          </Col>
-          <Col lg={3} className="flex-end">
-            <ul>
-              <li className="title">
-                <Link href="#contato">
-                  <a> CONTATO </a>
-                </Link>
-              </li>
-              <li>
-                <Link href="/seja-cooperado#faq">
-                  <a>FAQ</a>
-                </Link>
-              </li>
-              <li>
-                <Link href="/seja-cooperado#nossas-unidades">
-                  <a>Nossas unidades</a>
-                </Link>
-              </li>
-              <li>
-                <Link href="#contato">
-                  <a> Formulário </a>
-                </Link>
-              </li>
-            </ul>
-          </Col>
-          <Col lg={3} className="flex-end">
-            <ul>
-              <li className="title">
-                <Link href="/bases-de-apoio">
-                  <a>BASES DE APOIO</a>
-                </Link>
-              </li>
-              <li>
-                <Link href="/bases-de-apoio">
-                  <a>Ver</a>
-                </Link>
-              </li>
-              <li>
-                <Link href="/bases-de-apoio#onde-estao">
-                  <a>Localização</a>
-                </Link>
-              </li>
-            </ul>
-          </Col>
-        </Row>
-        <Row className="justify-content-center">
-          <Col lg={5}>
-            <Divider />
-          </Col>
-        </Row>
+        {!props.withoutSitemap ? (
+          <>
+            <Row>
+              <Col lg={3}>
+                <ul>
+                  <li className="title">
+                    <Link href="/seja-cooperado">
+                      <a>SEJA COOPERADO</a>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/seja-cooperado">
+                      <a>Beneficios</a>
+                    </Link>
+                  </li>
+                  <li> Unidade mais próxima </li>
+                  <li>
+                    <Link href="/rota-da-informacao">
+                      <a>Rota da informação</a>
+                    </Link>
+                  </li>
+                </ul>
+              </Col>
+              <Col lg={3} className="flex-center">
+                <ul>
+                  <li className="title">
+                    <Link href="/quem-somos">
+                      <a>QUEM SOMOS NÓS</a>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/quem-somos#cooperativismo">
+                      <a>O que é uma cooperativa</a>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/quem-somos?tab=3">
+                      <a>A COOPERATIVA</a>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/quem-somos?tab=0">
+                      <a>Nossa missão</a>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/quem-somos?tab=1">
+                      <a>Nossa visão</a>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/quem-somos#nossos-valores">
+                      <a>Nossos valores</a>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/quem-somos#nossos-beneficios">
+                      <a>Nossos benefícios</a>
+                    </Link>
+                  </li>
+                </ul>
+              </Col>
+              <Col lg={3} className="flex-end">
+                <ul>
+                  <li className="title">
+                    <Link href="#contato">
+                      <a> CONTATO </a>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/seja-cooperado#faq">
+                      <a>FAQ</a>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/seja-cooperado#nossas-unidades">
+                      <a>Nossas unidades</a>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="#contato">
+                      <a> Formulário </a>
+                    </Link>
+                  </li>
+                </ul>
+              </Col>
+              <Col lg={3} className="flex-end">
+                <ul>
+                  <li className="title">
+                    <Link href="/bases-de-apoio">
+                      <a>BASES DE APOIO</a>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/bases-de-apoio">
+                      <a>Ver</a>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/bases-de-apoio#onde-estao">
+                      <a>Localização</a>
+                    </Link>
+                  </li>
+                </ul>
+              </Col>
+            </Row>
+            <Row className="justify-content-center">
+              <Col lg={5}>
+                <Divider />
+              </Col>
+            </Row>
+          </>
+        ) : null}
         <Row className="margin-top-28px">
           <Col lg={3} className="vertical-center">
             <LogoLayer>

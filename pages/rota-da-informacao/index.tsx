@@ -1,5 +1,7 @@
 import type { NextPage } from "next";
 
+import Head from "next/head";
+
 import Navbar from "../../components/Navbar";
 import RotaCard from "../../components/RotaCard";
 import RotaHorizontalCard from "../../components/RotaHorizontalCard";
@@ -83,6 +85,10 @@ const RotaDaInformacao: NextPage = () => {
   ];
   return (
     <>
+      <Head>
+        <title> STCOOP | Rota da Informação </title>
+      </Head>
+
       <Navbar />
 
       <MaisVistosBox>

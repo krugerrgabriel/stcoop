@@ -47,6 +47,10 @@ export const IconLayer = styled.div`
         width: 17px;
         height: 19px;
     }
+    &.password{
+        width: 17.6px;
+        height: 22px;
+    }
 `;
 
 export const Etc = styled.div`

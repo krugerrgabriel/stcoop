@@ -28,8 +28,6 @@ const Home: NextPage = () => {
     <>
       <Head>
         <title> STCOOP Cooperativa Logística </title>
-
-        <link rel="shortcut icon" href="/public/images/icons/stcoop.png" />
       </Head>
 
       <Navbar />
