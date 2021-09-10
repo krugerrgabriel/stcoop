@@ -19,6 +19,7 @@ interface Data {
   right: string;
   city: string;
   name: string;
+  link?: string;
 }
 
 const Map: React.FC<{ type: String }> = (props) => {
@@ -43,14 +44,26 @@ const Map: React.FC<{ type: String }> = (props) => {
                     onMouseEnter={() => setNameData(item.city)}
                     key={index}
                   >
-                    <PinBox>
-                      <Image
-                        src={PinIcon}
-                        layout="fill"
-                        objectFit="cover"
-                        alt={`STCOOP Cooperativa Logística ${item.name}`}
-                      />
-                    </PinBox>
+                    <a
+                      href={
+                        props.type == "bases"
+                          ? item.link
+                          : `https://www.google.com.br/maps/search/${item.name
+                              .split(" -")[0]
+                              .replaceAll(" ", "+")}/`
+                      }
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <PinBox>
+                        <Image
+                          src={PinIcon}
+                          layout="fill"
+                          objectFit="cover"
+                          alt={`STCOOP Cooperativa Logística ${item.name}`}
+                        />
+                      </PinBox>
+                    </a>
                   </PinLayer>
                 );
               })}

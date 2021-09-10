@@ -86,7 +86,6 @@ export const SelectField: React.FC<{
       </GrayLayer>
       <Etc>
         <select
-          defaultValue="null"
           onChange={(event) => props.onSelect(event.target.value)}
           value={props.value}
         >
