@@ -71,9 +71,7 @@ const ContactForm: React.FC<{ left?: Boolean }> = (props) => {
         },
         body: JSON.stringify(data),
       }).then((res) => {
-        console.log(res);
         if (res.status === 200) {
-          console.log("Response succeeded!");
           setSubmitted(true);
           setName("");
           setMail("");

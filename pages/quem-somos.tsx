@@ -40,7 +40,6 @@ import Footer from "../components/Footer";
 const QuemSomos: NextPage = () => {
   const router = useRouter();
   const { tab } = router.query;
-  console.log("quem: " + tab);
   let tabSelect = tab != undefined ? tab : 0;
   return (
     <>
