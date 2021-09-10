@@ -77,6 +77,7 @@ const AdminLogin: NextPage = () => {
                   label="E-mail"
                   value={email}
                   onType={(data: string) => setEmail(data)}
+                  max={255}
                 />
               </Col>
             </Row>
@@ -88,6 +89,7 @@ const AdminLogin: NextPage = () => {
                   label="Senha"
                   value={password}
                   onType={(data: string) => setPassword(data)}
+                  max={255}
                 />
               </Col>
             </Row>

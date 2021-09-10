@@ -16,7 +16,6 @@ export const InputField: React.FC<{
   return (
     <Body>
       <GrayLayer>
-        {/* @ts-ignore */}
         <IconLayer className={props.id}>
           <Image
             src={require(`../../public/images/icons/stcoop-${props.id}.svg`)}
