@@ -12,6 +12,15 @@ import MapImage from "../../public/images/stcoop-map.svg";
 import PinIcon from "../../public/images/icons/stcoop-pin.svg";
 import PinImage from "../../public/images/icons/stcoop-map-pin.svg";
 
+interface Data {
+  top: string;
+  bottom: string;
+  left: string;
+  right: string;
+  city: string;
+  name: string;
+}
+
 const Map: React.FC<{ type: String }> = (props) => {
   const [nameData, setNameData] = useState("NÃO DEFINIDO");
   const PinsData =
@@ -24,8 +33,7 @@ const Map: React.FC<{ type: String }> = (props) => {
         <Row>
           <Col lg={6}>
             <MapLayer>
-              {/* @ts-ignore */}
-              {PinsData.map((item, index) => {
+              {PinsData.map((item: Data, index: number) => {
                 return (
                   <PinLayer
                     top={item.top}

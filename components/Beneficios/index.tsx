@@ -44,7 +44,6 @@ const Beneficios: React.FC = () => {
         <Row>
           <Col lg={6}>
             <YouTubeLayer>
-              {/* @ts-ignore */}
               {ProductsData[item].image != "null" ? (
                 <Image
                   src={VideoLayer}

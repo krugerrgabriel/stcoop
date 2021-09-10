@@ -106,7 +106,6 @@ const SejaCooperado: NextPage = () => {
             <Col lg={2} />
             <Col lg={10}>
               <Accordion>
-                {/* @ts-ignore */}
                 {FaqData.map((item, index) => {
                   return (
                     <Card className="test-class" key={item._id}>

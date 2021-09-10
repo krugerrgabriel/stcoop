@@ -46,8 +46,8 @@ export default function handler(
         </div>`
     }
 
-    /* @ts-ignore */
-    transporter.sendMail(mailData, function (err, info) {
+    
+    transporter.sendMail(mailData, function (err: string, info: string) {
         if(err){
             console.log(err);
         } else{

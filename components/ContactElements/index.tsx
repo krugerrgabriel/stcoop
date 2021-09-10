@@ -75,7 +75,6 @@ export const SelectField: React.FC<{
   return (
     <Body>
       <GrayLayer>
-        {/* @ts-ignore */}
         <IconLayer className={props.id}>
           <Image
             src={require(`../../public/images/icons/stcoop-motivo.svg`)}

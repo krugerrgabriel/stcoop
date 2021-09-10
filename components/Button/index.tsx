@@ -12,10 +12,15 @@ const Button: React.FC<{
   disabled?: Boolean;
 }> = (props) => {
   let color = props.gray ? "gray" : "white";
+  const handleClick = () => {
+    if (props.onClick) {
+      props.onClick();
+    }
+  };
   return (
     <Body
-      color={color} /* @ts-ignore */
-      onClick={props.onClick}
+      color={color}
+      onClick={() => handleClick()}
       disabled={props.disabled ? true : false}
     >
       <div className="info">
