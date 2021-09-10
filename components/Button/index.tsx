@@ -6,10 +6,18 @@ import { Body, ArrowLayer } from "./styles";
 
 import ArrowImage from "/public/images/icons/stcoop-arrow.svg";
 
-const Button: React.FC<{ gray?: Boolean; onClick?: Function }> = (props) => {
+const Button: React.FC<{
+  gray?: Boolean;
+  onClick?: Function;
+  disabled?: Boolean;
+}> = (props) => {
   let color = props.gray ? "gray" : "white";
   return (
-    <Body color={color} onClick={props.onClick}>
+    <Body
+      color={color} /* @ts-ignore */
+      onClick={props.onClick}
+      disabled={props.disabled ? true : false}
+    >
       <div className="info">
         <h6>{props.children}</h6>
       </div>

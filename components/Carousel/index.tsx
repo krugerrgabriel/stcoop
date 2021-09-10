@@ -1,5 +1,7 @@
-import React, { useState } from "react";
+import { useState } from "react";
+
 import Image from "next/image";
+import Link from "next/link";
 
 import { ICarousel } from "./interfaces";
 
@@ -65,7 +67,13 @@ const Carousel: React.FC<ICarousel> = () => {
               <Margin margin="36px 0 0 0" />
               <Row>
                 <Col lg={5}>
-                  <Button> VER MAIS </Button>
+                  {ProductsData[item].link ? (
+                    <Link href={ProductsData[item].link}>
+                      <a>
+                        <Button> VER MAIS </Button>
+                      </a>
+                    </Link>
+                  ) : null}
                 </Col>
               </Row>
             </CarouselPanel>

@@ -21,7 +21,7 @@ export const ArrowLayer = styled.div<{ color?: String; }>`
     transition: 0.2s;
 `;
 
-export const Body = styled.div<{ color?: String; }>`
+export const Body = styled.div<{ color?: String; disabled?: Boolean; }>`
     background-color: ${(props) => props.color == 'gray' ? '#7A7A7A' : props.theme.colors.orange};
     
     width: 100%;
@@ -30,6 +30,8 @@ export const Body = styled.div<{ color?: String; }>`
     position: relative;
 
     cursor: pointer;
+
+    ${(props) => props.disabled ? 'filter: saturate(50%)' : null};
 
     div.info{
         display: flex;

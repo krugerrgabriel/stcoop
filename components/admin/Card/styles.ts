@@ -58,6 +58,8 @@ export const OptionsBox = styled.div`
 
     top: 16px;
     right: 16px;
+
+    cursor: pointer;
 `;
 
 export const OptionsWrapper = styled.div`

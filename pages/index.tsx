@@ -1,5 +1,7 @@
 import type { NextPage } from "next";
+
 import Head from "next/head";
+import Link from "next/link";
 
 import Navbar from "../components/Navbar";
 import Carousel from "../components/Carousel";
@@ -102,7 +104,11 @@ const Home: NextPage = () => {
           </Row>
           <Row className="justify-content-center margin-top-28px">
             <Col lg={2}>
-              <Button> VER TUDO </Button>
+              <Link href="/rota-da-informacao">
+                <a>
+                  <Button> VER TUDO </Button>
+                </a>
+              </Link>
             </Col>
           </Row>
         </Container>

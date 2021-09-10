@@ -9,6 +9,8 @@ export const NewsCardBox = styled.div`
 export const Body = styled.div`
     box-shadow: rgba(0, 0, 0, 0.05) 4px 4px 12px;
 
+    margin: 0 0 12px 0;
+
     p{
         color: ${({ theme }) => theme.colors.gray01};
 

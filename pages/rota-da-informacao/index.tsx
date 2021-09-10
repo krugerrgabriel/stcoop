@@ -132,10 +132,10 @@ const RotaDaInformacao: NextPage = () => {
                 .filter((item) => item.big == false)
                 .map((item, index) => {
                   return (
-                    <>
+                    <div key={index}>
                       <RotaHorizontalCard item={item} />
                       <Divider />
-                    </>
+                    </div>
                   );
                 })}
               <RotaBigCard item={items[5]} />
@@ -144,13 +144,13 @@ const RotaDaInformacao: NextPage = () => {
                 .filter((item) => item.big == false)
                 .map((item, index) => {
                   return (
-                    <>
+                    <div key={index}>
                       <RotaHorizontalCard item={item} />
                       {items.filter((item) => item.big == false).length - 1 !=
                       index ? (
                         <Divider />
                       ) : null}
-                    </>
+                    </div>
                   );
                 })}
             </NoticiasBox>
@@ -162,13 +162,13 @@ const RotaDaInformacao: NextPage = () => {
                 .filter((item) => item.big == false)
                 .map((item, index) => {
                   return (
-                    <>
+                    <div key={index}>
                       <RotaSmallCard item={item} />
                       {items.filter((item) => item.big == false).length - 1 !=
                       index ? (
                         <Divider small />
                       ) : null}
-                    </>
+                    </div>
                   );
                 })}
             </BoxNews>
@@ -178,13 +178,13 @@ const RotaDaInformacao: NextPage = () => {
                 .filter((item) => item.big == false)
                 .map((item, index) => {
                   return (
-                    <>
+                    <div key={index}>
                       <RotaSmallCard item={item} />
                       {items.filter((item) => item.big == false).length - 1 !=
                       index ? (
                         <Divider small />
                       ) : null}
-                    </>
+                    </div>
                   );
                 })}
             </BoxNews>

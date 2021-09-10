@@ -1,4 +1,4 @@
-import React from "react";
+import InputMask from "react-input-mask";
 
 import Image from "next/image";
 
@@ -9,7 +9,9 @@ export const InputField: React.FC<{
   id: string;
   label: string;
   value: string;
+  max: number;
   onType: Function;
+  mask?: string;
 }> = (props) => {
   return (
     <Body>
@@ -25,11 +27,34 @@ export const InputField: React.FC<{
         </IconLayer>
       </GrayLayer>
       <Etc>
-        <input
-          type={props.type}
-          placeholder={props.label}
-          onChange={(event) => props.onType(event.target.value)}
-        />
+        {props.id == "phone" ? (
+          <InputMask
+            type={props.type}
+            placeholder={props.label}
+            value={props.value}
+            onChange={(event) => {
+              if (event.target.value.length >= props.max) {
+                props.onType(event.target.value.slice(0, -1));
+              } else {
+                props.onType(event.target.value);
+              }
+            }}
+            mask="99 99999-9999"
+          />
+        ) : (
+          <input
+            type={props.type}
+            placeholder={props.label}
+            value={props.value}
+            onChange={(event) => {
+              if (event.target.value.length >= props.max) {
+                props.onType(event.target.value.slice(0, -1));
+              } else {
+                props.onType(event.target.value);
+              }
+            }}
+          />
+        )}
       </Etc>
     </Body>
   );
@@ -65,6 +90,7 @@ export const SelectField: React.FC<{
         <select
           defaultValue="null"
           onChange={(event) => props.onSelect(event.target.value)}
+          value={props.value}
         >
           <option value="null" disabled>
             {props.label}

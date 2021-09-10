@@ -22,7 +22,7 @@ const Breadcrumb: React.FC<IBreadcrump> = (props) => {
         <Wrapper>
           {tree.map((item, index) => {
             return (
-              <>
+              <div key={index}>
                 {item.url != null ? (
                   <Link href={item.url}>
                     <a>{item.name}</a>
@@ -40,7 +40,7 @@ const Breadcrumb: React.FC<IBreadcrump> = (props) => {
                     />
                   </ArrowWrapper>
                 ) : null}
-              </>
+              </div>
             );
           })}
         </Wrapper>

@@ -10,6 +10,7 @@ import { TitleBox, Title, Subtitle } from "../../styles/";
 import { Container, Row, Col } from "react-bootstrap";
 
 import Button from "../Button";
+import Alert from "../Alert";
 
 import ContactBackground from "../../public/images/stcoop-contact-background.png";
 
@@ -17,8 +18,13 @@ const ContactForm: React.FC<{ left?: Boolean }> = (props) => {
   const [name, setName] = useState("");
   const [mail, setMail] = useState("");
   const [phone, setPhone] = useState("");
-  const [motivo, setMotivo] = useState("");
+  const [motivo, setMotivo] = useState("null");
   const [message, setMessage] = useState("");
+  const [submitted, setSubmitted] = useState(false);
+  const [buttonDisabled, setButtonDisabled] = useState(false);
+  const [alertActive, setAlertActive] = useState(false);
+  const [alertTitle, setAlertTitle] = useState("");
+  const [alertMessage, setAlertMessage] = useState("");
 
   const selectOptions = [
     {
@@ -34,6 +40,56 @@ const ContactForm: React.FC<{ left?: Boolean }> = (props) => {
       value: "opcao03",
     },
   ];
+
+  const handleSubmit = () => {
+    let data = {
+      name,
+      mail,
+      phone,
+      motivo,
+      message,
+    };
+
+    if (
+      name.length <= 1 ||
+      mail.length <= 1 ||
+      phone.length <= 1 ||
+      motivo.length <= 1 ||
+      message.length <= 1
+    ) {
+      setAlertTitle("Todos os campos precisam sem preenchidos!");
+      setAlertMessage("Preencha todos os campos antes de realizar o envio.");
+      setAlertActive(true);
+    } else {
+      setButtonDisabled(true);
+
+      fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          Accept: "application/json, text/plain, */*",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      }).then((res) => {
+        console.log(res);
+        if (res.status === 200) {
+          console.log("Response succeeded!");
+          setSubmitted(true);
+          setName("");
+          setMail("");
+          setPhone("");
+          setMotivo("null");
+          setMessage("");
+          setButtonDisabled(false);
+          setAlertTitle("Contato enviado com êxito :D");
+          setAlertMessage(
+            "Em breve um de nossos consultores entrará em contato com você!"
+          );
+          setAlertActive(true);
+        }
+      });
+    }
+  };
 
   return (
     <Body id="contato">
@@ -58,6 +114,7 @@ const ContactForm: React.FC<{ left?: Boolean }> = (props) => {
                   label="Nome completo"
                   value={name}
                   onType={(data: string) => setName(data)}
+                  max={255}
                 />
               </Col>
               <Col lg={6}>
@@ -67,6 +124,7 @@ const ContactForm: React.FC<{ left?: Boolean }> = (props) => {
                   label="Email"
                   value={mail}
                   onType={(data: string) => setMail(data)}
+                  max={255}
                 />
               </Col>
             </Row>
@@ -78,6 +136,8 @@ const ContactForm: React.FC<{ left?: Boolean }> = (props) => {
                   label="Telefone"
                   value={phone}
                   onType={(data: string) => setPhone(data)}
+                  max={255}
+                  mask="+4\9 99 999 99"
                 />
               </Col>
               <Col lg={6}>
@@ -85,7 +145,7 @@ const ContactForm: React.FC<{ left?: Boolean }> = (props) => {
                   type="text"
                   id="motivo"
                   label="Motivo do contato"
-                  value={phone}
+                  value={motivo}
                   onSelect={(data: string) => setMotivo(data)} /* @ts-ignore */
                   options={selectOptions}
                 />
@@ -99,13 +159,19 @@ const ContactForm: React.FC<{ left?: Boolean }> = (props) => {
                   label="Mensagem"
                   value={message}
                   onType={(data: string) => setMessage(data)}
+                  max={1000}
                 />
               </Col>
             </Row>
             <Row>
               <Col lg={8} />
               <Col lg={4}>
-                <Button> ENVIAR </Button>
+                <Button
+                  onClick={() => handleSubmit()}
+                  disabled={buttonDisabled}
+                >
+                  ENVIAR
+                </Button>
               </Col>
             </Row>
           </Col>
@@ -120,6 +186,12 @@ const ContactForm: React.FC<{ left?: Boolean }> = (props) => {
           alt="STCOOP Cooperativa Logística Contato"
         />
       </ContactWrapper>
+      <Alert
+        title={alertTitle}
+        message={alertMessage}
+        active={alertActive}
+        handleClose={() => setAlertActive(false)}
+      />
     </Body>
   );
 };

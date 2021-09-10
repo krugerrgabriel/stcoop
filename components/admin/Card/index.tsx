@@ -12,6 +12,7 @@ const Card: React.FC<{
   type: String;
   value: Number;
   label: String;
+  handleAdd: Function;
 }> = (props) => {
   return (
     <Body>
@@ -27,7 +28,7 @@ const Card: React.FC<{
       </IconBox>
       <p> {props.value} </p>
       <span> {props.label} </span>
-      <OptionsBox>
+      <OptionsBox onClick={() => props.handleAdd()}>
         <OptionsWrapper>
           <Image
             src={require(`../../../public/images/icons/stcoop-add.svg`)}

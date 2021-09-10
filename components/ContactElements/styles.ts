@@ -11,6 +11,8 @@ export const Body = styled.div`
     overflow: hidden;
 
     margin: 9px 0;
+
+    position: relative;
 `;
 
 export const GrayLayer = styled.div`
