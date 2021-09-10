@@ -48,9 +48,7 @@ const Map: React.FC<{ type: String }> = (props) => {
                       href={
                         props.type == "bases"
                           ? item.link
-                          : `https://www.google.com.br/maps/search/${item.name
-                              .split(" -")[0]
-                              .replaceAll(" ", "+")}/`
+                          : `https://www.google.com.br/maps/search/${item.link}/`
                       }
                       target="_blank"
                       rel="noreferrer"
