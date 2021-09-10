@@ -32,6 +32,7 @@ const CadastroNoticia: React.FC = () => {
                 label="E-mail"
                 value={titulo}
                 onType={(data: string) => setTitulo(data)}
+                max={255}
               />
             </Col>
             <Col lg={6}></Col>
@@ -44,6 +45,7 @@ const CadastroNoticia: React.FC = () => {
                 label="E-mail"
                 value={linhaFina}
                 onType={(data: string) => setLinhaFina(data)}
+                max={255}
               />
             </Col>
             <Col lg={3}>
@@ -53,6 +55,7 @@ const CadastroNoticia: React.FC = () => {
                 label="E-mail"
                 value={visibleTag}
                 onType={(data: string) => setVisibleTag(data)}
+                max={255}
               />
             </Col>
             <Col lg={3}>
@@ -62,6 +65,7 @@ const CadastroNoticia: React.FC = () => {
                 label="E-mail"
                 value={invisibleTag}
                 onType={(data: string) => setInvisibleTag(data)}
+                max={255}
               />
             </Col>
           </Row>
