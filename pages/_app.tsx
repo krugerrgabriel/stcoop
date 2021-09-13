@@ -25,11 +25,3 @@ function MyApp({ Component, pageProps }: AppProps) {
   );
 }
 export default MyApp;
-
-// Estrutura
-// Conveniência
-// Comodidade "16.013,31m² de área dedicada ao caminhão"
-// Espaço de Lazer
-// Segurança
-// Estacionamento "42 vagas"
-// Banheiros "Esquipados com locker e chuveiros"
