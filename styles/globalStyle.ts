@@ -20,11 +20,11 @@ const GlobalStyle = createGlobalStyle`
 
         border: 0;
 
-        font-family: 'Prelo', sans-serif;
+        font-family: 'Prelo', sans-serif !important;
     }
     a {
-        color: inherit;
-        text-decoration: none;
+        color: inherit !important;
+        text-decoration: none !important;
     }
     a:hover{
         color: #fd5000 !important;
