@@ -10,13 +10,12 @@ import TabsBases from "../components/TabsBases";
 import ContactForm from "../components/ContactForm";
 import Footer from "../components/Footer";
 
-import { FullBanner } from "../styles";
+import { FullBanner, MiniTitle } from "../styles";
 import { InfoBox } from "../styles/pages/quem-somos";
 import {
   OrangeLayerEdit,
   OqueSaoBox,
   ImageLayer,
-  BaseTitle,
   BaseText,
   ItemBox,
   ItemImage,
@@ -108,7 +107,7 @@ const BasesDeApoio: NextPage = () => {
             >
               <Row>
                 <Col lg={12}>
-                  <BaseTitle> O QUE SÃO </BaseTitle>
+                  <MiniTitle>O QUE SÃO</MiniTitle>
                 </Col>
               </Row>
               <Row>

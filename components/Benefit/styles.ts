@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import BenefitImage from '../../public/images/benefit.svg';
+import { DefaultText } from '../../styles/globalStyle';
 
 export const Body = styled.div<{ image: String; }>`
     display: flex;
@@ -28,7 +28,6 @@ export const Body = styled.div<{ image: String; }>`
     span{
         color: ${({ theme }) => theme.colors.black};
 
-        font-size: 20px;
-        font-weight: 400;
+        ${DefaultText};
     }
 `;

@@ -40,10 +40,15 @@ const Values: React.FC = () => {
       <Container>
         <Carousel
           ssr
-          partialVisbile
           itemClass="image-item"
           responsive={responsive}
           infinite={true}
+          swipeable={true}
+          draggable={true}
+          autoPlay={true}
+          autoPlaySpeed={2000}
+          keyBoardControl={true}
+          removeArrowOnDeviceType={["desktop", "tablet", "mobile"]}
         >
           <Value>
             <Image

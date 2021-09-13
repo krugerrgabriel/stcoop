@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+import { DefaultText } from '../../styles/globalStyle';
+
 export const Body = styled.div`
     position: relative;
 
@@ -36,10 +38,7 @@ export const Tab = styled.div<{ active?: Boolean }>`
 `;
 
 export const TabText = styled.p`
-    font-size: 24px;
-    font-weight: 400;
-
-    line-height: 32px;
+    ${DefaultText};
 
     padding: 26px 42px;
 `;

@@ -2,16 +2,14 @@ import React from "react";
 
 import Image from "next/image";
 
-import { Container, Row, Col } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 
-import { Body, Company, TriggerButton } from "./styles";
+import { Body, Company } from "./styles";
 
 import UNUSLogo from "../../public/images/stcoop-grupo-unus-logo.svg";
 import TransdeskLogo from "../../public/images/stcoop-transdesk-logo.svg";
 import TDKLogo from "../../public/images/stcoop-tdkcorretora-logo.svg";
 import BRLogo from "../../public/images/stcoop-brcentertruck-logo.svg";
-import CarouselLeftArrow from "../../public/images/icons/stcoop-left-arrow.svg";
-import CarouselRightArrow from "../../public/images/icons/stcoop-right-arrow.svg";
 
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
@@ -39,10 +37,15 @@ const Partners: React.FC = () => {
       <Body>
         <Carousel
           ssr
-          partialVisbile
           itemClass="image-item"
           responsive={responsive}
           infinite={true}
+          swipeable={true}
+          draggable={true}
+          autoPlay={true}
+          autoPlaySpeed={2000}
+          keyBoardControl={true}
+          removeArrowOnDeviceType={["desktop", "tablet", "mobile"]}
         >
           <a href="https://grupounus.com.br" target="_blank" rel="noreferrer">
             <Company>

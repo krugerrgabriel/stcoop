@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+import { DefaultText } from '../../styles/globalStyle';
+
 export const InfoBox = styled.div``;
 
 export const CooperativismoBox = styled.div`
@@ -38,10 +40,7 @@ export const Item = styled.div`
 export const TextDevelop = styled.p`
     color: ${({ theme }) => theme.colors.black};
 
-    font-size: 18px;
-    font-weight: 400;
-
-    line-height: 30px;
+    ${DefaultText};
 
     margin: 8px 0;
 `;

@@ -44,9 +44,7 @@ const Navbar: React.FC = () => {
 
           <ColEdit lg={2}>
             <Button disabled>
-              <Link href="/">
-                <a> SOU COOPERADO </a>
-              </Link>
+              <a> SOU COOPERADO </a>
             </Button>
           </ColEdit>
         </Row>

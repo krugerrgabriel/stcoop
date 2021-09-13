@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle, css } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
     * {
@@ -66,6 +66,20 @@ const GlobalStyle = createGlobalStyle`
         color: #ffffff;
         background: #000000;
     }
+`;
+
+export const DefaultText = css`
+    font-size: 18px;
+    font-weight: 400;
+
+    line-height: 32px;
+`;
+
+export const DefaultMiniTitle = css`
+    font-size: 28px;
+    font-weight: 600;
+
+    text-transform: uppercase;
 `;
 
 export default GlobalStyle;

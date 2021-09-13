@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+import { DefaultMiniTitle } from './globalStyle';
+
 export const OrangeLayer = styled.div<{ left?: Boolean; }>`
     position: absolute;
     top: 0;
@@ -7,7 +9,7 @@ export const OrangeLayer = styled.div<{ left?: Boolean; }>`
 
     background-color: ${({ theme }) => theme.colors.orange};
 
-    width: 32.5vw;
+    width: 30vw;
 `;
 
 export const TitleBox = styled.div`
@@ -56,9 +58,13 @@ export const FullBanner = styled.div`
         color: ${({ theme }) => theme.colors.white};
         
         font-size: 48px;
-        font-weight: 700;
+        font-weight: 800;
+
+        letter-spacing: 1.5px;
 
         margin: 0;
+
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.10);
 
         z-index: 2;
     }
@@ -68,8 +74,7 @@ export const FullBanner = styled.div`
 export const MiniTitle = styled.p`
     color: ${({ theme }) => theme.colors.black};
 
-    font-size: 28px;
-    font-weight: 500;
+    ${DefaultMiniTitle};
 
     margin: 0;
 `;

@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 import { OrangeLayer } from "../../styles";
+import { DefaultText } from '../../styles/globalStyle';
 
 export const OrangeLayerEdit = styled(OrangeLayer)`
     height: 100%;
@@ -46,10 +47,7 @@ export const InfoPanel = styled.div`
     span{
         color: ${({ theme }) => theme.colors.gray02};
 
-        font-size: 18px;
-        font-weight: 400;
-
-        line-height: 28px;
+        ${DefaultText};
 
         margin: 0 0 36px 0;
     }

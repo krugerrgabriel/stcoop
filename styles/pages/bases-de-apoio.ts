@@ -1,5 +1,7 @@
 import styled from "styled-components";
+
 import { OrangeLayer } from "../../styles";
+import { DefaultText, DefaultMiniTitle } from '../../styles/globalStyle';
 
 export const OqueSaoBox = styled.div`
     display: flex;
@@ -23,25 +25,10 @@ export const ImageLayer = styled.div`
     z-index: 2;
 `;
 
-export const BaseTitle = styled.p`
-    color: ${({ theme }) => theme.colors.gray01};
-
-    font-size: 47px;
-
-    font-weight: 700;
-
-    line-height: 47px;
-
-    margin: 8px 0 14px 0;
-`;
-
 export const BaseText = styled.span`
     color: ${({ theme }) => theme.colors.gray02};
 
-    font-size: 18px;
-    font-weight: 400;
-
-    line-height: 28px;
+    ${DefaultText};
 
     margin: 0 0 36px 0;
 `;
@@ -82,8 +69,7 @@ export const Item = styled.div`
         p{
             color: ${({ theme }) => theme.colors.gray01};
 
-            font-size: 28px;
-            font-weight: 600;
+            ${DefaultMiniTitle};
 
             margin: 0 0 6px 0;
         }
@@ -91,10 +77,7 @@ export const Item = styled.div`
         span{
             color: ${({ theme }) => theme.colors.gray01};
 
-            font-size: 20px;
-            font-weight: 400;
-
-            line-height: 32px;
+            ${DefaultText};
         }
     }
 `;

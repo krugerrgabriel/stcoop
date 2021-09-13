@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+import { DefaultText } from '../../styles/globalStyle';
+
 export const OrangeLayerWidth = styled.div`
     background-color: ${({ theme }) => theme.colors.orange};
 
@@ -48,8 +50,7 @@ export const Body = styled.div`
     span{
         color: ${({ theme }) => theme.colors.black};
 
-        font-size: 20px;
-        font-weight: 400;
+        ${DefaultText};
 
         margin: 0;
     }

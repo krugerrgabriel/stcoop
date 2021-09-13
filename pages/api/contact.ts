@@ -15,8 +15,6 @@ export default function handler(
   req: Data,
   res: NextApiResponse
 ) {
-    console.log(req.body);
-
     let nodemailer = require('nodemailer');
 
     const transporter = nodemailer.createTransport({

@@ -11,11 +11,15 @@ export const MaisVistosBox = styled.div`
     p.title{
         color: #f2f2f2;
 
-        font-size: 36px;
-        font-weight: 700;
+        font-size: 42px;
+        font-weight: 800;
         font-style: italic;
 
+        letter-spacing: 1.5px;
+
         text-align: center;
+
+        margin: 0 0 12px 0;
     }
 `;
 
@@ -148,6 +152,8 @@ export const Development = styled.p`
     font-family: 'Prelo', sans-serif;
     font-size: 20px;
     font-weight: 400;
+
+    line-height: 34px;
 
     margin: 14px 0;
 `;

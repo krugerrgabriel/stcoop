@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+import { DefaultText } from '../../styles/globalStyle';
+
 import Image from 'next/image';
 
 export const NewsCardBox = styled.div`
@@ -23,8 +25,7 @@ export const Body = styled.div`
     span{
         color: ${({ theme }) => theme.colors.gray01};
 
-        font-size: 18px;
-        font-weight: 400;
+        ${DefaultText};
     }
 `;
 

@@ -97,7 +97,7 @@ const RotaDaInformacao: NextPage = () => {
         <Container>
           <Row className="justify-content-center">
             <Col>
-              <p className="title"> MAIS VISTOS RECENTEMENTE </p>
+              <p className="title"> ROTA DA INFORMAÇÃO </p>
             </Col>
           </Row>
           <Row>
