@@ -145,7 +145,7 @@ export const Credits = styled.p`
 export const Development = styled.p`
     color: ${({ theme}) => theme.colors.black};
 
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Prelo', sans-serif;
     font-size: 20px;
     font-weight: 400;
 
