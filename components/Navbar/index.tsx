@@ -43,7 +43,7 @@ const Navbar: React.FC = () => {
           <Col lg={1}></Col>
 
           <ColEdit lg={2}>
-            <Button>
+            <Button disabled>
               <Link href="/">
                 <a> SOU COOPERADO </a>
               </Link>

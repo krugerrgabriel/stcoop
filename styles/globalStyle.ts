@@ -23,8 +23,8 @@ const GlobalStyle = createGlobalStyle`
         font-family: 'Prelo', sans-serif !important;
     }
     a {
-        color: inherit !important;
-        text-decoration: none !important;
+        color: inherit;
+        text-decoration: none;
     }
     a:hover{
         color: #fd5000 !important;

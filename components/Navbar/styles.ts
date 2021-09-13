@@ -26,7 +26,7 @@ export const Logo = styled(Image)`
     height: 100px;
 `;
 
-export const Button = styled.a`
+export const Button = styled.a<{ disabled?: Boolean }>`
     background-color: ${({ theme }) => theme.colors.black};
     color: ${({ theme }) => theme.colors.white};
 
@@ -39,7 +39,19 @@ export const Button = styled.a`
 
     padding: 12px 24px;
 
-    cursor: pointer;
+    cursor: ${(props) => props.disabled ? 'not-allowed' : 'pointer'};
+
+    &:hover{
+        color: ${({ theme }) => theme.colors.white} !important;
+    }
+
+    a{  
+        cursor: ${(props) => props.disabled ? 'not-allowed' : 'pointer'};
+
+        &:hover{
+            color: ${({ theme }) => theme.colors.white} !important;
+        }
+    }
 `;
 
 export const ColEdit = styled(Col)`
