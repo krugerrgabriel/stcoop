@@ -1,23 +1,16 @@
 {
   "extends": [
     "next/core-web-vitals",
-    "plugin:react/recommended",
-    "plugin:@typescript-eslint/recommended",
-    "prettier/@typescript-eslint",
-    "prettier/react"
+    "plugin:react/recommended"
   ],
   "env": {
     "browser": true,
-    "es202": true,
     "node": true
   },
   "plugins": [
-    "react",
-    "@typescript-eslint",
-    "prettier"
+    "react"
   ],
   "rules": {
-    "prettier/prettier": "error",
     "react/prop-types": "off"
   }
 }

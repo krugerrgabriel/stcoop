@@ -1,7 +1,9 @@
-import { Body } from "./styles";
+import React from "react";
 
 import Image from "next/image";
 import Link from "next/link";
+
+import { Body } from "./styles";
 
 import { IRotaCard } from "./interfaces";
 

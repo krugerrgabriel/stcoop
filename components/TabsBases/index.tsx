@@ -1,6 +1,4 @@
-import { useState } from "react";
-
-import Image from "next/image";
+import React, { useState } from "react";
 
 import YouTube from "react-youtube";
 

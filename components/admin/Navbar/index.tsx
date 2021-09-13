@@ -1,3 +1,5 @@
+import React from "react";
+
 import { Body, LogoWrapper, UserWrapper, LinksBox } from "./styles";
 
 import Image from "next/image";
