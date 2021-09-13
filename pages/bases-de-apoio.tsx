@@ -29,7 +29,6 @@ import { Container, Row, Col } from "react-bootstrap";
 
 import BasesDeApoioBanner from "../public/images/stcoop-bases-de-apoio.png";
 import BasesImage from "../public/images/stcoop-bases-image.png";
-import EspacoLazerImage from "../public/images/stcoop-espaco-lazer.png";
 
 // import { Container } from './styles';
 
