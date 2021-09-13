@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const InfoBox = styled.div``;
 
 export const CooperativismoBox = styled.div`
-    padding: 42px 0;
+    padding: ${({ theme }) => theme.padding.default} 0;
 `;
 
 export const Item = styled.div`

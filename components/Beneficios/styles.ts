@@ -12,7 +12,7 @@ export const OrangeLayerEdit = styled(OrangeLayer)`
 export const BeneficiosBox = styled.div`
     position: relative;
 
-    padding: 42px 0 12px 0;
+    padding: ${({ theme }) => theme.padding.default} 0 12px 0;
 `;
 
 export const Body = styled.div`

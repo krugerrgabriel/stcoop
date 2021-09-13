@@ -7,6 +7,6 @@ export const UserPanel = styled.div`
 export const BenefitsBox = styled.div`
     background-color: ${({ theme }) => theme.colors.gray06};
 
-    padding: 42px 0;
+    padding: ${({ theme }) => theme.padding.default} 0;
     margin: 6px 0 0 0;
 `;

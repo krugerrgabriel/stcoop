@@ -4,7 +4,7 @@ export const Body = styled.div`
     background-color: ${({ theme }) => theme.colors.black};
     color: ${({ theme }) => theme.colors.white};
 
-    padding: 42px 0;
+    padding: ${({ theme }) => theme.padding.default} 0;
 
     ul{
         padding: 0;

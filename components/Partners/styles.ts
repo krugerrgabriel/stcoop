@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const PartnersBox = styled.div`
-    padding: 42px 0;
+    padding: ${({ theme }) => theme.padding.default} 0;
 `;
 
 export const Body = styled.div`

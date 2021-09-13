@@ -17,7 +17,7 @@ export const LoremBox = styled.div`
 
     position: relative;
     
-    padding: 42px 0;
+    padding: ${({ theme }) => theme.padding.default} 0;
 
     z-index: -1;
 `;

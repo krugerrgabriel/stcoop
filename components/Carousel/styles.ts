@@ -7,7 +7,7 @@ import { OrangeLayer } from "../../styles/";
 export const Body = styled.div`
     height: auto;
 
-    margin: 42px 0 0 0;
+    margin: ${({ theme }) => theme.padding.default} 0 0 0;
 
     *{
         z-index: 500;

@@ -20,6 +20,12 @@ export const Wrapper = styled.div`
 
     height: 100%;
 
+    div{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
     a, span{
         color: ${({ theme }) => theme.colors.black};
 

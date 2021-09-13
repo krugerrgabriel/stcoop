@@ -5,7 +5,7 @@ export const Body = styled.div`
 
     position: relative;
 
-    padding: 42px 0;
+    padding: ${({ theme }) => theme.padding.default} 0;
 
     display: flex;
 `;

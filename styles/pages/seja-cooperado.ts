@@ -26,5 +26,5 @@ export const ImageBox = styled.div`
 `;
 
 export const FaqBox = styled.div`
-    padding: 42px 0;
+    padding: ${({ theme }) => theme.padding.default} 0;
 `;

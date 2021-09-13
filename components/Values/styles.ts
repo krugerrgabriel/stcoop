@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const ValueBox = styled.div`
-    padding: 42px 0;
+    padding: ${({ theme }) => theme.padding.default} 0;
 
     background-color: ${({ theme }) => theme.colors.gray06};
 `;

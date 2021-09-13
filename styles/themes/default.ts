@@ -11,5 +11,8 @@ export const theme = {
         gray04: '#cecece',
         gray05: '#e6e6e6',
         gray06: '#f4f4f4'
+    },
+    padding: { 
+        default: '48px'
     }
 }

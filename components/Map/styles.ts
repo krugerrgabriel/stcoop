@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const MapBox = styled.div<{ gray?: Boolean; }>`
-    padding: 42px 0;
+    padding: ${({ theme }) => theme.padding.default} 0;
     ${(props) => props.gray ? `background-color: ${props.theme.colors.gray06}` : null}
 `;
 
