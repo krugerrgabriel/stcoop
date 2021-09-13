@@ -4,7 +4,7 @@ import Image from "next/image";
 
 import { Body, ArrowLayer } from "./styles";
 
-import ArrowImage from "/public/images/icons/stcoop-arrow.svg";
+import ArrowImage from "../../public/images/icons/stcoop-arrow.svg";
 
 const Button: React.FC<{
   gray?: Boolean;

@@ -22,7 +22,7 @@ import Link from "next/link";
 
 import CarouselLeftArrow from "../../public/images/icons/stcoop-left-arrow.svg";
 import CarouselRightArrow from "../../public/images/icons/stcoop-right-arrow.svg";
-import VideoLayer from "/public/images/stcoop-video-layer.png";
+import VideoLayer from "../../public/images/stcoop-video-layer.png";
 
 import ProductsData from "../../public/json/products.json";
 

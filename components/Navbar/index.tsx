@@ -4,7 +4,7 @@ import Link from "next/link";
 import { Container, Row, Col } from "react-bootstrap";
 import { Body, Logo, Button, ColEdit, OrangeLayerEdit } from "./styles";
 
-import LogoSTCOOP from "/public/images/stcoop-logo01.svg";
+import LogoSTCOOP from "../../public/images/stcoop-logo01.svg";
 
 const Navbar: React.FC = () => {
   return (

@@ -21,12 +21,12 @@ import {
   MediaLayer,
 } from "./styles";
 
-import VideoLayer from "/public/images/stcoop-video-layer.png";
-import FacebookIcon from "/public/images/icons/stcoop-facebook.svg";
-import InstagramIcon from "/public/images/icons/stcoop-instagram.svg";
-import YoutubeIcon from "/public/images/icons/stcoop-youtube.svg";
-import CarouselLeftArrow from "/public/images/icons/stcoop-left-arrow.svg";
-import CarouselRightArrow from "/public/images/icons/stcoop-right-arrow.svg";
+import VideoLayer from "../../public/images/stcoop-video-layer.png";
+import FacebookIcon from "../../public/images/icons/stcoop-facebook.svg";
+import InstagramIcon from "../../public/images/icons/stcoop-instagram.svg";
+import YoutubeIcon from "../../public/images/icons/stcoop-youtube.svg";
+import CarouselLeftArrow from "../../public/images/icons/stcoop-left-arrow.svg";
+import CarouselRightArrow from "../../public/images/icons/stcoop-right-arrow.svg";
 
 import YouTube from "react-youtube";
 

@@ -10,8 +10,8 @@ import UNUSLogo from "../../public/images/stcoop-grupo-unus-logo.svg";
 import TransdeskLogo from "../../public/images/stcoop-transdesk-logo.svg";
 import TDKLogo from "../../public/images/stcoop-tdkcorretora-logo.svg";
 import BRLogo from "../../public/images/stcoop-brcentertruck-logo.svg";
-import CarouselLeftArrow from "/public/images/icons/stcoop-left-arrow.svg";
-import CarouselRightArrow from "/public/images/icons/stcoop-right-arrow.svg";
+import CarouselLeftArrow from "../../public/images/icons/stcoop-left-arrow.svg";
+import CarouselRightArrow from "../../public/images/icons/stcoop-right-arrow.svg";
 
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
