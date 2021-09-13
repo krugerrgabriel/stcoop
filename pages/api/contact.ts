@@ -24,7 +24,7 @@ export default function handler(
         host: "smtp.kinghost.net",
         auth: {
           user: 'test@stcoop.com.br',
-          pass: '49Unus38',
+          pass: process.env.MAIL_PASS,
         },
         secureConnection: false,
         tls: {
