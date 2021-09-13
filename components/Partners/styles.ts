@@ -14,7 +14,7 @@ export const Company = styled.div`
     justify-content: center;
 
     width: 100%;
-    height: 100%;
+    height: 135px;
 
     padding: 32px 42px;
 
