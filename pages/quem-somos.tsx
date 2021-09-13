@@ -29,7 +29,7 @@ import { LoremBox, OrangeLayerWidth } from "../components/Lorem/styles";
 
 import { Container, Row, Col } from "react-bootstrap";
 
-import QuemSomosBanner from "/public/images/stcoop-quem-somos.png";
+import QuemSomosBanner from "../public/images/stcoop-quem-somos.png";
 
 import LoremData from "../public/json/lorem.json";
 import ContactForm from "../components/ContactForm";

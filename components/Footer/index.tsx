@@ -15,10 +15,10 @@ import {
 
 import { Container, Row, Col } from "react-bootstrap";
 
-import STCoopLogo from "/public/images/stcoop-white-logo.svg";
-import FacebookIcon from "/public/images/icons/stcoop-facebook.svg";
-import InstagramIcon from "/public/images/icons/stcoop-instagram.svg";
-import YoutubeIcon from "/public/images/icons/stcoop-youtube.svg";
+import STCoopLogo from "../../public/images/stcoop-white-logo.svg";
+import FacebookIcon from "../../public/images/icons/stcoop-facebook.svg";
+import InstagramIcon from "../../public/images/icons/stcoop-instagram.svg";
+import YoutubeIcon from "../../public/images/icons/stcoop-youtube.svg";
 
 const Footer: React.FC<{ withoutSitemap?: Boolean }> = (props) => {
   return (
