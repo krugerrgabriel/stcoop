@@ -10,7 +10,7 @@ import TabsBases from "../components/TabsBases";
 import ContactForm from "../components/ContactForm";
 import Footer from "../components/Footer";
 
-import { FullBanner, MiniTitle } from "../styles";
+import { FullBanner, MiniTitle, Title, Subtitle, TitleBox } from "../styles";
 import { InfoBox } from "../styles/pages/quem-somos";
 import {
   OrangeLayerEdit,
