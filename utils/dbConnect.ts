@@ -3,6 +3,7 @@ import mongoose from 'mongoose';
 const connection = {};
 
 const dbConnect = async () => {
+    /* @ts-ignore */
     if(connection.isConnected){
         return;
     }
@@ -13,6 +14,7 @@ const dbConnect = async () => {
         useUnifiedTopology: true,
     });
 
+    /* @ts-ignore */
     connection.isConnected = db.connections[0].readyState;
 }
 
