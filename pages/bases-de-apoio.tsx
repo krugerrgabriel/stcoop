@@ -24,7 +24,6 @@ import {
 } from "../styles/pages/bases-de-apoio";
 import Map from "../components/Map";
 import { MapBox } from "../components/Map/styles";
-import { TitleBox, Title, Subtitle } from "../styles/";
 
 import { Container, Row, Col } from "react-bootstrap";
 

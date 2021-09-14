@@ -21,7 +21,7 @@ export default function handler(
         port: 587,
         host: "smtp.kinghost.net",
         auth: {
-          user: 'test@stcoop.com.br',
+          user: 'sender@stcoop.com.br',
           pass: process.env.MAIL_PASS,
         },
         secureConnection: false,
@@ -31,19 +31,18 @@ export default function handler(
     });
 
     const mailData = {
-        from: 'Landing Page STCOOP',
+        from: 'sender@stcoop.com.br',
         to: 'gabriel.sa.kruger@gmail.com',
         subject: `[CONTATO] Landing Page`,
         text: req.body.message,
         html: `<div>
-            <b>Nome: </b>${req.body.name}\n
-            <b>E-mail: </b>${req.body.mail}\n
-            <b>Telefone: </b>${req.body.phone}\n
-            <b>Motivo do Contato: </b>${req.body.motivo}\n
-            <b>Mensagem: </b>${req.body.message}\n
+            <b>NOME: </b>${req.body.name}\n<br>
+            <b>E-MAIL: </b>${req.body.mail}\n<br>
+            <b>TELEFONE: </b>${req.body.phone}\n<br>
+            <b>MOTIVO DO CONTATO: </b>${req.body.motivo}\n<br>
+            <b>MENSAGEM: </b>${req.body.message}\n<br>
         </div>`
     }
-
     
     transporter.sendMail(mailData, function (err: string, info: string) {
         if(err){

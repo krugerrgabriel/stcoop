@@ -71,6 +71,7 @@ const ContactForm: React.FC<{ left?: Boolean }> = (props) => {
         },
         body: JSON.stringify(data),
       }).then((res) => {
+        setButtonDisabled(false);
         if (res.status === 200) {
           setSubmitted(true);
           setName("");
@@ -78,10 +79,15 @@ const ContactForm: React.FC<{ left?: Boolean }> = (props) => {
           setPhone("");
           setMotivo("null");
           setMessage("");
-          setButtonDisabled(false);
           setAlertTitle("Contato enviado com êxito :D");
           setAlertMessage(
             "Em breve um de nossos consultores entrará em contato com você!"
+          );
+          setAlertActive(true);
+        } else {
+          setAlertTitle("Erro inexperado :(");
+          setAlertMessage(
+            "Desculpe pela inconveniência! Tente novamente mais tarde."
           );
           setAlertActive(true);
         }
