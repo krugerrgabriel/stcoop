@@ -1,9 +1,10 @@
 import mongoose from 'mongoose';
 
-const connection = {};
+const connection = {
+    isConnected: 0
+};
 
 const dbConnect = async () => {
-    /* @ts-ignore */
     if(connection.isConnected){
         return;
     }
@@ -14,7 +15,6 @@ const dbConnect = async () => {
         useUnifiedTopology: true,
     });
 
-    /* @ts-ignore */
     connection.isConnected = db.connections[0].readyState;
 }
 
