@@ -15,11 +15,11 @@ const NewsSchema = new mongoose.Schema({
         maxlength: [175, 'O título não pode ser maior do que 175 caracteres!']
     },
     visibleTags: {
-        type: [String],
+        type: [[]],
         required: false,
     },
     invisibleTags: {
-        type: [String],
+        type: [[]],
         required: false,
     },
     image: {
