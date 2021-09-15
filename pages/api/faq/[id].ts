@@ -1,6 +1,6 @@
 import type {  NextApiResponse } from 'next';
 
-const Product = require('@/models/Product.ts');
+const Faq = require('@/models/Faq.ts');
 
 import dbConnect from "@/utils/dbConnect";
 
@@ -19,13 +19,13 @@ export default async function handler(
           // MÉTODO GET
         case 'GET':
             try {
-                const product = await Product.findById(id);
+                const faq = await Faq.findById(id);
 
-                if(!product){
-                    return res.status(400).json({ success: false, message: 'Produto não encontrado!' });
+                if(!faq){
+                    return res.status(400).json({ success: false, message: 'Faq não encontrada!' });
                 }
 
-                res.status(200).json({ success: true, product });
+                res.status(200).json({ success: true, faq });
             } catch (error) {
             res.status(400).json({ success: false, error });
             }
@@ -34,16 +34,16 @@ export default async function handler(
         // MÉTODO PUT
         case 'PUT':
             try {
-                const product = await Product.findByIdAndUpdate(id, req.body, {
+                const faq = await Faq.findByIdAndUpdate(id, req.body, {
                     new: true,
                     runValidators: true
                 });
 
-                if(!product){
-                    return res.status(400).json({ success: false, message: 'Produto não encontrado!' });
+                if(!faq){
+                    return res.status(400).json({ success: false, message: 'Faq não encontrada!' });
                 }
 
-                res.status(200).json({ success: true, product });
+                res.status(200).json({ success: true, faq });
             } catch (error) {
                 res.status(400).json({ success: false, error });
             }
@@ -52,9 +52,9 @@ export default async function handler(
         // MÉTODO DELETE
         case 'DELETE':
             try {
-                const deletedProduct = await Product.deleteOne({ _id: id });
+                const deletedFaq = await Faq.deleteOne({ _id: id });
 
-                if(!deletedProduct){
+                if(!deletedFaq){
                     return res.status(400).json({ success: false });
                 }
 

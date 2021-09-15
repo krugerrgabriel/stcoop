@@ -1,6 +1,6 @@
 import type {  NextApiResponse } from 'next';
 
-const Product = require('@/models/Product.ts');
+const Faq = require('@/models/Faq.ts');
 
 import dbConnect from "@/utils/dbConnect";
 
@@ -16,9 +16,9 @@ export default async function handler(
         // MÉTODO GET
         case 'GET':
           try {
-            const products = await Product.find();
+            const faq = await Faq.find();
 
-            res.status(200).json({ success: true, data: products });
+            res.status(200).json({ success: true, data: faq });
           } catch (error) {
             res.status(400).json({ success: false, error });
           }
@@ -28,9 +28,9 @@ export default async function handler(
         case 'POST':
           try {
 
-            const product = await Product.create(req.body);
+            const faq = await Faq.create(req.body);
 
-            res.status(201).json({ success: true, data: product });
+            res.status(201).json({ success: true, data: faq });
           } catch (error) {
             res.status(400).json({ success: false, error });
           }

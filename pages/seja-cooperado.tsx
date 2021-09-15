@@ -26,7 +26,6 @@ import ContactForm from "../components/ContactForm";
 import Footer from "../components/Footer";
 
 import FaqData from "../public/json/faq.json";
-import { useEffect } from "react";
 
 const SejaCooperado: NextPage = () => {
   const opts = {

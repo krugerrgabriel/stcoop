@@ -18,13 +18,9 @@ const ProductSchema = new mongoose.Schema({
         type: String,
         required: [true, 'Por favor informe o tipo de media do produto ou serviço!'],
     },
-    image: {
+    media: {
         type: String,
-        required: false,
-    },
-    video: {
-        type: String,
-        required: false,
+        required: [true, 'Por favor informe a media do produto ou serviço!'],
     },
     linkTrigger: {
         type: String,
@@ -37,6 +33,3 @@ const ProductSchema = new mongoose.Schema({
 });
 
 module.exports = mongoose.models.Product || mongoose.model('Product', ProductSchema);
-
-// const Product = mongoose.model('Product', ProductSchema);
-// module.exports = Product;

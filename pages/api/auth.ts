@@ -14,16 +14,16 @@ export default async function handler(
       const { email, password } = req.body;
 
       if(!email || !password){
-        return res.status(400).json({ success: true, message: 'Os campos precisam ser preenchidos!' });
+        return res.status(400).json({ success: false, message: 'Os campos precisam ser preenchidos!' });
       } else{
           switch(method){
             // MÉTODO GET
             case 'GET':
               try {
-                const user = await User.find({ email: email, password: password });
+                const user = await User.findOne({ email: email, password: password });
     
                 if(!user){
-                    return res.status(400).json({ success: true, message: 'Usuário não encontrado!' });
+                    return res.status(400).json({ success: false, message: 'Usuário não encontrado!' });
                 }
     
                 res.status(200).json({ success: true, data: user });
