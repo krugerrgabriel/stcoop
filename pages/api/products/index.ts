@@ -24,7 +24,7 @@ export default async function handler(
           }
         break;
 
-        // MÉTODO POSTt
+        // MÉTODO POST
         case 'POST':
           try {
             const product = await Product.create(req.body);
