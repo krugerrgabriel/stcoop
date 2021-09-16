@@ -24,7 +24,7 @@ export default async function handler(
           }
         break;
 
-        // MÉTODO POST
+        // MÉTODO POSTt
         case 'POST':
           try {
 
