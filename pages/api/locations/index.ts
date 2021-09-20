@@ -36,7 +36,7 @@ export default async function handler(
         case 'POST':
           try {
 
-            const locations = await Locations.create(req.body);
+            const locations = await Locations.create(req.body.data);
 
             res.status(201).json({ success: true, data: locations });
           } catch (error) {

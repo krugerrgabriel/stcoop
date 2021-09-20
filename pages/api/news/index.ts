@@ -36,7 +36,7 @@ export default async function handler(
         case 'POST':
           try {
 
-            const item = await News.create(req.body);
+            const item = await News.create(req.body.data);
 
             res.status(201).json({ success: true, data: item });
           } catch (error) {
