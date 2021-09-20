@@ -41,7 +41,7 @@ export default async function handler(
 
             res.status(201).json({ success: true, data: advantage });
           } catch (error) {
-            res.status(400).json({ success: false, error });
+            res.json({ success: false, error });
           }
         break;
 
