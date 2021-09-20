@@ -39,7 +39,7 @@ export default async function handler(
 
             res.status(201).json({ success: true, data: product });
           } catch (error) {
-            res.status(400).send({ success: false, error });
+            res.json({ success: false, error });
           }
         break;
 
