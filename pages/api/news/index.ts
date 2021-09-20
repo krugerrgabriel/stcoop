@@ -2,6 +2,8 @@ import type {  NextApiResponse } from 'next';
 
 const News = require('@/models/News.ts');
 
+import NextCors from 'nextjs-cors';
+
 import dbConnect from "@/utils/dbConnect";
 
 dbConnect();
@@ -11,6 +13,12 @@ export default async function handler(
     res: NextApiResponse
   ) {
       const { method } = req;
+
+      await NextCors(req, res, {
+          methods: ['GET', 'POST'],
+          origin: '*',
+          optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
+      });
 
       switch(method){
         // MÉTODO GET

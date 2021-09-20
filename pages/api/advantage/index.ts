@@ -2,15 +2,24 @@ import type {  NextApiResponse } from 'next';
 
 const Advantage = require('@/models/Advantage.ts');
 
+import NextCors from 'nextjs-cors';
+
 import dbConnect from "@/utils/dbConnect";
 
 dbConnect();
 
 export default async function handler(
-    req,
-    res: NextApiResponse
+  req,
+  res: NextApiResponse
   ) {
+    
       const { method } = req;
+      
+      await NextCors(req, res, {
+          methods: ['GET', 'POST'],
+          origin: '*',
+          optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
+      });
 
       switch(method){
         // MÉTODO GET
