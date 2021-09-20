@@ -35,7 +35,7 @@ export default async function handler(
         // MÉTODO POST
         case 'POST':
           try {
-            const user = await User.create(req.body);
+            const user = await User.create(req.body.data);
 
             res.status(201).json({ success: true, data: user });
           } catch (error) {
