@@ -26,7 +26,7 @@ export default async function handler(
       } else{
           switch(method){
             // MÉTODO GET
-            case 'GET':
+            case 'POST':
               try {
                 const user = await User.findOne({ email: email, password: password });
     
