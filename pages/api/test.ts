@@ -2,6 +2,7 @@ import type {  NextApiResponse } from 'next';
 
 import nextConnect from 'next-connect';
 import multer from 'multer';
+import NextCors from 'nextjs-cors';
 
 import dbConnect from "@/utils/dbConnect";
 
@@ -25,7 +26,14 @@ const uploadMiddleware = upload.array('theFiles');
 
 apiRoute.use(uploadMiddleware);
 
-apiRoute.post((req, res: NextApiResponse) => {
+apiRoute.post(async (req, res: NextApiResponse) => {
+    // @ts-ignore
+    await NextCors(req, res, {
+        methods: ['GET', 'POST'],
+        origin: '*',
+        optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
+    });
+
     res.status(200).json({ data: 'success' });
 });
 
