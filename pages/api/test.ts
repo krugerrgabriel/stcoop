@@ -31,7 +31,7 @@ apiRoute.post(async (req, res: NextApiResponse) => {
     await NextCors(req, res, {
         methods: ['GET', 'POST'],
         origin: '*',
-        optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
+        optionsSuccessStatus: 200,
     });
 
     res.status(200).json({ data: 'success' });
