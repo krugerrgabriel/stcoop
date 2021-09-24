@@ -3,20 +3,10 @@ import type {  NextApiResponse } from 'next';
 import nextConnect from 'next-connect';
 import multer from 'multer';
 import NextCors from 'nextjs-cors';
-import Cors from 'cors'
-import initMiddleware from '../../utils/initMiddleware'
 
 import dbConnect from "@/utils/dbConnect";
 
 dbConnect();
-
-const cors = initMiddleware(
-    // You can read more about the available options here: https://github.com/expressjs/cors#configuration-options
-    Cors({
-      // Only allow requests with GET, POST and OPTIONS
-      methods: ['GET', 'POST', 'OPTIONS'],
-    })
-  )
 
 const upload = multer({
     storage: multer.diskStorage({
@@ -34,16 +24,16 @@ const apiRoute = nextConnect({
 
 const uploadMiddleware = upload.array('theFiles');
 
-apiRoute.use(uploadMiddleware);
-
-apiRoute.post(async (req, res: NextApiResponse) => {
-    await cors(req, res);
-    // @ts-ignore
+apiRoute.use(async (req, res) => {
     await NextCors(req, res, {
         methods: ['GET', 'POST'],
         origin: '*',
-        optionsSuccessStatus: 200,
+        optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
     });
+});
+apiRoute.use(uploadMiddleware);
+
+apiRoute.post(async (req, res: NextApiResponse) => {
 
     res.status(200).json({ data: 'success' });
 });
