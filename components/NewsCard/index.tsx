@@ -19,12 +19,14 @@ const NewsCard: React.FC<{
 }> = ({ item }) => {
   return (
     <Body>
-      <NewsImage
-        src={NewsImageSrc}
-        width={416}
-        height={225}
-        alt={`STCOOP Cooperativa Logistica ${item.title}`}
-      />
+      <div className="imageLayer">
+        <NewsImage
+          src={NewsImageSrc}
+          layout="fill"
+          objectFit="cover"
+          alt={`STCOOP Cooperativa Logistica ${item.title}`}
+        />
+      </div>
       <Info>
         <p> {item.title} </p>
         <span> {item.description} </span>

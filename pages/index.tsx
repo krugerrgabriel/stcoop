@@ -47,7 +47,7 @@ const Home: NextPage = () => {
           <Row>
             {BenefitsData.map((item, index) => {
               return (
-                <Col lg={4} key={index}>
+                <Col lg={4} md={4} key={index}>
                   <Benefit
                     title={item.title}
                     description={item.description}
@@ -80,7 +80,7 @@ const Home: NextPage = () => {
           <Row>
             {LoremData.map((item, index) => {
               return (
-                <Col lg={4} key={index}>
+                <Col lg={4} md={4} key={index}>
                   <Lorem title={item.title} description={item.description} />
                 </Col>
               );
@@ -98,7 +98,7 @@ const Home: NextPage = () => {
           <Row>
             {NewsData.map((item, index) => {
               return (
-                <Col lg={4} key={item._id}>
+                <Col lg={4} md={4} sm={12} key={item._id}>
                   <NewsCard item={item} />
                 </Col>
               );

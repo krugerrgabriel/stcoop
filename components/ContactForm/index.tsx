@@ -4,7 +4,7 @@ import Image from "next/image";
 
 import { InputField, SelectField } from "../ContactElements";
 
-import { Body, ContactWrapper } from "./styles";
+import { Body, ContactWrapper, ContactLayer } from "./styles";
 import { TitleBox, Title, Subtitle } from "../../styles/";
 
 import { Container, Row, Col } from "react-bootstrap";
@@ -99,7 +99,7 @@ const ContactForm: React.FC<{ left?: Boolean }> = (props) => {
     <Body id="contato">
       <Container>
         <Row>
-          {props.left ? <Col lg={6} /> : null}
+          {props.left ? <Col lg={6} md={6} /> : null}
           <Col lg={6}>
             <TitleBox>
               <Title> CONTATO </Title>
@@ -108,8 +108,8 @@ const ContactForm: React.FC<{ left?: Boolean }> = (props) => {
           </Col>
         </Row>
         <Row>
-          {props.left ? <Col lg={6} /> : null}
-          <Col lg={6}>
+          {props.left ? <Col lg={6} md={6} /> : null}
+          <Col lg={6} md={6}>
             <Row>
               <Col lg={6}>
                 <InputField
@@ -182,13 +182,15 @@ const ContactForm: React.FC<{ left?: Boolean }> = (props) => {
         </Row>
       </Container>
       <ContactWrapper left={props.left}>
-        <Image
-          src={ContactBackground}
-          width={857}
-          height={394}
-          className={props.left ? "rotated" : ""}
-          alt="STCOOP Cooperativa Logística Contato"
-        />
+        <ContactLayer>
+          <Image
+            src={ContactBackground}
+            layout="fill"
+            objectFit="cover"
+            className={props.left ? "rotated" : ""}
+            alt="STCOOP Cooperativa Logística Contato"
+          />
+        </ContactLayer>
       </ContactWrapper>
       <Alert
         title={alertTitle}

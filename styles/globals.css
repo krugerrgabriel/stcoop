@@ -170,21 +170,25 @@
 
 :root {
   --sizePercentage: 72%;
+  --sizePercentageNav: 72%;
 }
 
 @media only screen and (max-width: 992px) {
   :root {
     --sizePercentage: 68%;
+    --sizePercentageNav: 68%;
   }
 }
 @media only screen and (max-width: 768px) {
   :root {
-    --sizePercentage: 95%;
+    --sizePercentage: 100%;
+    --sizePercentageNav: 50%;
   }
 }
 @media only screen and (max-width: 576px) {
   :root {
     --sizePercentage: 100%;
+    --sizePercentageNav: 60%;
   }
 }
 
@@ -208,6 +212,29 @@
     to right,
     white var(--sizePercentage),
     #fd5000 var(--sizePercentage),
+    #fd5000 100%
+  );
+}
+.orange-layer-navbar {
+  background: -webkit-gradient(
+    left top,
+    right top,
+    color-stop(var(--sizePercentageNav), white),
+    color-stop(var(--sizePercentageNav), #fd5000),
+    color-stop(100%, #fd5000)
+  );
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    color-stop(var(--sizePercentageNav), white),
+    color-stop(var(--sizePercentageNav), #fd5000),
+    to(#fd5000)
+  );
+  background: linear-gradient(
+    to right,
+    white var(--sizePercentageNav),
+    #fd5000 var(--sizePercentageNav),
     #fd5000 100%
   );
 }

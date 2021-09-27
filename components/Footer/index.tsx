@@ -27,7 +27,7 @@ const Footer: React.FC<{ withoutSitemap?: Boolean }> = (props) => {
         {!props.withoutSitemap ? (
           <>
             <Row>
-              <Col lg={3}>
+              <Col lg={3} md={6} sm={6} xs={6} className="item-1">
                 <ul>
                   <li className="title">
                     <Link href="/seja-cooperado">
@@ -47,7 +47,7 @@ const Footer: React.FC<{ withoutSitemap?: Boolean }> = (props) => {
                   </li>
                 </ul>
               </Col>
-              <Col lg={3} className="flex-center">
+              <Col lg={3} md={6} sm={6} xs={6} className="item-2">
                 <ul>
                   <li className="title">
                     <Link href="/quem-somos">
@@ -86,7 +86,7 @@ const Footer: React.FC<{ withoutSitemap?: Boolean }> = (props) => {
                   </li>
                 </ul>
               </Col>
-              <Col lg={3} className="flex-end">
+              <Col lg={3} md={6} sm={6} xs={6} className="item-3">
                 <ul>
                   <li className="title">
                     <Link href="#contato">
@@ -110,7 +110,7 @@ const Footer: React.FC<{ withoutSitemap?: Boolean }> = (props) => {
                   </li>
                 </ul>
               </Col>
-              <Col lg={3} className="flex-end">
+              <Col lg={3} md={6} sm={6} xs={6} className="item-4">
                 <ul>
                   <li className="title">
                     <Link href="/bases-de-apoio">
@@ -138,7 +138,7 @@ const Footer: React.FC<{ withoutSitemap?: Boolean }> = (props) => {
           </>
         ) : null}
         <Row className="margin-top-28px">
-          <Col lg={3} className="vertical-center">
+          <Col lg={3} md={6} sm={6} xs={6} className="vertical-center">
             <LogoLayer>
               <Image
                 src={STCoopLogo}
@@ -148,7 +148,7 @@ const Footer: React.FC<{ withoutSitemap?: Boolean }> = (props) => {
               />
             </LogoLayer>
           </Col>
-          <Col lg={2} className="centered vertical-center">
+          <Col lg={2} md={6} sm={6} xs={6} className="centered vertical-center">
             <SocialMediaBox>
               <a
                 href="https://facebook.com/stcoop"
@@ -194,13 +194,13 @@ const Footer: React.FC<{ withoutSitemap?: Boolean }> = (props) => {
               </a>
             </SocialMediaBox>
           </Col>
-          <Col lg={3} className="centered vertical-center">
+          <Col lg={3} md={6} sm={6} xs={6} className="centered vertical-center">
             <ContactBox>
               <a href="tel:08009999999"> 0800 999 9999 </a>
               <a href="mailto:contato@stcoop.com.br"> contato@stcoop.com.br </a>
             </ContactBox>
           </Col>
-          <Col lg={4} className="vertical-center">
+          <Col lg={4} md={6} sm={6} xs={6} className="vertical-center">
             <CopyrightText>
               Copyright © 2020 - 2021 ST COOP Cooperativa Logística. Todos os
               Direitos Reservados.

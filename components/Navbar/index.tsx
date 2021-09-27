@@ -9,7 +9,7 @@ import LogoSTCOOP from "../../public/images/stcoop-logo01.svg";
 
 const Navbar: React.FC = () => {
   return (
-    <Body className="orange-layer">
+    <Body className="orange-layer-navbar">
       <Container>
         <Row>
           <Col lg={3} md={4} sm={5} xs={6}>

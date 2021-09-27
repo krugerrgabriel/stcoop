@@ -28,6 +28,19 @@ export const Body = styled.div`
 
         text-transform: uppercase;
     }
+
+    .item-2,.item-3,.item-4{
+        display: flex;
+        justify-content: flex-end;
+    }
+    @media(max-width: 992px){
+        .item-3{
+            justify-content: flex-start;
+        }
+        .item-3, .item-4{
+            margin: 24px 0 0 0;
+        }
+    }
 `;
 
 export const Divider = styled.div`
@@ -44,6 +57,11 @@ export const LogoLayer = styled.div`
 
     width: 225px;
     height: 64px;
+
+    @media(max-width: 992px){
+        width: 183px;
+        height: 52px;
+    }
 `;
 
 export const SocialMediaBox = styled.div`
@@ -77,9 +95,17 @@ export const ContactBox = styled.div`
 
         margin: 0;
     }
+
+    @media(max-width: 992px){
+        margin: 24px 0 0 0;
+    }
 `;
 
 export const CopyrightText = styled.p`
     font-size: 14px;
     font-weight: 400;
+
+    @media(max-width: 992px){
+        margin: 24px 0 0 0;
+    }
 `;

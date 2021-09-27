@@ -38,6 +38,18 @@ export const Body = styled.div`
 
     box-shadow: rgba(0, 0, 0, 0.02) 0 3px 8px;
 
+    @media(max-width: 1200px){
+        height: 375px;
+    }
+    @media(max-width: 992px){
+        height: 325px;
+    }
+    @media(max-width: 768px){
+        height: 400px;
+
+        margin: 12px 0;
+    }
+
     p{
         color: ${({ theme }) => theme.colors.black};
 
@@ -45,6 +57,16 @@ export const Body = styled.div`
         font-weight: 600;
 
         margin: 0;
+
+        @media(max-width: 1200px){
+            font-size: 28px;
+        }
+        @media(max-width: 992px){
+            font-size: 24px;
+        }
+        @media(max-width: 768px){
+            font-size: 26px;
+        }
     }
 
     span{
@@ -58,6 +80,7 @@ export const Body = styled.div`
     div.side-a-side{
         display: flex;
         justify-content: space-between;
+        align-items: flex-end;
     }
 `;
 
@@ -70,4 +93,13 @@ export const SeeMoreButton = styled.div`
 
     width: 42px;
     height: 42px;
+
+    @media(max-width: 992px){
+        width: 36px;
+        height: 36px;
+    }
+    @media(max-width: 768px){
+        width: 42px;
+        height: 42px;
+    }
 `;

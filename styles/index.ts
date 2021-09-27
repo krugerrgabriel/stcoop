@@ -17,6 +17,10 @@ export const TitleBox = styled.div`
     align-items: baseline;
 
     margin: 0 0 28px 0;
+
+    @media(max-width: 768px){
+        flex-direction: column;
+    }
 `;
 
 export const Title = styled.p<{ white?: Boolean; }>`
@@ -24,6 +28,8 @@ export const Title = styled.p<{ white?: Boolean; }>`
 
     font-size: 32px;
     font-weight: 700;
+
+    line-height: 36px;
 
     margin: 0;
 `;
@@ -35,6 +41,10 @@ export const Subtitle = styled.span<{ white?: Boolean; }>`
     font-weight: 400;
 
     margin: 0 0 0 12px;
+
+    @media(max-width: 768px){
+        margin: 0;
+    }
 `;
 
 export const FullBanner = styled.div`

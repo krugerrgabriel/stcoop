@@ -16,6 +16,18 @@ export const Body = styled.div<{ image: String; }>`
 
     padding: 24px;
 
+    @media(max-width: 1200px){
+        height: 400px;
+    }
+    @media(max-width: 992px){
+        height: 325px;
+    }
+    @media(max-width: 768px){
+        height: 400px;
+        
+        margin: 12px 0;
+    }
+
     p{
         color: ${({ theme }) => theme.colors.black};
 
@@ -23,6 +35,13 @@ export const Body = styled.div<{ image: String; }>`
         font-weight: 600;
 
         margin: 0;
+
+        @media(max-width: 1200px){
+            font-size: 28px;
+        }
+        @media(max-width: 992px){
+            font-size: 24px;
+        }
     }
 
     span{

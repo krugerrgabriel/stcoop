@@ -11,6 +11,9 @@ export const Body = styled.div`
     *{
         z-index: 500;
     }
+    @media(max-width: 576px) {
+        padding: 24px 0 0 0;
+    }
 `;
 
 export const CarouselPanel = styled.div`
