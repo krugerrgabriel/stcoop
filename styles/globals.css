@@ -83,86 +83,131 @@
   font-display: swap;
 }
 
-.align-center{
+.align-center {
   align-items: center;
   display: flex;
 }
 
-.react-multiple-carousel__arrow{
+.react-multiple-carousel__arrow {
   background-color: #fd5000 !important;
   border-radius: 0 !important;
 }
-.react-multiple-carousel__arrow:hover{
+.react-multiple-carousel__arrow:hover {
   background-color: #fd5000 !important;
 }
 
-.image-item{
+.image-item {
   margin: 0 16px;
 }
 
-.margin-top-18px{
+.margin-top-18px {
   margin-top: 18px;
 }
-.margin-top-28px{
+.margin-top-28px {
   margin-top: 28px;
 }
-.margin-top-42px{
+.margin-top-42px {
   margin-top: 42px;
 }
 
-.centered{
+.centered {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.flex-end{
+.flex-end {
   display: flex;
   justify-content: flex-end;
 }
-.flex-center{
+.flex-center {
   display: flex;
   justify-content: center;
 }
 
-.vertical-center{
+.vertical-center {
   display: flex;
   align-items: center;
 }
 
-.rotated{
+.rotated {
   transform: scaleX(-1);
 }
 
-.display-flex{
+.display-flex {
   display: flex;
 }
 
-.card{
+.card {
   cursor: pointer;
 
   transition: 0.2s;
 }
-.card:hover{
+.card:hover {
   background-color: rgba(0, 0, 0, 0.4);
 }
 
-.card,.card-header{
+.card,
+.card-header {
   background-color: rgba(0, 0, 0, 0.5);
 
   border-radius: 0;
 
   color: #ffffff;
-  
+
   font-weight: 400;
 }
-.card-body{
+.card-body {
   color: #000000;
   background-color: #fefefe;
 
   cursor: default;
 }
 
-.align-end{
+.align-end {
   align-items: flex-end;
+}
+
+:root {
+  --sizePercentage: 72%;
+}
+
+@media only screen and (max-width: 992px) {
+  :root {
+    --sizePercentage: 68%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  :root {
+    --sizePercentage: 95%;
+  }
+}
+@media only screen and (max-width: 576px) {
+  :root {
+    --sizePercentage: 100%;
+  }
+}
+
+.orange-layer {
+  background: -webkit-gradient(
+    left top,
+    right top,
+    color-stop(var(--sizePercentage), white),
+    color-stop(var(--sizePercentage), #fd5000),
+    color-stop(100%, #fd5000)
+  );
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    color-stop(var(--sizePercentage), white),
+    color-stop(var(--sizePercentage), #fd5000),
+    to(#fd5000)
+  );
+  background: linear-gradient(
+    to right,
+    white var(--sizePercentage),
+    #fd5000 var(--sizePercentage),
+    #fd5000 100%
+  );
 }

@@ -22,6 +22,22 @@ export const Body = styled.div`
     }
 `;
 
+export const LogoLayer = styled.div`
+    position: relative;
+
+    width: 225px;
+    height: 64px;
+
+    @media(max-width: 1200px) {
+        width: 218px;
+        height: 62px;
+    }
+    @media(max-width: 768px) {
+        width: 168px;
+        height: 48px;
+    }
+`;
+
 export const Logo = styled(Image)`
     height: 100px;
 `;
@@ -40,6 +56,12 @@ export const Button = styled.a<{ disabled?: Boolean }>`
     padding: 12px 24px;
 
     cursor: ${(props) => props.disabled ? 'not-allowed' : 'pointer'};
+
+    @media(max-width: 1400px) {
+        font-size: 13px;
+
+        padding: 12px 12px;
+    }
 
     &:hover{
         color: ${({ theme }) => theme.colors.white} !important;
@@ -65,6 +87,16 @@ export const ColEdit = styled(Col)`
         a{
             font-size: 16px;
             font-weight: 500;
+
+            @media(max-width: 1400px) {
+                font-size: 13px;
+            }
+            @media(max-width: 1200px) {
+                font-size: 12px;
+            }
+            @media(max-width: 992px) {
+                display: none;
+            }
         }
     }
 `;

@@ -73,6 +73,17 @@ export const DefaultText = css`
     font-weight: 400;
 
     line-height: 32px;
+
+    @media(max-width: 1400px) {
+        font-size: 16px;
+
+        line-height: 28px;
+    }
+    @media(max-width: 1200px) {
+        font-size: 14px;
+
+        line-height: 26px;
+    }
 `;
 
 export const DefaultMiniTitle = css`

@@ -10,7 +10,7 @@ export const Body = styled.div<{ active?: Boolean }>`
 
     position: fixed;
     top: 20%;
-    left: ${(props) => props.active ? '0' : '-200vw'};
+    left: ${(props) => props.active ? '0' : '-250vw'};
     right: 0;
     margin-left: auto;
     margin-right: auto;

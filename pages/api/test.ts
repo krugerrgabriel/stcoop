@@ -10,10 +10,10 @@ dbConnect();
 
 const upload = multer({
     storage: multer.diskStorage({
-      destination: './public/uploads',
-      filename: (req, file, cb) => cb(null, file.originalname),
+        destination: './public/uploads',
+        filename: (req, file, cb) => cb(null, file.originalname),
     }),
-  });
+});
 
 const apiRoute = nextConnect({
     // Handle any other HTTP method
@@ -24,17 +24,9 @@ const apiRoute = nextConnect({
 
 const uploadMiddleware = upload.array('theFiles');
 
-apiRoute.use(async (req, res) => {
-    await NextCors(req, res, {
-        methods: ['GET', 'POST'],
-        origin: '*',
-        optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
-    });
-});
 apiRoute.use(uploadMiddleware);
 
 apiRoute.post(async (req, res: NextApiResponse) => {
-
     res.status(200).json({ data: 'success' });
 });
 

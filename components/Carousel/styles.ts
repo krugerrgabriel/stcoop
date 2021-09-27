@@ -6,7 +6,7 @@ import { DefaultText } from '../../styles/globalStyle';
 export const Body = styled.div`
     height: auto;
 
-    margin: ${({ theme }) => theme.padding.default} 0 0 0;
+    padding: ${({ theme }) => theme.padding.default} 0 0 0;
 
     *{
         z-index: 500;
@@ -14,11 +14,27 @@ export const Body = styled.div`
 `;
 
 export const CarouselPanel = styled.div`
+    @media(max-width: 768px){
+        margin: 16px 0 0 0;
+    }
     strong{
         color: ${({ theme }) => theme.colors.orange};
 
         font-size: 18px;
         font-weight: 700;
+
+        @media(max-width: 1400px) {
+            font-size: 16px;
+        }
+        @media(max-width: 1200px) {
+            font-size: 14px;
+        }
+        @media(max-width: 992px) {
+            font-size: 10px;
+        }
+        @media(max-width: 768px) {
+            font-size: 12px;
+        }
     }
 
     p{
@@ -31,6 +47,29 @@ export const CarouselPanel = styled.div`
         line-height: 47px;
 
         margin: 8px 0 14px 0;
+
+        @media(max-width: 1400px) {
+            font-size: 38px;
+
+            line-height: 38px;
+        }
+        @media(max-width: 1200px) {
+            font-size: 32px;
+
+            line-height: 32px;
+        }
+        @media(max-width: 992px) {
+            font-size: 24px;
+
+            line-height: 26px;
+
+            margin: 4px 0 4px 0;
+        }
+        @media(max-width: 768px) {
+            font-size: 28px;
+            
+            line-height: 28px;
+        }
     }
 
     span{
@@ -39,6 +78,17 @@ export const CarouselPanel = styled.div`
         ${DefaultText};
 
         margin: 0 0 36px 0;
+
+        @media(max-width: 992px) {
+            font-size: 12px;
+
+            line-height: 12px;
+        }
+        @media(max-width: 768px) {
+            font-size: 16px;
+            
+            line-height: 20px;
+        }
     }
 `;
 
@@ -56,6 +106,10 @@ export const SocialMedia = styled.div`
     width: 100%;
 
     padding: 30px 12px 0 0;
+
+    @media(max-width: 768px){
+        display: none;
+    }
 `;
 
 export const CarouselButtonBox = styled.div`
@@ -96,4 +150,29 @@ export const CarouselCounter = styled.div<{ active: Boolean; }>`
     cursor: pointer;
 `;
 
-export const MediaLayer = styled.div``;
+export const MediaLayer = styled.div`
+    .youtube-frame{
+        width: 760px;
+        height: 428px;
+        @media(max-width: 1400px) {
+            width: 740px;
+            height: 417px;
+        }
+        @media(max-width: 1400px) {
+            width: 600px;
+            height: 338px;
+        }
+        @media(max-width: 992px) {
+            width: 450px;
+            height: 250px;
+        }
+        @media(max-width: 768px) {
+            width: 576px;
+            height: 325px;
+        }
+        @media(max-width: 576px) {
+            width: 459px;
+            height: 260px;
+        }
+    }
+`;

@@ -44,16 +44,13 @@ const Carousel: React.FC<ICarousel> = () => {
     setItem(item <= 0 ? 3 : item - 1);
   };
 
-  const opts = {
-    height: "422",
-    width: "745",
-  };
+  const opts = {};
 
   return (
-    <Body>
+    <Body className="orange-layer">
       <Container>
-        <Row>
-          <Col lg={5}>
+        <Row className="flex-column-reverse flex-md-row">
+          <Col lg={4} md={4} sm={10} xs={12}>
             <CarouselPanel>
               <strong> NOSSOS PRODUTOS E SERVIÇOS </strong>
               <p>
@@ -66,9 +63,9 @@ const Carousel: React.FC<ICarousel> = () => {
                   ? ProductsData[item].description
                   : "NÃO DEFINIDO"}
               </span>
-              <Margin margin="36px 0 0 0" />
+              <Margin margin="24px 0 0 0" />
               <Row>
-                <Col lg={5}>
+                <Col xl={5} lg={8} md={8} sm={6} xs={10}>
                   {ProductsData[item].link ? (
                     <Link href={ProductsData[item].link}>
                       <a>
@@ -80,7 +77,7 @@ const Carousel: React.FC<ICarousel> = () => {
               </Row>
             </CarouselPanel>
           </Col>
-          <Col lg={7}>
+          <Col lg={8} md={8} className="flex-end">
             <MediaLayer>
               {ProductsData[item].image != "null" ? (
                 <Image
@@ -90,13 +87,17 @@ const Carousel: React.FC<ICarousel> = () => {
                   height={422}
                 />
               ) : (
-                <YouTube videoId={ProductsData[item].video} opts={opts} />
+                <YouTube
+                  videoId={ProductsData[item].video}
+                  opts={opts}
+                  className="youtube-frame"
+                />
               )}
             </MediaLayer>
           </Col>
         </Row>
         <Row className="justify-content-end">
-          <Col lg={2}>
+          <Col lg={2} md={4} sm={6} xs={6}>
             <CarouselCounterBox>
               <CarouselCounter
                 active={item == 0 ? true : false}
@@ -124,7 +125,7 @@ const Carousel: React.FC<ICarousel> = () => {
               />
             </CarouselCounterBox>
           </Col>
-          <Col lg={2}>
+          <Col lg={2} md={4} sm={6} xs={6}>
             <CarouselButtonBox>
               <CarouselButton
                 onClick={() => {
@@ -152,8 +153,8 @@ const Carousel: React.FC<ICarousel> = () => {
               </CarouselButton>
             </CarouselButtonBox>
           </Col>
-          <Col lg={1}></Col>
-          <Col lg={2}>
+          <Col lg={1} md={1}></Col>
+          <Col lg={2} md={3}>
             <SocialMedia>
               <a
                 href="https://facebook.com/stcoop"
@@ -195,7 +196,7 @@ const Carousel: React.FC<ICarousel> = () => {
           </Col>
         </Row>
       </Container>
-      <OrangeLayerEdit />
+      {/* <OrangeLayerEdit /> */}
     </Body>
   );
 };

@@ -3,29 +3,31 @@ import React from "react";
 import Link from "next/link";
 
 import { Container, Row, Col } from "react-bootstrap";
-import { Body, Logo, Button, ColEdit, OrangeLayerEdit } from "./styles";
+import { Body, Logo, Button, ColEdit, LogoLayer } from "./styles";
 
 import LogoSTCOOP from "../../public/images/stcoop-logo01.svg";
 
 const Navbar: React.FC = () => {
   return (
-    <Body>
+    <Body className="orange-layer">
       <Container>
         <Row>
-          <Col lg={3}>
+          <Col lg={3} md={4} sm={5} xs={6}>
             <Link href="/">
               <a>
-                <Logo
-                  src={LogoSTCOOP}
-                  alt="STCOOP Logo"
-                  width={225}
-                  height={64}
-                />
+                <LogoLayer>
+                  <Logo
+                    src={LogoSTCOOP}
+                    layout="fill"
+                    objectFit="cover"
+                    alt="STCOOP Cooperativa Logística Logo Branca"
+                  />
+                </LogoLayer>
               </a>
             </Link>
           </Col>
 
-          <ColEdit className="links" lg={6}>
+          <ColEdit className="links" lg={6} md={1} sm={1} xs={1}>
             <Link href="/seja-cooperado">
               <a> SEJA COOPERADO </a>
             </Link>
@@ -40,16 +42,16 @@ const Navbar: React.FC = () => {
             </Link>
           </ColEdit>
 
-          <Col lg={1}></Col>
+          <Col lg={1} md={3} sm={1} xs={1}></Col>
 
-          <ColEdit lg={2}>
+          <ColEdit lg={2} md={4} sm={5} xs={4}>
             <Button disabled>
               <a> SOU COOPERADO </a>
             </Button>
           </ColEdit>
         </Row>
       </Container>
-      <OrangeLayerEdit />
+      {/* <OrangeLayerEdit /> */}
     </Body>
   );
 };
