@@ -194,7 +194,13 @@ const Footer: React.FC<{ withoutSitemap?: Boolean }> = (props) => {
               </a>
             </SocialMediaBox>
           </Col>
-          <Col lg={3} md={6} sm={6} xs={6} className="centered vertical-center">
+          <Col
+            lg={3}
+            md={6}
+            sm={6}
+            xs={6}
+            className="centered vertical-center item-contact"
+          >
             <ContactBox>
               <a href="tel:08009999999"> 0800 999 9999 </a>
               <a href="mailto:contato@stcoop.com.br"> contato@stcoop.com.br </a>

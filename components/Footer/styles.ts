@@ -40,6 +40,9 @@ export const Body = styled.div`
         .item-3, .item-4{
             margin: 24px 0 0 0;
         }
+        .item-contact{
+            justify-content: flex-start;
+        }
     }
 `;
 
@@ -61,6 +64,10 @@ export const LogoLayer = styled.div`
     @media(max-width: 992px){
         width: 183px;
         height: 52px;
+    }
+    @media(max-width: 576px){
+        width: 175px;
+        height: 50px;
     }
 `;
 
