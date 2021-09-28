@@ -166,8 +166,8 @@ export const Sidenav = styled.div<{ active?: Boolean; }>`
     background-color: ${({ theme }) => theme.colors.orange};
 
     position: absolute;
-    right: ${(props) => props.active ? '0' : '-200vw'};
-    top: 0;
+    right: 0;
+    top: ${(props) => props.active ? '0' : '-200vh'};
 
     width: 300px;
 
@@ -178,7 +178,7 @@ export const Sidenav = styled.div<{ active?: Boolean; }>`
 
     box-shadow: 1px 6px 8px rgba(0, 0, 0, 0.05);
 
-    z-index: 994;
+    z-index: 997;
 
     a{
         color: ${({ theme }) => theme.colors.white};

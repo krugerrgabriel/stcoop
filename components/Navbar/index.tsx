@@ -10,7 +10,7 @@ import LogoSTCOOP from "../../public/images/stcoop-logo01.svg";
 import SidenavIcon from "../../public/images/icons/stcoop-sidenav.svg";
 
 const Navbar: React.FC = () => {
-  const [activeSidenav, setActiveSidenav] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <>
       <Body className="orange-layer-navbar">
@@ -54,10 +54,7 @@ const Navbar: React.FC = () => {
               </Button>
             </ColEdit>
 
-            <div
-              className="sidenav-trigger"
-              onClick={() => setActiveSidenav(!activeSidenav)}
-            >
+            <div className="sidenav-trigger" onClick={() => setIsOpen(!isOpen)}>
               <div className="wrapper">
                 <Image
                   src={SidenavIcon}
@@ -70,7 +67,7 @@ const Navbar: React.FC = () => {
           </Row>
         </Container>
       </Body>
-      <Sidenav active={activeSidenav}>
+      <Sidenav active={isOpen}>
         <Link href="/seja-cooperado">
           <a> SEJA COOPERADO </a>
         </Link>
