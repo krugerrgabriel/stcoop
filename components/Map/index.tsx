@@ -34,7 +34,7 @@ const Map: React.FC<{ type: String }> = (props) => {
     <Body>
       <Container>
         <Row>
-          <Col lg={6}>
+          <Col lg={6} md={12} className="align-center justify-content-center">
             <MapLayer>
               {PinsData.map((item: Data, index: number) => {
                 return (
@@ -94,7 +94,7 @@ const Map: React.FC<{ type: String }> = (props) => {
               sanctus est Lorem ipsum dolor sit amet. Lorem ipsum
             </TextDevelop>
             <Row>
-              <Col lg={7}>
+              <Col lg={7} md={6} xs={8}>
                 <UnidadeShow>
                   <ImageLayer>
                     <Image

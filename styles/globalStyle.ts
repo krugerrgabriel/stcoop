@@ -90,7 +90,21 @@ export const DefaultMiniTitle = css`
     font-size: 28px;
     font-weight: 600;
 
+    line-height: 48px;
+
     text-transform: uppercase;
+
+    @media(max-width: 1400px) {
+        font-size: 26px;
+
+        line-height: 26px;
+    }
+
+    @media(max-width: 992px) {
+        font-size: 24px;
+
+        line-height: 24px;
+    }
 `;
 
 export default GlobalStyle;

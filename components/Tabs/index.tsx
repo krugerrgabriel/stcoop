@@ -32,18 +32,12 @@ const Tabs: React.FC<{ tab?: Number }> = (props) => {
     "A força que representa estes transportadores configura cerca de 70% de toda frota brasileira, que juntas realizam 83% das movimentações de cargas pelo país. A coletividade proporcionada pela STCOOP irá gerar a força de negociação que eles precisam, sendo possível obter diversos benefícios.",
   ];
 
-  const opts = {
-    height: "535",
-    width: "955",
-    playerVars: {
-      autoplay: 0,
-    },
-  };
+  const opts = {};
   return (
     <Body>
       <Container>
         <Row>
-          <Col lg={6}>
+          <Col lg={6} md={12} sm={12}>
             <Row>
               <Col lg={12}>
                 <TabsBox>
@@ -82,7 +76,11 @@ const Tabs: React.FC<{ tab?: Number }> = (props) => {
       <VideoLayer>
         <ImageBox>
           {/* @ts-ignore */}
-          <YouTube videoId="W0Wy1A1GWKQ" opts={opts} />
+          <YouTube
+            className="youtube-frame"
+            videoId="W0Wy1A1GWKQ"
+            opts={opts}
+          />
         </ImageBox>
       </VideoLayer>
     </Body>

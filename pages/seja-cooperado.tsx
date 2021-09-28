@@ -28,10 +28,7 @@ import Footer from "../components/Footer";
 import FaqData from "../public/json/faq.json";
 
 const SejaCooperado: NextPage = () => {
-  const opts = {
-    height: "535",
-    width: "955",
-  };
+  const opts = {};
   return (
     <>
       <Head>
@@ -55,7 +52,7 @@ const SejaCooperado: NextPage = () => {
       <OqueBox>
         <Container>
           <Row>
-            <Col lg={5} className="margin-top-42px">
+            <Col lg={5} md={6} className="margin-top-42px">
               <Row>
                 <Col lg={12}>
                   <MiniTitle> LOREM IPSUM DOLOR SIT </MiniTitle>
@@ -82,7 +79,11 @@ const SejaCooperado: NextPage = () => {
         <VideoLayer>
           <ImageBox>
             {/* @ts-ignore */}
-            <YouTube videoId="2G6E7WcVIJc" opts={opts} />
+            <YouTube
+              videoId="2G6E7WcVIJc"
+              opts={opts}
+              className="youtube-frame"
+            />
           </ImageBox>
         </VideoLayer>
       </OqueBox>

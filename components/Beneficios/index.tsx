@@ -38,15 +38,12 @@ const Beneficios: React.FC = () => {
     setItem(item <= 0 ? 3 : item - 1);
   };
 
-  const opts = {
-    height: "350",
-    width: "622",
-  };
+  const opts = {};
   return (
     <Body>
       <Container>
         <Row>
-          <Col lg={6}>
+          <Col lg={7} md={12}>
             <YouTubeLayer>
               {ProductsData[item].image != "null" ? (
                 <Image
@@ -56,11 +53,15 @@ const Beneficios: React.FC = () => {
                   height={422}
                 />
               ) : (
-                <YouTube videoId={ProductsData[item].video} opts={opts} />
+                <YouTube
+                  className="youtube-frame"
+                  videoId={ProductsData[item].video}
+                  opts={opts}
+                />
               )}
             </YouTubeLayer>
           </Col>
-          <Col lg={6}>
+          <Col lg={5} md={8} sm={10} xs={12} className="offset-control-4">
             <InfoPanel>
               <strong> NOSSOS PRODUTOS E SERVIÇOS </strong>
               <p>
@@ -89,8 +90,14 @@ const Beneficios: React.FC = () => {
           </Col>
         </Row>
         <Row>
-          <Col lg={3} />
-          <Col lg={2}>
+          <Col lg={3} md={1} sm={1} />
+          <Col
+            lg={2}
+            md={2}
+            sm={3}
+            xs={6}
+            className="offset-control-3 offset-control-992px"
+          >
             <CarouselButtonBox>
               <CarouselButton
                 onClick={() => {
@@ -118,7 +125,7 @@ const Beneficios: React.FC = () => {
               </CarouselButton>
             </CarouselButtonBox>
           </Col>
-          <Col lg={2}>
+          <Col lg={2} md={4} sm={4} xs={6}>
             <CarouselCounterBox>
               <CarouselCounter
                 active={item == 0 ? true : false}

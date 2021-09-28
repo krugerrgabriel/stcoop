@@ -5,7 +5,22 @@ import { DefaultText } from '../../styles/globalStyle';
 export const Body = styled.div`
     position: relative;
 
-    height: 535px;
+    height: 500px;
+
+    @media(max-width: 1600px){
+        height: 450px;
+    }
+    @media(max-width: 1400px){
+        height: 400px;
+    }
+    @media(max-width: 1200px){
+        height: 350px;
+    }
+    @media(max-width: 992px){
+        height: unset;
+
+        padding: calc(100vw/1.78 - 48px) 0 36px 0;
+    }
 `;
 
 export const TabsBox = styled.div`
@@ -46,9 +61,6 @@ export const TabText = styled.p`
 export const VideoLayer = styled.div`
     position: absolute;
 
-    width: 950px;
-    height: 535px;
-
     right: 0;
     top: 0;
 
@@ -58,6 +70,28 @@ export const VideoLayer = styled.div`
 export const ImageBox = styled.div`
     position: relative;
 
-    width: 950px;
-    height: 535px;
+    display: flex;
+    justify-content: flex-end;
+
+    .youtube-frame{
+        width: 810px;
+        height: 456px;
+
+        @media(max-width: 1600px){
+            width: 712px;
+            height: 401px;
+        }
+        @media(max-width: 1400px){
+            width: 610px;
+            height: 343.50px;
+        }
+        @media(max-width: 1200px){
+            width: 505px;
+            height: 284.39px;
+        }
+        @media(max-width: 992px){
+            width: 100vw;
+            height: calc(100vw/1.78);
+        }
+    }
 `;

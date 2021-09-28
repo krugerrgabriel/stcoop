@@ -25,18 +25,12 @@ const TabsBases: React.FC = () => {
 
   const videosArray = ["E19qYSYBgqQ", "W0Wy1A1GWKQ", "fdS-aCIKrfQ"];
 
-  const opts = {
-    height: "535",
-    width: "955",
-    playerVars: {
-      autoplay: 0,
-    },
-  };
+  const opts = {};
   return (
     <Body>
       <Container>
         <Row>
-          <Col lg={6}>
+          <Col lg={6} md={12} sm={12}>
             <Row>
               <Col lg={12}>
                 <TabsBox>
@@ -75,7 +69,11 @@ const TabsBases: React.FC = () => {
       <VideoLayer>
         <ImageBox>
           {/* @ts-ignore */}
-          <YouTube videoId={videosArray[activeTab]} opts={opts} />
+          <YouTube
+            className="youtube-frame"
+            videoId={videosArray[activeTab]}
+            opts={opts}
+          />
         </ImageBox>
       </VideoLayer>
     </Body>

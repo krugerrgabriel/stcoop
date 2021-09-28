@@ -90,7 +90,7 @@ const BasesDeApoio: NextPage = () => {
       <OqueSaoBox>
         <Container>
           <Row>
-            <Col lg={7}>
+            <Col lg={7} md={7} sm={12} className="padding-576">
               <ImageLayer>
                 <Image
                   src={BasesImage}
@@ -102,7 +102,9 @@ const BasesDeApoio: NextPage = () => {
             </Col>
             <Col
               lg={5}
-              className="display-flex justify-content-center flex-column"
+              md={5}
+              sm={12}
+              className="display-flex justify-content-center flex-column margin-top"
             >
               <Row>
                 <Col lg={12}>
@@ -140,7 +142,7 @@ const BasesDeApoio: NextPage = () => {
       <ItemBox>
         {items.map((item, index) => {
           return (
-            <Item key={index}>
+            <Item key={index} className={`item-${index}`}>
               <ItemImageAbsolute left={item.left}>
                 <ItemImage>
                   <Image
@@ -153,8 +155,8 @@ const BasesDeApoio: NextPage = () => {
               </ItemImageAbsolute>
               <Container>
                 <Row>
-                  {item.left ? <Col lg={6} /> : null}
-                  <Col lg={6}>
+                  {item.left ? <Col lg={6} md={6} sm={12} /> : null}
+                  <Col lg={6} md={6} sm={12}>
                     <div className="info">
                       <p> {item.title} </p>
                       <span>{item.description}</span>

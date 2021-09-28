@@ -14,6 +14,7 @@ import Beneficios from "../components/Beneficios";
 import {
   BeneficiosBox,
   OrangeLayerEdit,
+  OrangeLayerEditTwo,
 } from "../components/Beneficios/styles";
 import Map from "../components/Map";
 import { MapBox } from "../components/Map/styles";
@@ -85,7 +86,7 @@ const QuemSomos: NextPage = () => {
             <Subtitle> O que é o cooperativismo </Subtitle>
           </TitleBox>
           <Row>
-            <Col lg={6}>
+            <Col lg={6} md={12}>
               <Row>
                 <Col lg={12}>
                   <MiniTitle> Princípios </MiniTitle>
@@ -94,37 +95,37 @@ const QuemSomos: NextPage = () => {
               <Row>
                 <Col lg={12}>
                   <Item>
-                    <span> 1. </span>
+                    <span>1.</span>
                     <p> Ajuda mútua </p>
                   </Item>
                   <Item>
-                    <span> 2. </span>
+                    <span>2.</span>
                     <p> Responsabilidade </p>
                   </Item>
                   <Item>
-                    <span> 3. </span>
+                    <span>3.</span>
                     <p> Democracia e igualdade </p>
                   </Item>
                   <Item>
-                    <span> 4. </span>
+                    <span>4.</span>
                     <p> Equidade e solidariedade </p>
                   </Item>
                   <Item>
-                    <span> 5. </span>
+                    <span>5.</span>
                     <p> Honestidade </p>
                   </Item>
                   <Item>
-                    <span> 6. </span>
+                    <span>6.</span>
                     <p> Transparência </p>
                   </Item>
                   <Item>
-                    <span> 7. </span>
+                    <span>7.</span>
                     <p> Responsabilidade social </p>
                   </Item>
                 </Col>
               </Row>
             </Col>
-            <Col lg={6}>
+            <Col lg={6} md={12} className="margin-top-24px">
               <Row>
                 <Col lg={12}>
                   <MiniTitle> Cooperativa de Transporte </MiniTitle>
@@ -156,10 +157,12 @@ const QuemSomos: NextPage = () => {
       </CooperativismoBox>
 
       <BeneficiosBox id="nossos-beneficios">
-        <OrangeLayerEdit left />
+        <OrangeLayerEditTwo left />
         <Container>
           <TitleBox>
-            <Title white> NOSSOS BENEFÍCIOS </Title>
+            <Title white className="black-992px">
+              NOSSOS BENEFÍCIOS
+            </Title>
           </TitleBox>
         </Container>
         <Beneficios />
@@ -185,7 +188,7 @@ const QuemSomos: NextPage = () => {
           <Row>
             {LoremData.map((item, index) => {
               return (
-                <Col lg={4} key={index}>
+                <Col lg={4} md={4} key={index}>
                   <Lorem title={item.title} description={item.description} />
                 </Col>
               );
