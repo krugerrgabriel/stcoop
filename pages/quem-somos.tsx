@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 import type { NextPage } from "next";
 
@@ -44,9 +44,6 @@ const QuemSomos: NextPage = () => {
   const router = useRouter();
   const { tab } = router.query;
   let tabSelect = tab != undefined ? tab : 0;
-
-  const [isOpen, setIsOpen] = useState(false);
-
   return (
     <>
       <Head>
@@ -81,21 +78,6 @@ const QuemSomos: NextPage = () => {
         </Container>
         <Values />
       </ValueBox>
-
-      <Button
-        onClick={() => setIsOpen(!isOpen)}
-        aria-controls="example-collapse-text"
-        aria-expanded={open}
-      >
-        click
-      </Button>
-      <Collapse in={isOpen}>
-        <div id="example-collapse-text">
-          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
-          terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer
-          labore wes anderson cred nesciunt sapiente ea proident.
-        </div>
-      </Collapse>
 
       <CooperativismoBox id="cooperativismo">
         <Container>
