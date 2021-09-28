@@ -5,6 +5,21 @@ export const Body = styled.div<{ large?: Boolean; }>`
 
     width: 100%;
     height: ${(props) => props.large ? '525px' : '254px'};
+    @media(max-width: 1400px){
+        height: ${(props) => props.large ? '546px' : '261px'};
+    }
+    @media(max-width: 1200px){
+        height: ${(props) => props.large ? '456px' : '216px'};
+    }
+    @media(max-width: 992px){
+        height: ${(props) => props.large ? '336px' : '156px'};
+    }
+    @media(max-width: 768px){
+        height: ${(props) => props.large ? '516px' : '516px'};
+    }
+    @media(max-width: 576px){
+        height: 100vw;
+    }
 
     cursor: pointer;
 
@@ -36,6 +51,13 @@ export const Body = styled.div<{ large?: Boolean; }>`
 
             font-size: ${(props) => props.large ? '18px' : '14px'};
             font-weight: 600;
+
+            @media(max-width: 992px){
+                font-size: ${(props) => props.large ? '16px' : '12px'};
+            }
+            @media(max-width: 768px){
+                font-size: 18px;
+            }
         }
 
         p{
@@ -47,6 +69,17 @@ export const Body = styled.div<{ large?: Boolean; }>`
             line-height: ${(props) => props.large ? '42px' : '26px'};
 
             margin: 0;
+
+            @media(max-width: 992px){
+                font-size: ${(props) => props.large ? '24px' : '14px'};
+
+                line-height: ${(props) => props.large ? '28px' : '18px'};
+            }
+            @media(max-width: 768px){
+                font-size: 32px;
+
+                line-height: 42px;
+            }
         }
     }
 
@@ -61,6 +94,16 @@ export const Body = styled.div<{ large?: Boolean; }>`
         font-weight: 500;
 
         z-index: 995;
+
+        @media(max-width: 992px){
+            font-size: ${(props) => props.large ? '10px' : '8px'};
+        }
+        @media(max-width: 768px){
+            font-size: 12px;
+
+            bottom: 8px;
+            right: 16px;
+        }
     }
 
     &:hover{

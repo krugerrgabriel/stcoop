@@ -18,6 +18,7 @@ import {
   NoticiasBox,
   Divider,
   BoxNews,
+  MarginMd,
 } from "../../styles/pages/rota-da-informacao";
 
 const RotaDaInformacao: NextPage = () => {
@@ -101,23 +102,23 @@ const RotaDaInformacao: NextPage = () => {
             </Col>
           </Row>
           <Row>
-            <Col lg={6}>
+            <Col lg={6} md={6} sm={12}>
               <RotaCard large item={items[0]} />
             </Col>
-            <Col lg={6}>
+            <Col lg={6} md={6} sm={12}>
               <Row>
-                <Col lg={6}>
+                <Col lg={6} md={6} sm={12}>
                   <RotaCard item={items[1]} />
                 </Col>
-                <Col lg={6}>
+                <Col lg={6} md={6} sm={12}>
                   <RotaCard item={items[2]} />
                 </Col>
               </Row>
               <Row>
-                <Col lg={6}>
+                <Col lg={6} md={6} sm={12}>
                   <RotaCard item={items[3]} />
                 </Col>
-                <Col lg={6}>
+                <Col lg={6} md={6} sm={12}>
                   <RotaCard item={items[4]} />
                 </Col>
               </Row>
@@ -128,7 +129,7 @@ const RotaDaInformacao: NextPage = () => {
 
       <Container>
         <Row>
-          <Col lg={8}>
+          <Col lg={8} md={12} sm={12}>
             <NoticiasBox>
               {items
                 .filter((item) => item.big == false)
@@ -157,42 +158,48 @@ const RotaDaInformacao: NextPage = () => {
                 })}
             </NoticiasBox>
           </Col>
-          <Col lg={4}>
+          <Col lg={4} md={12} sm={12}>
             <BoxNews>
               <h1> NOVOS </h1>
-              {items
-                .filter((item) => item.big == false)
-                .map((item, index) => {
-                  return (
-                    <div key={index}>
-                      <RotaSmallCard item={item} />
-                      {items.filter((item) => item.big == false).length - 1 !=
-                      index ? (
-                        <Divider small />
-                      ) : null}
-                    </div>
-                  );
-                })}
+              <Row>
+                {items
+                  .filter((item) => item.big == false)
+                  .map((item, index) => {
+                    return (
+                      <Col lg={12} md={6} sm={6} xs={12} key={index}>
+                        <RotaSmallCard item={item} />
+                        {items.filter((item) => item.big == false).length - 1 !=
+                        index ? (
+                          <Divider small />
+                        ) : null}
+                      </Col>
+                    );
+                  })}
+              </Row>
             </BoxNews>
             <BoxNews>
               <h1> MAIS VISTOS </h1>
-              {items
-                .filter((item) => item.big == false)
-                .map((item, index) => {
-                  return (
-                    <div key={index}>
-                      <RotaSmallCard item={item} />
-                      {items.filter((item) => item.big == false).length - 1 !=
-                      index ? (
-                        <Divider small />
-                      ) : null}
-                    </div>
-                  );
-                })}
+              <Row>
+                {items
+                  .filter((item) => item.big == false)
+                  .map((item, index) => {
+                    return (
+                      <Col lg={12} md={6} sm={6} xs={12} key={index}>
+                        <RotaSmallCard item={item} />
+                        {items.filter((item) => item.big == false).length - 1 !=
+                        index ? (
+                          <Divider small />
+                        ) : null}
+                      </Col>
+                    );
+                  })}
+              </Row>
             </BoxNews>
           </Col>
         </Row>
       </Container>
+
+      <MarginMd />
 
       <Footer />
     </>

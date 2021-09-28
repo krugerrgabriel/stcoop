@@ -53,4 +53,8 @@ export const ImageLayer = styled.div`
     position: relative;
     width: 100%;
     height: 200px;
+
+    @media(max-width: 576px){
+        height: calc(100vw / 2.12);
+    }
 `;

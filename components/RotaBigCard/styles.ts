@@ -17,6 +17,10 @@ export const Body = styled.div`
 
         font-size: 18px;
         font-weight: 600;
+
+        @media(max-width: 768px){
+            font-size: 16px;
+        }
     }
 
     p{
@@ -28,6 +32,12 @@ export const Body = styled.div`
         line-height: 36px;
 
         margin: 4px 0 12px 0;
+
+        @media(max-width: 768px){
+            font-size: 24px;
+
+            line-height: 32px;
+        }
     }
 
     span{
@@ -39,6 +49,12 @@ export const Body = styled.div`
         line-height: 28px;
 
         margin: 12px 0 0 0;
+
+        @media(max-width: 768px){
+            font-size: 18px;
+
+            line-height: 26px;
+        }
     }
 
     div.metadata{
@@ -53,6 +69,10 @@ export const Body = styled.div`
             font-weight: 500;
 
             margin-top: 14px;
+
+            @media(max-width: 768px){
+                font-size: 13px;
+            }
         }
         h6{
             margin-right: 42px;

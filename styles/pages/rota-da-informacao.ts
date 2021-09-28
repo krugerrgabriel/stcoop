@@ -20,6 +20,10 @@ export const MaisVistosBox = styled.div`
         text-align: center;
 
         margin: 0 0 12px 0;
+
+        @media(max-width: 992px){
+            font-size: 38px;
+        }
     }
 `;
 
@@ -48,8 +52,14 @@ export const BoxNews = styled.div`
     border: 1px solid #7A7A7A;
 
     padding: 12px;
-
     margin: 32px 0 0 0;
+
+    @media(max-width: 992px){
+        border: none;
+
+        padding: 0;
+        margin: 24px 0 0 0;
+    }
 
     h1{
         color: ${({ theme }) => theme.colors.gray01};
@@ -61,6 +71,12 @@ export const BoxNews = styled.div`
         width: 100%;
 
         margin-bottom: 12px;
+
+        @media(max-width: 992px){
+            text-align: center;
+
+            margin: 12px 0 18px 0;
+        }
     }
 `;
 
@@ -187,4 +203,10 @@ export const Wrapper = styled.div<{ type: String; }>`
     width: ${(props) => props.type == 'facebook' ? '10.38px' : props.type == 'twitter' ? '20px' : props.type == 'whatsapp' ? '20px' : '20px'};
 
     margin-right: 12px;
+`;
+
+export const MarginMd = styled.div`
+    @media(max-width: 992px){
+        margin: 0 0 42px 0;
+    }
 `;

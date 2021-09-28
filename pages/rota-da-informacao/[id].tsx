@@ -288,27 +288,29 @@ const Noticia: NextPage = () => {
               </Col>
             </Row>
           </Col>
-          <Col lg={4}>
+          <Col lg={4} md={12} sm={12}>
             <BoxNews>
               <h1> NOVOS </h1>
-              {items
-                .filter((item) => item.big == false)
-                .map((item, index) => {
-                  return (
-                    <>
-                      <RotaSmallCard item={item} />
-                      {items.filter((item) => item.big == false).length - 1 !=
-                      index ? (
-                        <Divider small />
-                      ) : null}
-                    </>
-                  );
-                })}
+              <Row>
+                {items
+                  .filter((item) => item.big == false)
+                  .map((item, index) => {
+                    return (
+                      <Col lg={12} md={6} sm={6} xs={12} key={index}>
+                        <RotaSmallCard item={item} />
+                        {items.filter((item) => item.big == false).length - 1 !=
+                        index ? (
+                          <Divider small />
+                        ) : null}
+                      </Col>
+                    );
+                  })}
+              </Row>
             </BoxNews>
           </Col>
         </Row>
         <Row>
-          <Col lg={3}>
+          <Col lg={3} md={6} sm={6}>
             <SocialButton type="facebook">
               <Wrapper type="facebook">
                 <Image
@@ -321,7 +323,7 @@ const Noticia: NextPage = () => {
               <span> COMPARTILHAR </span>
             </SocialButton>
           </Col>
-          <Col lg={3}>
+          <Col lg={3} md={6} sm={6}>
             <SocialButton type="twitter">
               <Wrapper type="twitter">
                 <Image
@@ -334,7 +336,7 @@ const Noticia: NextPage = () => {
               <span> TWEETAR </span>
             </SocialButton>
           </Col>
-          <Col lg={3}>
+          <Col lg={3} md={6} sm={6}>
             <SocialButton type="whatsapp">
               <Wrapper type="whatsapp">
                 <Image
@@ -347,7 +349,7 @@ const Noticia: NextPage = () => {
               <span> ENCAMINHAR </span>
             </SocialButton>
           </Col>
-          <Col lg={3}>
+          <Col lg={3} md={6} sm={6}>
             <SocialButton type="mail">
               <Wrapper type="mail">
                 <Image
@@ -374,13 +376,13 @@ const Noticia: NextPage = () => {
           </Col>
         </Row>
         <Row>
-          <Col lg={4}>
+          <Col lg={4} md={6} sm={12} xs={12}>
             <RotaSmallCard item={items[0]} />
           </Col>
-          <Col lg={4}>
+          <Col lg={4} md={6} sm={12} xs={12}>
             <RotaSmallCard item={items[1]} />
           </Col>
-          <Col lg={4}>
+          <Col lg={4} md={6} sm={12} xs={12}>
             <RotaSmallCard item={items[2]} />
           </Col>
         </Row>
