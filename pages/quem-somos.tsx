@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import type { NextPage } from "next";
 
@@ -30,7 +30,7 @@ import { TitleBox, Title, Subtitle, MiniTitle } from "../styles/";
 import Lorem from "../components/Lorem";
 import { LoremBox, OrangeLayerWidth } from "../components/Lorem/styles";
 
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Button, Collapse } from "react-bootstrap";
 
 import QuemSomosBanner from "../public/images/stcoop-quem-somos.png";
 
@@ -44,6 +44,9 @@ const QuemSomos: NextPage = () => {
   const router = useRouter();
   const { tab } = router.query;
   let tabSelect = tab != undefined ? tab : 0;
+
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <>
       <Head>
@@ -78,6 +81,21 @@ const QuemSomos: NextPage = () => {
         </Container>
         <Values />
       </ValueBox>
+
+      <Button
+        onClick={() => setIsOpen(!isOpen)}
+        aria-controls="example-collapse-text"
+        aria-expanded={open}
+      >
+        click
+      </Button>
+      <Collapse in={isOpen}>
+        <div id="example-collapse-text">
+          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
+          terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer
+          labore wes anderson cred nesciunt sapiente ea proident.
+        </div>
+      </Collapse>
 
       <CooperativismoBox id="cooperativismo">
         <Container>
