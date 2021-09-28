@@ -65,7 +65,7 @@ const Carousel: React.FC<ICarousel> = () => {
               </span>
               <Margin margin="24px 0 0 0" />
               <Row>
-                <Col xl={5} lg={8} md={8} sm={6} xs={10}>
+                <Col xl={5} lg={8} md={8} sm={6} xs={12}>
                   {ProductsData[item].link ? (
                     <Link href={ProductsData[item].link}>
                       <a>

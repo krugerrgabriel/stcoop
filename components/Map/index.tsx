@@ -94,7 +94,7 @@ const Map: React.FC<{ type: String }> = (props) => {
               sanctus est Lorem ipsum dolor sit amet. Lorem ipsum
             </TextDevelop>
             <Row>
-              <Col lg={7} md={6} xs={8}>
+              <Col lg={7} md={6} xs={12}>
                 <UnidadeShow>
                   <ImageLayer>
                     <Image
