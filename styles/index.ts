@@ -60,6 +60,16 @@ export const FullBanner = styled.div`
 
     z-index: -1;
 
+    @media(max-width: 1200px){
+        height: 250px;
+    }
+    @media(max-width: 992px){
+        height: 225px;
+    }
+    @media(max-width: 768px){
+        height: 200px;
+    }
+
     *{
         z-index: -1;
     }
@@ -78,7 +88,7 @@ export const FullBanner = styled.div`
 
         z-index: 2;
 
-        @media(max-width: 576px){
+        @media(max-width: 768px){
             font-size: 36px;
         }
     }
