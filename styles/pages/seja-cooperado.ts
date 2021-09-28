@@ -49,6 +49,10 @@ export const ImageBox = styled.div`
             width: 650px;
             height: calc(650px / 1.7777777777777777777777777777778);
         }
+        @media(max-width: 1200px){
+            width: 505px;
+            height: calc(505px / 1.7777777777777777777777777777778);
+        }
         @media(max-width: 992px) {
             width: 375px;
             height: calc(375px / 1.7777777777777777777777777777778);

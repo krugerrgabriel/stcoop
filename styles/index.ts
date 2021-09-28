@@ -77,6 +77,10 @@ export const FullBanner = styled.div`
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.10);
 
         z-index: 2;
+
+        @media(max-width: 576px){
+            font-size: 36px;
+        }
     }
 
 `;
