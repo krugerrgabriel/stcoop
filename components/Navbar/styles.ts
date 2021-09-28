@@ -20,6 +20,51 @@ export const Body = styled.div`
     *{
         z-index: 995;
     }
+
+    div.sidenav-trigger{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        background-color: ${({ theme }) => theme.colors.black};
+
+        position: absolute;
+        right: 12px;
+        top: 0;
+        bottom: 0;
+        margin-top: auto;
+        margin-bottom: auto;
+
+        width: 52px;
+        height: 52px;
+        
+        cursor: pointer;
+
+        display: none;
+
+        transition: 0.2s;
+
+        z-index: 999;
+
+        &:hover{
+            transform: scale(1.005);
+
+            box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.1);
+        }
+        &:active{
+            transform: scale(0.995);
+        }
+
+        @media(max-width: 992px) {
+            display: flex;
+        }
+
+        div.wrapper{
+            position: relative;
+            width: 24px;
+            height: 24px;
+        }
+    }
 `;
 
 export const LogoLayer = styled.div`
@@ -61,6 +106,11 @@ export const Button = styled.a<{ disabled?: Boolean }>`
         font-size: 13px;
 
         padding: 12px 12px;
+    }
+    &.main{
+        @media(max-width: 992px) {
+            display: none;
+        }
     }
 
     &:hover{
@@ -105,4 +155,44 @@ export const OrangeLayerEdit = styled(OrangeLayer)`
     height: 100%;
 
     z-index: 994;
+`;
+
+export const Sidenav = styled.div<{ active?: Boolean; }>`
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+
+    background-color: ${({ theme }) => theme.colors.orange};
+
+    position: absolute;
+    right: ${(props) => props.active ? '0' : '-200vw'};
+    top: 0;
+
+    width: 300px;
+
+    margin: 112px 0 0 0;
+    padding: 24px;
+
+    transition: 0.2s;
+
+    box-shadow: 1px 6px 8px rgba(0, 0, 0, 0.05);
+
+    z-index: 994;
+
+    a{
+        color: ${({ theme }) => theme.colors.white};
+        
+        font-size: 16px;
+        font-weight: 500;
+
+        margin: 12px 0;
+
+        &:hover{
+            color: ${({ theme }) => theme.colors.gray05} !important;
+        }
+        &.last{
+            margin: 12px 0 24px 0;
+        }
+    }
 `;
