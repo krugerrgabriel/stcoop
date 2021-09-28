@@ -40,31 +40,22 @@ export const ImageBox = styled.div`
 
     .youtube-frame{
         width: 900px;
-        height: 505px;
-
-        @media(max-width: 1600px){
+        height: calc(900px / 1.7777777777777777777777777777778);
+        @media(max-width: 1400px) {
             width: 750px;
-            height: 422px;
+            height: calc(750px / 1.7777777777777777777777777777778);
         }
-        @media(max-width: 1400px){
+        @media(max-width: 1400px) {
             width: 650px;
-            height: 366px;
+            height: calc(650px / 1.7777777777777777777777777777778);
         }
-        @media(max-width: 1200px){
-            width: 550px;
-            height: 310px;
-        }
-        @media(max-width: 992px){
+        @media(max-width: 992px) {
             width: 375px;
-            height: 211px;
+            height: calc(375px / 1.7777777777777777777777777777778);
         }
-        @media(max-width: 768px){
-            width: 540px;
-            height: 304px;
-        }
-        @media(max-width: 768px){
+        @media(max-width: 768px) {
             width: 100vw;
-            height: calc(100vw/1.78);
+            height: calc(100vw / 1.7777777777777777777777777777778);
         }
     }
 

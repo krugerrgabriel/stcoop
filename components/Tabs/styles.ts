@@ -75,23 +75,23 @@ export const ImageBox = styled.div`
 
     .youtube-frame{
         width: 810px;
-        height: 456px;
+        height: calc(810px / 1.7777777777777777777777777777778);
 
         @media(max-width: 1600px){
             width: 712px;
-            height: 401px;
+            height: calc(712px / 1.7777777777777777777777777777778);
         }
         @media(max-width: 1400px){
             width: 610px;
-            height: 343.50px;
+            height: calc(610px / 1.7777777777777777777777777777778);
         }
         @media(max-width: 1200px){
             width: 505px;
-            height: 284.39px;
+            height: calc(505px / 1.7777777777777777777777777777778);
         }
         @media(max-width: 992px){
             width: 100vw;
-            height: calc(100vw/1.78);
+            height: calc(100vw / 1.7777777777777777777777777777778);
         }
     }
 `;

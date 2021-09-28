@@ -156,26 +156,26 @@ export const CarouselCounter = styled.div<{ active: Boolean; }>`
 export const MediaLayer = styled.div`
     .youtube-frame{
         width: 760px;
-        height: 428px;
+        height: calc(760px / 1.7777777777777777777777777777778);
         @media(max-width: 1400px) {
             width: 740px;
-            height: 417px;
+            height: calc(740px / 1.7777777777777777777777777777778);
         }
         @media(max-width: 1400px) {
             width: 600px;
-            height: 338px;
+            height: calc(600px / 1.7777777777777777777777777777778);
         }
         @media(max-width: 992px) {
             width: 450px;
-            height: 250px;
+            height: calc(450px / 1.7777777777777777777777777777778);
         }
         @media(max-width: 768px) {
             width: 576px;
-            height: 325px;
+            height: calc(576px / 1.7777777777777777777777777777778);
         }
         @media(max-width: 576px) {
-            width: 459px;
-            height: 260px;
+            width: 100vw;
+            height: calc(100vw / 1.7777777777777777777777777777778);
         }
     }
 `;
