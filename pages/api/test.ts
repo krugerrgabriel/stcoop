@@ -1,4 +1,4 @@
-import type {  NextApiResponse } from 'next';
+import type {  NextApiResponse, NextApiRequest } from 'next';
 
 import nextConnect from 'next-connect';
 import multer from 'multer';
@@ -26,7 +26,17 @@ const uploadMiddleware = upload.array('theFiles');
 
 apiRoute.use(uploadMiddleware);
 
-apiRoute.post(async (req, res: NextApiResponse) => {
+apiRoute.use(async (req: NextApiRequest, res, next) => {
+    await NextCors(req, res, {
+        // Options
+        methods: ['GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE'],
+        origin: '*',
+        optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
+      });
+      next();
+});
+
+apiRoute.post((req, res: NextApiResponse) => {
     res.status(200).json({ data: 'success' });
 });
 

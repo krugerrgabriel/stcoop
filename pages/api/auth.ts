@@ -22,7 +22,6 @@ export default async function handler(
       const { method } = req;
       const { email, password } = req.body;
 
-
       if(!email || !password){
         return res.json({ success: false, message: 'Os campos precisam ser preenchidos!', req });
       } else{

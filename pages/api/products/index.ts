@@ -1,6 +1,9 @@
-import type {  NextApiResponse } from 'next';
+import type {  NextApiResponse, NextApiRequest } from 'next';
 
+import nextConnect from 'next-connect';
+import multer from 'multer';
 import NextCors from 'nextjs-cors';
+import multiparty from 'multiparty';
 
 const Product = require('@/models/Product.ts');
 
@@ -8,43 +11,57 @@ import dbConnect from "@/utils/dbConnect";
 
 dbConnect();
 
-export default async function handler(
-    req,
-    res: NextApiResponse
-  ) {
-      const { method } = req;
+const upload = multer({
+    storage: multer.diskStorage({
+        destination: './public/uploads',
+        filename: (req, file, cb) => cb(null, file.originalname),
+    }),
+});
 
-      await NextCors(req, res, {
-          methods: ['GET', 'POST'],
-          origin: '*',
-          optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
+const apiRoute = nextConnect({
+    // Handle any other HTTP method
+    onNoMatch(req, res: NextApiResponse) {
+        res.status(405).json({ error: `Method '${req.method}' Not Allowed` });
+    },
+});
+
+// const uploadMiddleware = upload.array('theFiles');
+
+// apiRoute.use(uploadMiddleware);
+
+apiRoute.use(async (req: NextApiRequest, res, next) => {
+    await NextCors(req, res, {
+        // Options
+        methods: ['GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE'],
+        origin: '*',
+        optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
       });
+      next();
+});
 
-      switch(method){
-        // MÉTODO GET
-        case 'GET':
-          try {
-            const products = await Product.find();
+apiRoute.use(async (req: NextApiRequest, res: NextApiResponse, next) => {
+  const form = new multiparty.Form()
 
-            res.status(200).json({ success: true, data: products });
-          } catch (error) {
-            res.status(400).json({ success: false, error });
-          }
-        break;
+  await form.parse(req, function (err, fields, files) {
+    req.body = fields;
+    next();
+  });
+});
 
-        // MÉTODO POST
-        case 'POST':
-          try {
-            const product = await Product.create(req.body.data);
+apiRoute.post(async (req: NextApiRequest, res: NextApiResponse, next) => {
+  res.json({ success: true, data: req.body });
+  // try {
+  //   // const product = await Product.create(req.body.data);
 
-            res.status(201).json({ success: true, data: product });
-          } catch (error) {
-            res.json({ success: false, error });
-          }
-        break;
+  // } catch (error) {
+  //   res.json({ success: false, error });
+  // }
+});
 
-        default:
-          res.status(400).json({ success: false, error: 'Método não encontrado' });
-        break;
-      }
-  }
+export default apiRoute;
+
+export const config = {
+  api: {
+      bodyParser: false, // Disallow body parsing, consume as stream
+  },
+};
