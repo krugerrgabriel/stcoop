@@ -13,6 +13,7 @@ export default async function handler(
     res: NextApiResponse
   ) {
       await NextCors(req, res, {
+          headers: { 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Headers': '*'},
           methods: ['GET', 'POST'],
           origin: '*',
           optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
@@ -22,7 +23,7 @@ export default async function handler(
       const { email, password } = req.body;
 
       if(!email || !password){
-        return res.status(400).json({ success: false, message: 'Os campos precisam ser preenchidos!' });
+        return res.status(400).json({ success: false, message: 'Os campos precisam ser preenchidos!', req: req.body });
       } else{
           switch(method){
             // MÉTODO GET
