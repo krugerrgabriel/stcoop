@@ -13,10 +13,10 @@ export default async function handler(
     res: NextApiResponse
   ) {
       await NextCors(req, res, {
-          headers: { 'Access-Control-Allow-Origin': '*', "Access-Control-Allow-Headers": "Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers"},
-          methods: ['GET', 'POST'],
-          origin: '*',
-          optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
+        // Options
+        methods: ['GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE'],
+        origin: '*',
+        optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
       });
       
       const { method } = req;
