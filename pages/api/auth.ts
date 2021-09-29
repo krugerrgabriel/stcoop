@@ -22,8 +22,9 @@ export default async function handler(
       const { method } = req;
       const { email, password } = req.body;
 
+
       if(!email || !password){
-        return res.status(400).json({ success: false, message: 'Os campos precisam ser preenchidos!', req: req.body });
+        return res.json({ success: false, message: 'Os campos precisam ser preenchidos!', req });
       } else{
           switch(method){
             // MÉTODO GET
@@ -32,17 +33,17 @@ export default async function handler(
                 const user = await User.findOne({ email: email, password: password });
     
                 if(!user){
-                    return res.status(400).json({ success: false, message: 'Usuário não encontrado!' });
+                    return res.json({ success: false, message: 'Usuário não encontrado!' });
                 }
     
-                res.status(200).json({ success: true, data: user });
+                res.json({ success: true, data: user });
               } catch (error) {
-                res.status(400).json({ success: false, error });
+                res.json({ success: false, error });
               }
             break;
     
             default:
-              res.status(400).json({ success: false, error: 'Método não encontrado' });
+              res.json({ success: false, error: 'Método não encontrado' });
             break;
           }
       }
