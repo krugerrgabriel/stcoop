@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+import { LoadingState } from '../../styles/globalStyle';
+
 export const OqueBox = styled.div`
     position: relative;
 
@@ -32,13 +34,14 @@ export const VideoLayer = styled.div`
     z-index: 994;
 `;
 
-export const ImageBox = styled.div`
+export const ImageBox = styled.div<{ ready?: Boolean; }>`
     display: flex;
     justify-content: flex-end;
 
     position: relative;
 
     .youtube-frame{
+        ${(props) => props.ready ? '' : LoadingState};
         width: 900px;
         height: calc(900px / 1.7777777777777777777777777777778);
         @media(max-width: 1400px) {

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 import { OrangeLayer } from "../../styles/";
-import { DefaultText } from '../../styles/globalStyle';
+import { DefaultText, LoadingState } from '../../styles/globalStyle';
 
 export const Body = styled.div`
     height: auto;
@@ -153,8 +153,9 @@ export const CarouselCounter = styled.div<{ active: Boolean; }>`
     cursor: pointer;
 `;
 
-export const MediaLayer = styled.div`
+export const MediaLayer = styled.div<{ ready?: Boolean; }>`
     .youtube-frame{
+        ${(props) => props.ready ? '' : LoadingState};
         width: 760px;
         height: calc(760px / 1.7777777777777777777777777777778);
         @media(max-width: 1400px) {

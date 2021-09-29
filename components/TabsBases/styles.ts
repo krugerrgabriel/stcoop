@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { DefaultText } from '../../styles/globalStyle';
+import { DefaultText, LoadingState } from '../../styles/globalStyle';
 
 export const Body = styled.div`
     position: relative;
@@ -67,13 +67,14 @@ export const VideoLayer = styled.div`
     z-index: 994;
 `;
 
-export const ImageBox = styled.div`
+export const ImageBox = styled.div<{ ready?: Boolean; }>`
     position: relative;
 
     display: flex;
     justify-content: flex-end;
 
     .youtube-frame{
+        ${(props) => props.ready ? '' : LoadingState};
         width: 810px;
         height: calc(810px / 1.7777777777777777777777777777778);
 

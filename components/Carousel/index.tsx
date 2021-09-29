@@ -1,6 +1,4 @@
-import React from "react";
-
-import { useState } from "react";
+import React, { useState } from "react";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -14,7 +12,6 @@ import { Container, Row, Col } from "react-bootstrap";
 import {
   Body,
   CarouselPanel,
-  OrangeLayerEdit,
   SocialMedia,
   CarouselButtonBox,
   CarouselButton,
@@ -36,6 +33,7 @@ import ProductsData from "../../public/json/products.json";
 
 const Carousel: React.FC<ICarousel> = () => {
   const [item, setItem] = useState(0);
+  const [youtubeReady, setYoutubeReady] = useState(false);
 
   const nextItem = () => {
     setItem(item >= 3 ? 0 : item + 1);
@@ -78,7 +76,7 @@ const Carousel: React.FC<ICarousel> = () => {
             </CarouselPanel>
           </Col>
           <Col lg={8} md={8} className="flex-end">
-            <MediaLayer>
+            <MediaLayer ready={youtubeReady}>
               {ProductsData[item].image != "null" ? (
                 <Image
                   src={VideoLayer}
@@ -91,6 +89,7 @@ const Carousel: React.FC<ICarousel> = () => {
                   videoId={ProductsData[item].video}
                   opts={opts}
                   className="youtube-frame"
+                  onReady={() => setYoutubeReady(true)}
                 />
               )}
             </MediaLayer>

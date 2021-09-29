@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import type { NextPage } from "next";
 
@@ -28,6 +28,7 @@ import Footer from "../components/Footer";
 import FaqData from "../public/json/faq.json";
 
 const SejaCooperado: NextPage = () => {
+  const [youtubeReady, setYoutubeReady] = useState(false);
   const opts = {};
   return (
     <>
@@ -77,12 +78,13 @@ const SejaCooperado: NextPage = () => {
           </Row>
         </Container>
         <VideoLayer>
-          <ImageBox>
+          <ImageBox ready={youtubeReady}>
             {/* @ts-ignore */}
             <YouTube
               videoId="2G6E7WcVIJc"
               opts={opts}
               className="youtube-frame"
+              onReady={() => setYoutubeReady(true)}
             />
           </ImageBox>
         </VideoLayer>

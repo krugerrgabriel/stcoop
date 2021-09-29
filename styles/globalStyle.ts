@@ -1,4 +1,4 @@
-import { createGlobalStyle, css } from "styled-components";
+import { createGlobalStyle, css, keyframes } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
     * {
@@ -104,6 +104,40 @@ export const DefaultMiniTitle = css`
         font-size: 24px;
 
         line-height: 24px;
+    }
+`;
+
+const LoadingAnimation = keyframes`
+    100% {
+        transform: translateX(100%);
+    }
+`;
+
+export const LoadingState = css`
+
+    position: relative;
+
+    background: #cccccc !important;
+
+    font-size: 0px !important;
+    border: 0 !important;
+
+    &:after {
+        content: "";
+
+        display: block;
+
+        position: absolute;
+        top: 0;
+
+        width: 100%;
+        height: 100%;
+
+        transform: translateX(-100px);
+
+        background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+
+        animation: ${LoadingAnimation} 0.8s infinite;
     }
 `;
 

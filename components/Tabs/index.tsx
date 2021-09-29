@@ -1,6 +1,4 @@
-import React from "react";
-
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import YouTube from "react-youtube";
 
@@ -18,6 +16,8 @@ import { Container, Row, Col } from "react-bootstrap";
 
 const Tabs: React.FC<{ tab?: Number }> = (props) => {
   const [activeTab, setActiveTab] = useState(0);
+  const [youtubeReady, setYoutubeReady] = useState(false);
+
   useEffect(() => {
     if (props.tab != undefined) {
       /* @ts-ignore */
@@ -74,12 +74,13 @@ const Tabs: React.FC<{ tab?: Number }> = (props) => {
         </Row>
       </Container>
       <VideoLayer>
-        <ImageBox>
+        <ImageBox ready={youtubeReady}>
           {/* @ts-ignore */}
           <YouTube
             className="youtube-frame"
             videoId="W0Wy1A1GWKQ"
             opts={opts}
+            onReady={() => setYoutubeReady(true)}
           />
         </ImageBox>
       </VideoLayer>

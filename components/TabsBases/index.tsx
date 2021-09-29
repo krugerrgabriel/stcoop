@@ -16,6 +16,7 @@ import { Container, Row, Col } from "react-bootstrap";
 
 const TabsBases: React.FC = () => {
   const [activeTab, setActiveTab] = useState(0);
+  const [youtubeReady, setYoutubeReady] = useState(false);
 
   const textsArray = [
     "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam",
@@ -67,12 +68,13 @@ const TabsBases: React.FC = () => {
         </Row>
       </Container>
       <VideoLayer>
-        <ImageBox>
+        <ImageBox ready={youtubeReady}>
           {/* @ts-ignore */}
           <YouTube
             className="youtube-frame"
             videoId={videosArray[activeTab]}
             opts={opts}
+            onReady={() => setYoutubeReady(true)}
           />
         </ImageBox>
       </VideoLayer>
