@@ -76,6 +76,7 @@ const BasesDeApoio: NextPage = () => {
           src={BasesDeApoioBanner}
           layout="fill"
           objectFit="cover"
+          placeholder="blur"
           alt="STCOOP Cooperativa Logística Bases de Apoio Banner"
         />
         <Container>

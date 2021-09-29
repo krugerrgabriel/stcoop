@@ -57,6 +57,7 @@ const QuemSomos: NextPage = () => {
           src={QuemSomosBanner}
           layout="fill"
           objectFit="cover"
+          placeholder="blur"
           alt="STCOOP Cooperativa Logística Facebook Icon"
         />
         <Container>

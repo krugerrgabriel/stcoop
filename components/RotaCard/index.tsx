@@ -17,6 +17,7 @@ const RotaCard: React.FC<IRotaCard> = (props) => {
             src={item.image}
             layout="fill"
             objectFit="cover"
+            placeholder="blur"
             alt="STCOOP Cooperativa Logística Facebook Icon"
           />
           <div className="info">

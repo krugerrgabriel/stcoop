@@ -3,5 +3,6 @@ module.exports = {
   reactStrictMode: true,
   images: {
     loader: "default",
+    placeholder: "blur",
   },
 };
