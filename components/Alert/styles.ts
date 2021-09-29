@@ -21,6 +21,10 @@ export const Body = styled.div<{ active?: Boolean }>`
 
     transition: 0.4s;
 
+    @media (max-width: 576px){
+        width: 95%;
+    }
+
     div.closeBox{
         position: absolute;
         right: 18px;
@@ -46,6 +50,8 @@ export const Body = styled.div<{ active?: Boolean }>`
     p{
         font-size: 24px;
         font-weight: 700;
+
+        line-height: 28px;
 
         text-transform: uppercase;
         text-align: center;
