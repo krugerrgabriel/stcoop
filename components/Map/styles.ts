@@ -10,17 +10,21 @@ export const Body = styled.div``;
 export const MapLayer = styled.div`
     position: relative;
     
-    width: 465.05px;
-    height: 480px;
+    width: 400px;
+    height: 411px;
 `;
 
 export const PinLayer = styled.div<{ top: String; bottom: String; left: String; right: String; }>`
     position: absolute;
 
-    ${(props) => props.top != 'null' ? `top: calc(${props.top}px * 462.05 / 575);` : null}
+    /* ${(props) => props.top != 'null' ? `top: calc(${props.top}px * 462.05 / 575);` : null}
     ${(props) => props.bottom != 'null' ? `bottom: calc(${props.bottom}px * 462.05 / 575);` : null}
     ${(props) => props.left != 'null' ? `left: calc(${props.left}px * 480 / 560);` : null}
-    ${(props) => props.right != 'null' ? `right: calc(${props.right}px * 480 / 560 + 12px);` : null}
+    ${(props) => props.right != 'null' ? `right: calc(${props.right}px * 480 / 560 + 12px);` : null} */
+    ${(props) => props.top != 'null' ? `top: ${props.top}px;` : null}
+    ${(props) => props.bottom != 'null' ? `bottom: ${props.bottom}px;` : null}
+    ${(props) => props.left != 'null' ? `left: ${props.left}px;` : null}
+    ${(props) => props.right != 'null' ? `right: ${props.right}px;` : null}
     
     cursor: pointer;
 

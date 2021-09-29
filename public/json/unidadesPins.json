@@ -3,9 +3,9 @@
     "_id": 1,
     "name": "Unidade Transdesk Porto Velho - RO",
     "city": "Porto Velho - RO",
-    "top": 171,
+    "top": 122,
     "bottom": "null",
-    "left": 140,
+    "left": 99.1,
     "right": "null",
     "link": "Unidade+Transdesk+Porto+Velho"
   },
@@ -13,9 +13,9 @@
     "_id": 2,
     "name": "Unidade Transdesk Vilhena - RO",
     "city": "Vilhena - RO",
-    "top": 228,
+    "top": 162.8,
     "bottom": "null",
-    "left": 180,
+    "left": 128.3,
     "right": "null",
     "link": "Unidade+Transdesk+Vilhena"
   },
@@ -23,9 +23,9 @@
     "_id": 3,
     "name": "Unidade Transdesk Sinop - MT",
     "city": "Sinop - MT",
-    "top": 208,
+    "top": 148.6,
     "bottom": "null",
-    "left": 266,
+    "left": 189.9,
     "right": "null",
     "link": "Unidade+Transdesk+Sinop"
   },
@@ -33,9 +33,9 @@
     "_id": 4,
     "name": "Unidade Transdesk Lucas do Rio Verde - MT",
     "city": "Lucas do Rio Verde - MT",
-    "top": 227,
+    "top": 162.3,
     "bottom": "null",
-    "left": 250,
+    "left": 178.6,
     "right": "null",
     "link": "Unidade+Transdesk+Lucas+do+Rio+Verde"
   },
@@ -43,29 +43,29 @@
     "_id": 5,
     "name": "Unidade Transdesk Aracajú - SE",
     "city": "Aracajú - SE",
-    "top": 203,
+    "top": 145.5,
     "bottom": "null",
     "left": "null",
-    "right": 27,
+    "right": 18.5,
     "link": "Unidade+Transdesk+Aracajú"
   },
   {
     "_id": 6,
     "name": "Unidade Transdesk Feira de Santana - BA",
     "city": "Feira de Santana - BA",
-    "top": 222,
+    "top": 158.4,
     "bottom": "null",
     "left": "null",
-    "right": 46,
+    "right": 33.2,
     "link": "Unidade+Transdesk+Feira+de+Santana"
   },
   {
     "_id": 7,
     "name": "Unidade Transdesk Cuiabá - MT",
     "city": "Cuiabá - MT",
-    "top": 258,
+    "top": 184,
     "bottom": "null",
-    "left": 255,
+    "left": 182.1,
     "right": "null",
     "link": "Unidade+Transdesk+Cuiaba"
   },
@@ -74,8 +74,8 @@
     "name": "Unidade Transdesk Rondonópolis - MT",
     "city": "Rondonópolis - MT",
     "top": "null",
-    "bottom": 265,
-    "left": 270,
+    "bottom": 189.4,
+    "left": 192.2,
     "right": "null",
     "link": "Unidade+Transdesk+Rondonopolis"
   },
@@ -84,9 +84,9 @@
     "name": "Unidade Transdesk Rio Verde - GO",
     "city": "Rio Verde - GO",
     "top": "null",
-    "bottom": 239,
+    "bottom": 170.9,
     "left": "null",
-    "right": 216,
+    "right": 155,
     "link": "Unidade+Transdesk+Rio+Verde"
   },
   {
@@ -94,9 +94,9 @@
     "name": "Unidade Transdesk Dourados - MS",
     "city": "Dourados - MS",
     "top": "null",
-    "bottom": 188,
+    "bottom": 134.2,
     "left": "null",
-    "right": 267,
+    "right": 190.8,
     "link": "Unidade+Transdesk+Dourados"
   },
   {
@@ -104,9 +104,9 @@
     "name": "Unidade Transdesk Maringá - PR",
     "city": "Maringá - PR",
     "top": "null",
-    "bottom": 158,
+    "bottom": 112.8,
     "left": "null",
-    "right": 237,
+    "right": 169.4,
     "link": "Unidade+Transdesk+Maringa"
   },
   {
@@ -114,9 +114,9 @@
     "name": "Unidade Transdesk Londrina - PR",
     "city": "Londrina - PR",
     "top": "null",
-    "bottom": 160,
+    "bottom": 114.3,
     "left": "null",
-    "right": 217,
+    "right": 154.9,
     "link": "Unidade+Transdesk+Londrina"
   },
   {
@@ -124,9 +124,9 @@
     "name": "Unidade Transdesk São Bernardo do Campo - SP",
     "city": "São Bernardo do Campo - SP",
     "top": "null",
-    "bottom": 202,
+    "bottom": 114.3,
     "left": "null",
-    "right": 169,
+    "right": 120.6,
     "link": "Unidade+Transdesk+São+Bernardo+do+Campo"
   },
   {
@@ -134,9 +134,9 @@
     "name": "Unidade Transdesk Cascavel - PR",
     "city": "Cascavel - PR",
     "top": "null",
-    "bottom": 136,
+    "bottom": 97.3,
     "left": "null",
-    "right": 252,
+    "right": 180.4,
     "link": "Unidade+Transdesk+Cascavel"
   },
   {
@@ -144,9 +144,9 @@
     "name": "Unidade Transdesk Guarapuava - PR",
     "city": "Guarapuava - PR",
     "top": "null",
-    "bottom": 127,
+    "bottom": 90.9,
     "left": "null",
-    "right": 227,
+    "right": 162.1,
     "link": "Unidade+Transdesk+Guarapuava"
   },
   {
@@ -154,9 +154,9 @@
     "name": "Unidade Transdesk Ponta Grossa - PR",
     "city": "Ponta Grossa - PR",
     "top": "null",
-    "bottom": 138,
+    "bottom": 98.2,
     "left": "null",
-    "right": 213,
+    "right": 152.2,
     "link": "Unidade+Transdesk+Ponta+Grossa"
   },
   {
@@ -164,9 +164,9 @@
     "name": "Unidade Transdesk Curitiba - PR",
     "city": "Curitiba - PR",
     "top": "null",
-    "bottom": 129,
+    "bottom": 92,
     "left": "null",
-    "right": 199,
+    "right": 142.3,
     "link": "Unidade+Transdesk+Curitiba"
   },
   {
@@ -174,9 +174,9 @@
     "name": "Unidade Transdesk Itapejara D'Oeste - PR",
     "city": "Itapejara D'Oeste - PR",
     "top": "null",
-    "bottom": 120,
+    "bottom": 86,
     "left": "null",
-    "right": 239,
+    "right": 170.6,
     "link": "Unidade+Transdesk+Itapejara+D'Oeste"
   },
   {
@@ -184,9 +184,9 @@
     "name": "Unidade Transdesk Chapecó - SC",
     "city": "Chapecó - SC",
     "top": "null",
-    "bottom": 104,
+    "bottom": 73.9,
     "left": "null",
-    "right": 231,
+    "right": 165,
     "link": "Unidade+Transdesk+Chapecó"
   },
   {
@@ -194,9 +194,9 @@
     "name": "Unidade Transdesk Joinville - SC",
     "city": "Joinville - SC",
     "top": "null",
-    "bottom": 110,
+    "bottom": 78.4,
     "left": "null",
-    "right": 191,
+    "right": 136.4,
     "link": "Unidade+Transdesk+Joinville"
   },
   {
@@ -204,9 +204,9 @@
     "name": "Unidade Transdesk Itajaí - SC",
     "city": "Itajaí - SC",
     "top": "null",
-    "bottom": 95,
+    "bottom": 68,
     "left": "null",
-    "right": 187,
+    "right": 133.7,
     "link": "Unidade+Transdesk+Itajai"
   }
 ]
