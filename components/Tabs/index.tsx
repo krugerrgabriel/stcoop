@@ -58,7 +58,7 @@ const Tabs: React.FC<{ tab?: Number }> = (props) => {
                       active={activeTab == 2 ? true : false}
                       onClick={() => setActiveTab(2)}
                     >
-                      A COOPERATIVA
+                      A cooperativa
                     </Tab>
                   </Header>
                 </TabsBox>
