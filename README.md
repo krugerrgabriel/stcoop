@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://stcoop.vercel.app">
-    <img alt="STCOOP" src="https://stcoop.vercel.app/images/stcoop-logo01.svg" width="60" />
+    <img alt="STCOOP" src="https://stcoop.vercel.app/images/stcoop-logo02.svg" width="400" />
   </a>
 </p>
 <h1 align="center">
