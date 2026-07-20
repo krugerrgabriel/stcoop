@@ -1,12 +1,20 @@
-<p align="center">
-  <a href="https://stcoop.vercel.app">
-    <img alt="STCOOP" src="https://stcoop.vercel.app/images/stcoop-logo02.svg" width="400" />
-  </a>
-</p>
-<h1 align="center">
-  STCOOP
-</h1>
+# STCoop
 
-Repositório para o site da <a href="https://stcoop.vercel.app">STCOOP</a> desenvolvido com Javascript através da biblioteca NextJS e ReactJS.
+Institutional website for STCoop, a cooperative.
 
-Site desenvolvido por <a href="https://www.linkedin.com/in/gabriel-sabara-krüger-a4871518b">Gabriel Sabara Krüger</a>, Web Designer do Marketing do Marketing da <a href="https://www.transdesk.com.br">Transdesk</a>.
+🔗 **Live:** https://stcoop.vercel.app/
+
+**Built with:** Next.js · TypeScript
+
+## About
+
+A responsive institutional site presenting the cooperative, its services and contact channels.
+
+## Running locally
+
+```bash
+npm install
+npm run dev
+```
+
+Then open http://localhost:3000
